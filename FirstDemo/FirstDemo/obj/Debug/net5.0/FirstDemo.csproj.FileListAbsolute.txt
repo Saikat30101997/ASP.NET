@@ -879,3 +879,12 @@ G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\ref\FirstDemo.dll
 G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\FirstDemo.pdb
 G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\FirstDemo.genruntimeconfig.cache
 G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Views\Dashboard\StudentBranch.cshtml.g.cs
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.dll
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.AspNetCore.dll
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Extensions.Hosting.dll
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Extensions.Logging.dll
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Formatting.Compact.dll
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Settings.Configuration.dll
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.Console.dll
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.File.dll
