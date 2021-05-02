@@ -1,4 +1,5 @@
 using FirstDemo.Data;
+using FirstDemo.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -17,24 +18,45 @@ namespace FirstDemo
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        //public Startup(IConfiguration configuration)
+        //{
+        //    Configuration = configuration;
+        //}
+
+        //public IConfiguration Configuration { get; }
+
+        // ekhane j constructor er mddhe j kaj ta korchi tar bodolee ami use korboo new ekta configuration
+        public Startup(IWebHostEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                         .SetBasePath(env.ContentRootPath)
+                         .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                         .AddEnvironmentVariables();
+
+
+                          WebHostEnvironment = env; // WebHostEnvironment property jeta nisi er mddhe env set kore dicchi
+                          Configuration = builder.Build(); //Configuration Property r mddhe builder ekta kaj korchi seta Build kore set kore dicchi
         }
-
-        public IConfiguration Configuration { get; }
-
+        
+         public IConfiguration Configuration { get; }
+        public IWebHostEnvironment WebHostEnvironment { get; set; }
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDatabaseDeveloperPageExceptionFilter();
+          
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+      
+            services.Configure<SmtpConfiguration>(Configuration.GetSection("Smtp")); // eta diye smtp section configure korlam. obossoi smtpConfiguration class create korte hobe..
             services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
+            services.AddRazorPages();
+            services.AddDatabaseDeveloperPageExceptionFilter();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
