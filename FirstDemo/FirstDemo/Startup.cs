@@ -28,11 +28,11 @@ namespace FirstDemo
         // ekhane j constructor er mddhe j kaj ta korchi tar bodolee ami use korboo new ekta configuration
         public Startup(IWebHostEnvironment env)
         {
-            var builder = new ConfigurationBuilder()
-                         .SetBasePath(env.ContentRootPath)
-                         .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                         .AddEnvironmentVariables();
+            var builder = new ConfigurationBuilder() // ConfigurationBuilder er object create korlam
+                         .SetBasePath(env.ContentRootPath) //appsettings.json file er path ta basepath e set kore dicche
+                         .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true) // appsettings.json file ta set korche ..amdr onno nam e json file name dile sekhane file name ta diye dilei hobe
+                         .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true) //appsettings.json file er sate environment file k add korchee merge korchee
+                         .AddEnvironmentVariables(); //environment variable add korchee
 
 
                           WebHostEnvironment = env; // WebHostEnvironment property jeta nisi er mddhe env set kore dicchi
