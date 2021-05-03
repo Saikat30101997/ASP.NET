@@ -19,3 +19,16 @@ System.InvalidOperationException: Unable to resolve service for type 'Microsoft.
    at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
    at FirstDemo.Program.Main(String[] args) in G:\ASP.NET\FirstDemo\FirstDemo\Program.cs:line 34
 2021-05-02 12:09:39.945 -07:00 [INF] Application Starting up
+2021-05-02 22:25:33.977 -07:00 [INF] Application Starting up
+2021-05-02 22:27:00.817 -07:00 [INF] Application Starting up
+2021-05-02 22:48:36.448 -07:00 [INF] Application Starting up
+2021-05-02 22:49:42.390 -07:00 [INF] Application Starting up
+2021-05-02 22:50:29.530 -07:00 [INF] Application Starting up
+2021-05-02 22:50:58.745 -07:00 [INF] Application Starting up
+2021-05-02 22:51:53.972 -07:00 [INF] Application Starting up
+2021-05-02 22:55:04.013 -07:00 [INF] Application Starting up
+2021-05-02 22:55:43.742 -07:00 [INF] Application Starting up
+2021-05-02 22:58:56.207 -07:00 [INF] Application Starting up
+2021-05-02 22:59:57.975 -07:00 [INF] Application Starting up
+2021-05-02 23:14:35.701 -07:00 [INF] Application Starting up
+2021-05-02 23:15:41.381 -07:00 [INF] Application Starting up

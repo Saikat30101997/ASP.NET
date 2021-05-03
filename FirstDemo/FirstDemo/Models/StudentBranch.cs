@@ -29,7 +29,13 @@ namespace FirstDemo.Models
         }
 
       
-        
+       public IList<Student>GetStudentsRes()
+        {
+            IList<Student> x = new List<Student>();
+            var ds = new DashboardController();
+             x = (from std in GetStudents() where std.Name == ds.s select std).ToList();
+            return x;
+        }
 
   
     }
