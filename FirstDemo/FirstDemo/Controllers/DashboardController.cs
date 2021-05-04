@@ -27,5 +27,17 @@ namespace FirstDemo.Controllers
             return View(std1);
 
         }
+
+        public IActionResult StudentData()
+        {
+            var std = new Student()
+            {
+                Name = "Shweta",
+                RegNo = 3,
+            };
+
+            ViewBag.Student = std;
+            return View();
+        }
     }
 }
