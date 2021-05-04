@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "StudentInfo";
+}
+
+<h1>StudentInfo</h1>
+@{ 
+    var std = new Student();
+    var std1 = std.StudenInfo();
+
+}
+
+<table style="border: 1px solid black">
+    <tr style="border:1px solid black">
+        <th>RegNo</th>
+        <th>Name</th>
+    </tr>
+    @foreach (var item in std1)
+    {
+        <tr style="border:1px solid black">
+            <td style="border:1px solid black">@item.RegNo</td>
+            <td style="border:1px solid black">@item.Name</td>
+        </tr>
+    }
+
+</table>

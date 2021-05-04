@@ -10,33 +10,33 @@ namespace FirstDemo.Models
     {
         public int RegNo { get; set; }
         public string Name { get; set; }
-
-        
-    }
-
-    public class StudentInfo
-    {
-       
-
-        public List<Student>GetStudents()
+    
+        public List<Student>StudenInfo()
         {
-            List<Student> students = new List<Student>()
+            List<Student> sd = new List<Student>();
+            sd.Add(new Student() { Name = "Saikat", RegNo = 1 });
+            sd.Add(new Student() { Name = "Sohel", RegNo = 2 });
+
+            return sd;
+        }
+        public Student GetStudents(string name)
+        {
+          
+            var res = (from st in StudenInfo() where st.Name == name select st).ToList();
+           
+            var std = new Student();
+            foreach (var item in res)
             {
-                new Student(){RegNo = 1,Name = "Saikat"},
-                new Student(){RegNo=2,Name="Sohel"}
-            };
-            return students;
+                std.Name = item.Name;
+                std.RegNo = item.RegNo;
+            }
+            return std;
         }
 
-      
-       public IList<Student>GetStudentsRes()
-        {
-            IList<Student> x = new List<Student>();
-            var ds = new DashboardController();
-             x = (from std in GetStudents() where std.Name == ds.s select std).ToList();
-            return x;
-        }
-
-  
+     
     }
+
+   
+  
+    
 }

@@ -1,5 +1,6 @@
 ﻿using FirstDemo.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace FirstDemo.Controllers
@@ -12,25 +13,18 @@ namespace FirstDemo.Controllers
             var model = new SummaryModel();
             return View(model);
         }
+
+        public IActionResult StudentInfo()
+        {
+            var std = new Student();
+            return View(std.StudenInfo());
+        }
         public IActionResult StudentBranch(string name)
         {
 
-            s = name;
-
-
-            //return View("~/Views/Dashboard/StudentBranch.cshtml");
-            ////StudentInfo model = new StudentInfo();
-            ////return View(model.GetStudents());
-            ////StudentInfo studentInfo = new StudentInfo();
-
-
-
-            var std = new StudentInfo();
-
-            
-            return View(std.GetStudentsRes());
-
-
+            var std = new Student();
+            var std1 = std.GetStudents(name);
+            return View(std1);
 
         }
     }

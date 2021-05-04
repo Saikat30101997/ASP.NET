@@ -1,4 +1,4 @@
-﻿@using FirstDemo.Models
+﻿@using FirstDemo.Models;
 @using FirstDemo.Controllers
 @{
     ViewData["Title"] = "StudentBranch";
@@ -7,19 +7,20 @@
 <h1>StudentBranch</h1>
 @{
 
-    var std = new StudentInfo();
+
+
+
 }
 <table style="border: 1px solid black">
     <tr style="border:1px solid black">
         <th>RegNo</th>
         <th>Name</th>
     </tr>
-    @foreach (var item in std.GetStudentsRes())
-    {
+     
         <tr style="border:1px solid black">
-            <td style="border:1px solid black">@item.RegNo</td>
-            <td style="border:1px solid black">@item.Name</td>
+            <td style="border:1px solid black">@Model.RegNo</td>
+            <td style="border:1px solid black">@Model.Name</td>
         </tr>
-    }
+    
 
 </table>

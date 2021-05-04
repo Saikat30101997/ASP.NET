@@ -888,3 +888,4 @@ G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Settings.Configuration.d
 G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.Console.dll
 G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.Debug.dll
 G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.File.dll
+G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Views\Dashboard\StudentInfo.cshtml.g.cs
