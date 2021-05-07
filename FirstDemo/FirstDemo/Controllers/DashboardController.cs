@@ -39,5 +39,15 @@ namespace FirstDemo.Controllers
             ViewBag.Student = std;
             return View();
         }
+
+        public IActionResult StudentInfo1(int id)
+        {
+            var std = new Student();
+            var st = std.StudenInfo();
+            var res = (from s in st where s.RegNo == id select s).ToList();
+            TempData["Student"] = res;
+
+            return View();
+        }
     }
 }
