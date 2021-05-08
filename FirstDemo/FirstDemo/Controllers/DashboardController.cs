@@ -32,10 +32,13 @@ namespace FirstDemo.Controllers
         {
             var std = new Student()
             {
+                StudentId = 110,
                 Name = "Shweta",
-                RegNo = 3,
+                 Branch="Anthropology",
+                 Section="C",
+                 Gender="Female"
             };
-
+            
             ViewBag.Student = std;
             return View();
         }
@@ -44,7 +47,7 @@ namespace FirstDemo.Controllers
         {
             var std = new Student();
             var st = std.StudenInfo();
-            var res = (from s in st where s.RegNo == id select s).ToList();
+            var res = (from s in st where s.StudentId == id select s).ToList();
             TempData["Student"] = res;
 
             return View();

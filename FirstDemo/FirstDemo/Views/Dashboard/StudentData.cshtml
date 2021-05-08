@@ -1,0 +1,17 @@
+﻿@using FirstDemo.Models;
+@{
+    ViewData["Title"] = "StudentData";
+}
+
+<h1>StudentData</h1>
+@{ 
+    var std = ViewBag.Student;
+}
+<div>
+    <p>@std.StudentId</p>
+    <p>@std.Name</p>
+    <p>@std.Branch</p>
+    <p>@std.Section</p>
+    <p>@std.Gender</p>
+</div>
+
