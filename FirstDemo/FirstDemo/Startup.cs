@@ -10,9 +10,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using FirstDemo.Services;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Autofac.Extensions.DependencyInjection;
+using Autofac;
 
 namespace FirstDemo
 {
@@ -41,7 +44,15 @@ namespace FirstDemo
         
          public IConfiguration Configuration { get; }
         public IWebHostEnvironment WebHostEnvironment { get; set; }
-        // This method gets called by the runtime. Use this method to add services to the container.
+
+        public static ILifetimeScope AutofacContainer { get; set; } // j property likhar kothaa setaa likhaa ta ekhane likhbo
+                                                                    // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule(new WebModule()); //ullhek kore dilam
+        }
+
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -64,6 +75,8 @@ namespace FirstDemo
                 options.Cookie.IsEssential = true;
             });
 
+            services.AddTransient<IDataDriver, LocalDriver>(); // amra jodi kokhno DI project e korte chai tahole built in DI korbo tahole asp.net er built in use korte parboo.. tobe eta asp.net er built in amra mainly kaj ta korbo autofac diye jeta third party lib
+
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
@@ -78,6 +91,7 @@ namespace FirstDemo
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            AutofacContainer = app.ApplicationServices.GetAutofacRoot(); //autofac er jonno eta likhte hobe tobe ekta property likhte hobe
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

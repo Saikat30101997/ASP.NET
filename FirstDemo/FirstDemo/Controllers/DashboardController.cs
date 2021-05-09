@@ -2,14 +2,19 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
-
+using FirstDemo.Services;
 namespace FirstDemo.Controllers
 {
     public class DashboardController : Controller
     {
-        public string s = null;
+        private IDataBaseService _dataBaseService;
+        public DashboardController(IDataBaseService dataBaseService)
+        {
+            _dataBaseService = dataBaseService;
+        }
         public IActionResult Summary()
         {
+            var databaseservice = _dataBaseService.Getname(); // eta amdr addtransient diye add korar karone amdr DI er fole jodi knu ekta debug rekhe dei dekha jbe jeta diye amra startup e bind korechi shei class er instance ta ekhane cholee asbee...
             var model = new SummaryModel();
             return View(model);
         }

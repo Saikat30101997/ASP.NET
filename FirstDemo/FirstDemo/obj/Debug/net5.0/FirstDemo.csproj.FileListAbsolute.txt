@@ -891,3 +891,5 @@ G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.File.dll
 G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Views\Dashboard\StudentInfo.cshtml.g.cs
 G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Views\Dashboard\StudentData.cshtml.g.cs
 G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Views\Dashboard\StudentInfo1.cshtml.g.cs
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Autofac.dll
+G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Autofac.Extensions.DependencyInjection.dll

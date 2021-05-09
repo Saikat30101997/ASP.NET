@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "rR+24etGYHKIGpi0Al6xWa70KmBiX5P1uPYF8Dy5yXO+1nkmScCR2y35dWSwqCx9lStqPgEYyGaP5GC6JikyMQ==",
+  "dgSpecHash": "vncdbEx3JcbQbtc/ruiWyC9qADEPd/cFQBjeBxAPCoYktn548wIxNbrQ43HwgTsV9H875nen4N3vZ4b/Mbbnqg==",
   "success": true,
   "projectFilePath": "G:\\ASP.NET\\FirstDemo\\FirstDemo\\FirstDemo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Saikat\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.5\\microsoft.aspnetcore.cryptography.internal.5.0.5.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.5\\microsoft.aspnetcore.cryptography.keyderivation.5.0.5.nupkg.sha512",
