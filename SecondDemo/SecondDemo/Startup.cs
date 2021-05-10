@@ -10,9 +10,11 @@ using Microsoft.Extensions.Hosting;
 using SecondDemo.Data;
 using SecondDemo.Models;
 using System;
+using SecondDemo.Services;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Autofac;
 
 namespace SecondDemo
 {
@@ -32,6 +34,12 @@ namespace SecondDemo
         public IConfiguration Configuration { get; }
         public IWebHostEnvironment WebHostEnvironment { get; set; }
         // This method gets called by the runtime. Use this method to add services to the container.
+        public static ILifetimeScope AutofacContainer { get; set; }
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+            builder.RegisterModule(new WebModule());
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
@@ -52,7 +60,8 @@ namespace SecondDemo
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
-
+            
+            services.AddTransient<IDataDriver, LocalDriver>();
             services.Configure<SmtpConfiguration>(Configuration.GetSection("Smtp"));
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
