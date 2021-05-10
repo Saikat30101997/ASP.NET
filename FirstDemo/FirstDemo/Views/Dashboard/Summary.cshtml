@@ -4,5 +4,19 @@
     Layout = "_Layout2";
 }
 
-<h1 style="color:blue">Summary</h1>
+@section Styles{ 
+<style>
+    h1{
+        color:yellow;
+    }
+</style>
+}
+
+<h1>Summary</h1>
 <p>@Model.SummaryText</p>
+@section Scripts{ 
+<script type="text/javascript">
+    alert("Hello");
+</script>
+
+}
