@@ -97,3 +97,7 @@ G:\ASP.NET\FirstDemo\SerilogDemo\obj\Debug\net5.0\SerilogDemo.dll
 G:\ASP.NET\FirstDemo\SerilogDemo\obj\Debug\net5.0\ref\SerilogDemo.dll
 G:\ASP.NET\FirstDemo\SerilogDemo\obj\Debug\net5.0\SerilogDemo.pdb
 G:\ASP.NET\FirstDemo\SerilogDemo\obj\Debug\net5.0\SerilogDemo.genruntimeconfig.cache
+G:\ASP.NET\FirstDemo\SerilogDemo\bin\Debug\net5.0\MailKit.dll
+G:\ASP.NET\FirstDemo\SerilogDemo\bin\Debug\net5.0\MimeKit.dll
+G:\ASP.NET\FirstDemo\SerilogDemo\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+G:\ASP.NET\FirstDemo\SerilogDemo\bin\Debug\net5.0\Serilog.Sinks.Email.dll

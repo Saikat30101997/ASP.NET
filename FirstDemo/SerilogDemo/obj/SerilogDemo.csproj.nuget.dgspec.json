@@ -68,6 +68,10 @@
               "target": "Package",
               "version": "[3.2.0-dev-00239, )"
             },
+            "Serilog.Sinks.Email": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
             "Serilog.Sinks.MSSqlServer": {
               "target": "Package",
               "version": "[5.6.0, )"
