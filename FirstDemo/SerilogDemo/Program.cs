@@ -16,6 +16,7 @@ namespace SerilogDemo
     {
         public static void Main(string[] args)
         {
+            Serilog.Debugging.SelfLog.Enable(Console.Out);
             var configbuilder = new ConfigurationBuilder()
                                 .AddJsonFile("appsettings.json", false)
                                 .AddEnvironmentVariables()
