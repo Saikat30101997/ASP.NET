@@ -58,7 +58,7 @@ namespace SerilogDemo
 
             app.UseAuthentication();
             app.UseAuthorization();
-            app.UseSession();
+           
            
             app.UseEndpoints(endpoints =>
             {
