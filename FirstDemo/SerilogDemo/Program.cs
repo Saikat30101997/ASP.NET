@@ -32,23 +32,6 @@ namespace SerilogDemo
                          .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                          .Enrich.FromLogContext()
                          .ReadFrom.Configuration(configbuilder)
-                         .WriteTo.Email(new EmailConnectionInfo()
-                         {
-                             FromEmail = "helloforasp.netcore@gmail.com",
-                             ToEmail = "saikatdastushar1997@gmail.com",
-                             MailServer = "smtp.gmail.com",
-                             NetworkCredentials = new NetworkCredential()
-                             {
-                                 UserName = "helloforasp.netcore@gmail.com",
-                                 Password = "saikatdas10"
-                             },
-                             EnableSsl = true,
-                             IsBodyHtml=true,
-                             EmailSubject = "Application Log",
-                             Port = 587
-
-                         }, 
-                         outputTemplate:"{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz}[{Level}] {Message} {NewLine} {Exception}",batchPostingLimit:1,restrictedToMinimumLevel:LogEventLevel.Error)
                          .CreateLogger();
 
             try
@@ -71,7 +54,7 @@ namespace SerilogDemo
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-            .UseSerilog()
+                 .UseSerilog()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
