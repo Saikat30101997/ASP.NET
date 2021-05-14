@@ -1,0 +1,29 @@
+﻿
+
+
+<h1>StudentInfo1</h1>
+
+<table style="border: 1px solid black">
+    <tr style="border:1px solid black">
+        <th>StudentId</th>
+        <th>Name</th>
+        <th>Branch</th>
+        <th>Section</th>
+        <th>Gender</th>
+    </tr>
+    @foreach (var item in (List<Student>)TempData["Student"])
+    {
+<tr style="border:1px solid black">
+    <td style="border:1px solid black">@item.StudentId</td>
+    <td style="border:1px solid black">@item.Name</td>
+    <td style="border:1px solid black">@item.Branch</td>
+    <td style="border:1px solid black">@item.Section</td>
+    <td style="border:1px solid black">@item.Gender</td>
+
+
+</tr>
+    }
+
+</table>
+
+
