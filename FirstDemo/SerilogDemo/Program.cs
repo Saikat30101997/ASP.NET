@@ -4,19 +4,24 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
+using Serilog.Sinks.Email;
 using System;
+using System.Net;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace SerilogDemo
 {
     public class Program
     {
+       
         public static void Main(string[] args)
         {
-            Serilog.Debugging.SelfLog.Enable(Console.Out);
+            
+           
             var configbuilder = new ConfigurationBuilder()
                                 .AddJsonFile("appsettings.json", false)
                                 .AddEnvironmentVariables()
@@ -27,6 +32,23 @@ namespace SerilogDemo
                          .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                          .Enrich.FromLogContext()
                          .ReadFrom.Configuration(configbuilder)
+                         .WriteTo.Email(new EmailConnectionInfo()
+                         {
+                             FromEmail = "helloforasp.netcore@gmail.com",
+                             ToEmail = "saikatdastushar1997@gmail.com",
+                             MailServer = "smtp.gmail.com",
+                             NetworkCredentials = new NetworkCredential()
+                             {
+                                 UserName = "helloforasp.netcore@gmail.com",
+                                 Password = "saikatdas10"
+                             },
+                             EnableSsl = true,
+                             IsBodyHtml=true,
+                             EmailSubject = "Application Log",
+                             Port = 587
+
+                         }, 
+                         outputTemplate:"{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz}[{Level}] {Message} {NewLine} {Exception}",batchPostingLimit:1,restrictedToMinimumLevel:LogEventLevel.Error)
                          .CreateLogger();
 
             try
