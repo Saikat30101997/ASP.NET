@@ -4,9 +4,11 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
+using Serilog.Sinks.Email;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace Task1
@@ -17,7 +19,21 @@ namespace Task1
         public static void Main(string[] args)
         {
 
+            var emailinfo = new EmailConnectionInfo()
+            {
+                FromEmail = "helloforasp.netcore@gmail.com",
+                ToEmail = "saikatdastushar1997@gmail.com",
+                MailServer = "smtp.gmail.com",
+                NetworkCredentials = new NetworkCredential()
+                {
+                    UserName = "helloforasp.netcore@gmail.com",
+                    Password = "saikatdas101997",
+                },
+                EnableSsl = true,
+                Port = 465,
+                EmailSubject = "FirstDemo Logs"
 
+            };
             var configbuilder = new ConfigurationBuilder()
                                 .AddJsonFile("appsettings.json", false)
                                 .AddEnvironmentVariables()
@@ -28,6 +44,9 @@ namespace Task1
                          .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                          .Enrich.FromLogContext()
                          .ReadFrom.Configuration(configbuilder)
+                         .WriteTo.Email(emailinfo,
+                           outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level}] {Message} {NewLine} {Exception}"
+                           , batchPostingLimit: 1)
                          .CreateLogger();
 
             try

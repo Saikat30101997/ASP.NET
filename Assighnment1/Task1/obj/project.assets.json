@@ -9165,11 +9165,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\aspnetb5\\Assighnment1\\Task1\\Task1.csproj",
+      "projectUniqueName": "G:\\ASP.NET\\Assighnment1\\Task1\\Task1.csproj",
       "projectName": "Task1",
-      "projectPath": "G:\\aspnetb5\\Assighnment1\\Task1\\Task1.csproj",
+      "projectPath": "G:\\ASP.NET\\Assighnment1\\Task1\\Task1.csproj",
       "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
-      "outputPath": "G:\\aspnetb5\\Assighnment1\\Task1\\obj\\",
+      "outputPath": "G:\\ASP.NET\\Assighnment1\\Task1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
