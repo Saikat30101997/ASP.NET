@@ -1,4 +1,6 @@
 ﻿@using FirstDemo.Models
+@model SummaryModel
+
 @{
     ViewData["Title"] = "Summary";
     Layout = "_Layout2";
@@ -14,6 +16,7 @@
 
 <h1>Summary</h1>
 <p>@Model.SummaryText</p>
+@Html.TextBox("SummeryText",Model.SummaryText)
 @section Scripts{ 
 <script type="text/javascript">
     alert("Hello");
