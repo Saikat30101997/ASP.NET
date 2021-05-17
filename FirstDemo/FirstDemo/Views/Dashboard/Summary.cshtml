@@ -17,6 +17,9 @@
 <h1>Summary</h1>
 <p>@Model.SummaryText</p>
 @Html.TextBox("SummeryText",Model.SummaryText)
+@Html.ActionLink("Summary","Summary","DashBoard")
+<br />
+<a asp-action="Summary" asp-controller="Dashboard">SummeryText</a>
 @section Scripts{ 
 <script type="text/javascript">
     alert("Hello");
