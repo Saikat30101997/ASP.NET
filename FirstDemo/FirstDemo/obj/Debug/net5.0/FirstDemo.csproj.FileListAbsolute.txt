@@ -899,3 +899,9 @@ G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Microsoft.IdentityModel.Clients.
 G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.MSSqlServer.dll
 G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.PeriodicBatching.dll
 G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Views\Home\Bootstrap.cshtml.g.cs
+G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\form.cshtml.g.cs
+G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminMenuPartial.cshtml.g.cs
