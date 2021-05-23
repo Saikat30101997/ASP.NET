@@ -898,3 +898,4 @@ G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Microsoft.Azure.Services.AppAuth
 G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
 G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.MSSqlServer.dll
 G:\ASP.NET\FirstDemo\FirstDemo\bin\Debug\net5.0\Serilog.Sinks.PeriodicBatching.dll
+G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Views\Home\Bootstrap.cshtml.g.cs
