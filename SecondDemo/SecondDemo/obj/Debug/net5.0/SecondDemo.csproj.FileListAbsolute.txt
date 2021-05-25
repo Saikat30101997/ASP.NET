@@ -448,3 +448,8 @@ G:\ASP.NET\SecondDemo\SecondDemo\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis
 G:\ASP.NET\SecondDemo\SecondDemo\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 G:\ASP.NET\SecondDemo\SecondDemo\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 G:\ASP.NET\SecondDemo\SecondDemo\obj\Debug\net5.0\Razor\Views\DashBoard\Summery.cshtml.g.cs
+G:\ASP.NET\SecondDemo\SecondDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+G:\ASP.NET\SecondDemo\SecondDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+G:\ASP.NET\SecondDemo\SecondDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+G:\ASP.NET\SecondDemo\SecondDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\Index.cshtml.g.cs
+G:\ASP.NET\SecondDemo\SecondDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminMenuPartial.cshtml.g.cs
