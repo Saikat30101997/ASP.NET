@@ -223,6 +223,7 @@ encapsulate.Get("Saikat", "Das");
 encapsulate.display();
 */
 //interfaces
+/*
 interface IPerson {
     FirstName: string,
     LastName: string,
@@ -237,3 +238,165 @@ var Customer: IPerson = {
 console.log(Customer.FirstName);
 console.log(Customer.LastName);
 console.log(Customer.SayHi());
+*/
+// simple interface inheritance
+/*
+interface Person {
+    age: number;
+}
+
+interface Musician extends Person {
+    instrument: string,
+    Display(): void;
+
+}
+
+var Rahim: Musician = {
+    age: 26,
+    instrument: "Guiter",
+    Display() {
+        console.log(this.age + " " + this.instrument);
+    }
+}
+
+Rahim.Display();
+*/
+
+//multiple inheritance
+
+//interface IFirst {
+//    v1: number;
+//}
+
+//interface Isecond {
+//    v2: number;
+//    Display(): void;
+
+//}
+
+//class Third implements IFirst, Isecond {
+//    v1: number;
+//    v2: number;
+//    Display() {
+//        console.log(this.v1 + " " + this.v2);
+//    }
+//}
+
+//var mytask: Third = new Third();
+//mytask.v1 = 12;
+//mytask.v2 = 23;
+//mytask.Display();
+
+
+//interface Task {
+//    name: String; //property
+//    run(arg: any): void; //method
+//}
+
+//class MyTask implements Task {
+//    name: String;
+//    constructor(name: String) {
+//        this.name = name;
+//    }
+
+//    run(arg: any): void {
+//        console.log(`running: ${this.name}, arg: ${arg}`);
+//    }
+//}
+
+//let myTask: Task = new MyTask('someTask');
+//myTask.run("test");
+
+//interface LabeledValue {
+//    label: string;
+//} 
+// function printLabel(labeledObj: LabeledValue) {
+//    console.log(labeledObj.label);
+//}
+//let myObj = { size: 10, label: "Size 10 Object" };
+//printLabel(myObj);
+
+//interface Labeledvalue {
+//    label: string;
+//}
+//function printlable(labeledobj: Labeledvalue) {
+//    console.log(labeledobj.label);
+//}
+
+//var Iobj = { label: "Saikat Das Tushar" };
+//printlable(Iobj);
+
+//devskill inheritance
+//class Animal {
+//    move(distanceInMeters: number = 0) {
+//        console.log(`Animal moved ${distanceInMeters}m.`);
+//    }
+//}
+//class Dog extends Animal {
+//    bark() {
+//        console.log("Woof! Woof!");
+//    }
+//}
+//const dog = new Dog();
+//dog.bark();
+//dog.move(10);
+//dog.bark();
+
+//Accessability
+//Private
+//class Animal {
+//    private name: string;
+//    constructor(theName: string) {
+//        this.name = theName;
+//        console.log(this.name);
+//    }
+//}
+
+//class Rhino extends Animal {
+  
+//    constructor() {
+//        super("Rhino");
+//    }
+   
+//}
+//class Employee {
+//private name: string;
+//    constructor(theName: string) {
+//        this.name = theName;
+//    }
+//}
+
+//let Rhinoname = new Rhino();
+//Protected accessbility
+//class Person {
+//    protected name: string;
+//    constructor(name: string) {
+//        this.name = name;
+//    }
+//}
+
+//class student extends Person {
+//    private Department: string;
+//    constructor(name: string, Department: string) {
+//        super(name);
+//        this.Department = Department;
+//    }
+//    public Display(): void {
+//        console.log(`here name is ${this.name} and Department ${this.Department}`);
+//    }
+//}
+
+//var Saikat = new student("Saikat Das", "CSE");
+//Saikat.Display();
+
+
+//indexer property
+
+interface StringArray {
+    [index: number]: string; // index hobe number r value hobe string
+}
+let myArray: StringArray;
+myArray = ["Bob", "Fred"];
+let myStr: string = myArray[0];
+
+console.log(myStr);

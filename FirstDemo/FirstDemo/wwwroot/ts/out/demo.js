@@ -5,12 +5,8 @@ for (let i = 0; i < list.length; i++) {
 }
 
 */
-var Customer = {
-    FirstName: "Saikat",
-    LastName: "Das",
-    SayHi: function () { return "Hello"; }
-};
-console.log(Customer.FirstName);
-console.log(Customer.LastName);
-console.log(Customer.SayHi());
+var myArray;
+myArray = ["Bob", "Fred"];
+var myStr = myArray[0];
+console.log(myStr);
 //# sourceMappingURL=demo.js.map
