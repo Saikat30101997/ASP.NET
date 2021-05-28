@@ -905,3 +905,5 @@ G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImp
 G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
 G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Dashboard\form.cshtml.g.cs
 G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminMenuPartial.cshtml.g.cs
+G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Views\Dashboard\Form.cshtml.g.cs
+G:\ASP.NET\FirstDemo\FirstDemo\obj\Debug\net5.0\Razor\Views\Dashboard\FormA.cshtml.g.cs

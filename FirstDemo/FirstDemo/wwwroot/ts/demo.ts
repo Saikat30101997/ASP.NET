@@ -392,11 +392,28 @@ Rahim.Display();
 
 //indexer property
 
-interface StringArray {
-    [index: number]: string; // index hobe number r value hobe string
-}
-let myArray: StringArray;
-myArray = ["Bob", "Fred"];
-let myStr: string = myArray[0];
+//interface StringArray {
+//    [index: number]: string; // index hobe number r value hobe string
+//}
+//let myArray: StringArray;
+//myArray = ["Bob", "Fred"];
+//let myStr: string = myArray[0];
 
-console.log(myStr);
+//console.log(myStr);
+
+//let x: [number, string];
+//x = [10, "Hello"];
+//x.push(11);
+//console.log(x);
+
+//Readonly er kaj jokhn declare korbo tokhn r constructor diye assign kora jabe pore r assign koraa jabe na
+class Octopus {
+    readonly name: string;
+    readonly numberOfLegs: number = 8;
+    constructor(theName: string) {
+        this.name = theName;
+    }
+}
+let dad = new Octopus("Man with the 8 strong legs");
+//dad.name = "Man with the 3-piece suit"; // error! name is readonly.
+
