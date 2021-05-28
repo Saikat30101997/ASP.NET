@@ -371,13 +371,56 @@ Rahim.Display();
 //x.push(11);
 //console.log(x);
 //Readonly er kaj jokhn declare korbo tokhn r constructor diye assign kora jabe pore r assign koraa jabe na
-var Octopus = /** @class */ (function () {
-    function Octopus(theName) {
-        this.numberOfLegs = 8;
-        this.name = theName;
+//class Octopus {
+//    readonly name: string;
+//    readonly numberOfLegs: number = 8;
+//    constructor(theName: string) {
+//        this.name = theName;
+//    }
+//}
+//let dad = new Octopus("Man with the 8 strong legs");
+////dad.name = "Man with the 3-piece suit"; // error! name is readonly.
+//parameter properties parameter e readonly name use korchi
+//class Octopus {
+//    readonly numberOfLegs: number = 8;
+//    constructor(readonly name: string) {
+//        console.log(this.numberOfLegs + " " + name);
+//    }
+//}
+//let octopus = new Octopus("Hello Saikat Das");
+//get & set method
+//const fullmxlength = 10;
+//class Employee {
+//    private _name: string;
+//    get fullname(): string {
+//        return this._name;
+//    }
+//    set(fullname: string) {
+//        if (fullname && fullname.length > fullmxlength) {
+//            throw new Error("This is not valid");
+//        }
+//        this._name = fullname;
+//        console.log(this._name);
+//    }
+//}
+//let employee = new Employee();
+//employee.set("Saikat Das");
+//employee.fullname;
+//static properties
+var Grid = /** @class */ (function () {
+    function Grid(scale) {
+        this.scale = scale;
     }
-    return Octopus;
+    Grid.prototype.Calculation = function (point) {
+        var ansx = point.x - Grid.origin.x;
+        var ansy = point.y - Grid.origin.y;
+        return Math.sqrt(ansx * ansx + ansy * ansy) / this.scale;
+    };
+    Grid.origin = { x: 0, y: 0 }; //static property declare
+    return Grid;
 }());
-var dad = new Octopus("Man with the 8 strong legs");
-//dad.name = "Man with the 3-piece suit"; // error! name is readonly.
+var grid1 = new Grid(1.0); // 1x scale
+var grid2 = new Grid(5.0); // 5x scale
+console.log(grid1.Calculation({ x: 10, y: 10 }));
+console.log(grid2.Calculation({ x: 10, y: 10 }));
 //# sourceMappingURL=demo.js.map

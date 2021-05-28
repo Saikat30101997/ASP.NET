@@ -407,13 +407,62 @@ Rahim.Display();
 //console.log(x);
 
 //Readonly er kaj jokhn declare korbo tokhn r constructor diye assign kora jabe pore r assign koraa jabe na
-class Octopus {
-    readonly name: string;
-    readonly numberOfLegs: number = 8;
-    constructor(theName: string) {
-        this.name = theName;
-    }
-}
-let dad = new Octopus("Man with the 8 strong legs");
-//dad.name = "Man with the 3-piece suit"; // error! name is readonly.
+//class Octopus {
+//    readonly name: string;
+//    readonly numberOfLegs: number = 8;
+//    constructor(theName: string) {
+//        this.name = theName;
+//    }
+//}
+//let dad = new Octopus("Man with the 8 strong legs");
+////dad.name = "Man with the 3-piece suit"; // error! name is readonly.
 
+//parameter properties parameter e readonly name use korchi
+//class Octopus {
+//    readonly numberOfLegs: number = 8;
+//    constructor(readonly name: string) {
+//        console.log(this.numberOfLegs + " " + name);
+//    }
+//}
+
+//let octopus = new Octopus("Hello Saikat Das");
+
+//get & set method
+
+//const fullmxlength = 10;
+
+//class Employee {
+//    private _name: string;
+//    get fullname(): string {
+//        return this._name;
+//    }
+//    set(fullname: string) {
+
+//        if (fullname && fullname.length > fullmxlength) {
+//            throw new Error("This is not valid");
+//        }
+//        this._name = fullname;
+//        console.log(this._name);
+//    }
+
+//}
+
+//let employee = new Employee();
+//employee.set("Saikat Das");
+//employee.fullname;
+
+//static properties
+class Grid {
+    static origin= { x: 0, y: 0 }; //static property declare
+    scale: number;
+    Calculation(point: { x: number, y: number }) {
+        let ansx = point.x - Grid.origin.x;
+        let ansy = point.y - Grid.origin.y;
+        return Math.sqrt(ansx * ansx + ansy * ansy) / this.scale;
+    }
+    constructor(scale: number) { this.scale = scale }
+}
+let grid1 = new Grid(1.0); // 1x scale
+let grid2 = new Grid(5.0); // 5x scale
+console.log(grid1.Calculation({ x: 10, y: 10 }));
+console.log(grid2.Calculation({ x: 10, y: 10 }));
