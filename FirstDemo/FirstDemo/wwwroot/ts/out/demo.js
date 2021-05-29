@@ -5,6 +5,21 @@ for (let i = 0; i < list.length; i++) {
 }
 
 */
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 /*let x: [string, number];
 x = ["Saikat", 10];
 console.log(x[0].substring(1));
@@ -407,20 +422,67 @@ Rahim.Display();
 //employee.set("Saikat Das");
 //employee.fullname;
 //static properties
-var Grid = /** @class */ (function () {
-    function Grid(scale) {
-        this.scale = scale;
+//class Grid {
+//    static origin= { x: 0, y: 0 }; //static property declare
+//    scale: number;
+//    Calculation(point: { x: number, y: number }) {
+//        let ansx = point.x - Grid.origin.x;
+//        let ansy = point.y - Grid.origin.y;
+//        return Math.sqrt(ansx * ansx + ansy * ansy) / this.scale;
+//    }
+//    constructor(scale: number) { this.scale = scale }
+//}
+//let grid1 = new Grid(1.0); // 1x scale
+//let grid2 = new Grid(5.0); // 5x scale
+//console.log(grid1.Calculation({ x: 10, y: 10 }));
+//console.log(grid2.Calculation({ x: 10, y: 10 }));
+//class DemoCounter {
+//    static counter: number = 0;
+//    _str: string = null;
+//    increment(str: string): void {
+//        DemoCounter.counter++;
+//        this._str = str;
+//    }
+//    static doSomething(): void{
+//    console.log("Hello");
+//}
+//}
+//let demoCounter = new DemoCounter();
+//let demoCounter1 = new DemoCounter();
+//demoCounter.increment("x");
+//demoCounter.increment("y");
+//demoCounter1.increment("z");
+//console.log(DemoCounter.counter);
+//console.log(DemoCounter.doSomething());
+//abstract class
+var Department = /** @class */ (function () {
+    function Department(name) {
+        this.name = name;
     }
-    Grid.prototype.Calculation = function (point) {
-        var ansx = point.x - Grid.origin.x;
-        var ansy = point.y - Grid.origin.y;
-        return Math.sqrt(ansx * ansx + ansy * ansy) / this.scale;
+    Department.prototype.printname = function () {
+        console.log("Department Name: " + this.name);
     };
-    Grid.origin = { x: 0, y: 0 }; //static property declare
-    return Grid;
+    return Department;
 }());
-var grid1 = new Grid(1.0); // 1x scale
-var grid2 = new Grid(5.0); // 5x scale
-console.log(grid1.Calculation({ x: 10, y: 10 }));
-console.log(grid2.Calculation({ x: 10, y: 10 }));
+var CSE_Department = /** @class */ (function (_super) {
+    __extends(CSE_Department, _super);
+    function CSE_Department() {
+        return _super.call(this, "CSE DEPARTMENT") || this;
+    }
+    CSE_Department.prototype.printname = function () {
+        console.log("Department of CSE");
+    };
+    CSE_Department.prototype.printmeeting = function () {
+        console.log("Programming Contest");
+    };
+    CSE_Department.prototype.generateReports = function () {
+        console.log("Generating accounting reports...");
+    };
+    return CSE_Department;
+}(Department));
+var department; // ok to create a reference to an abstract type
+department = new CSE_Department(); // ok to create and assign a non - abstract subclass
+department.printname();
+department.printmeeting();
+//department.generateReports();// error: method doesn't exist on declared abstract type 
 //# sourceMappingURL=demo.js.map

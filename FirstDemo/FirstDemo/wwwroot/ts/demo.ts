@@ -452,17 +452,90 @@ Rahim.Display();
 //employee.fullname;
 
 //static properties
-class Grid {
-    static origin= { x: 0, y: 0 }; //static property declare
-    scale: number;
-    Calculation(point: { x: number, y: number }) {
-        let ansx = point.x - Grid.origin.x;
-        let ansy = point.y - Grid.origin.y;
-        return Math.sqrt(ansx * ansx + ansy * ansy) / this.scale;
-    }
-    constructor(scale: number) { this.scale = scale }
+//class Grid {
+//    static origin= { x: 0, y: 0 }; //static property declare
+//    scale: number;
+//    Calculation(point: { x: number, y: number }) {
+//        let ansx = point.x - Grid.origin.x;
+//        let ansy = point.y - Grid.origin.y;
+//        return Math.sqrt(ansx * ansx + ansy * ansy) / this.scale;
+//    }
+//    constructor(scale: number) { this.scale = scale }
+//}
+//let grid1 = new Grid(1.0); // 1x scale
+//let grid2 = new Grid(5.0); // 5x scale
+//console.log(grid1.Calculation({ x: 10, y: 10 }));
+//console.log(grid2.Calculation({ x: 10, y: 10 }));
+
+//class DemoCounter {
+//    static counter: number = 0;
+//    _str: string = null;
+//    increment(str: string): void {
+//        DemoCounter.counter++;
+//        this._str = str;
+//    }
+//    static doSomething(): void{
+//    console.log("Hello");
+//}
+//}
+
+//let demoCounter = new DemoCounter();
+//let demoCounter1 = new DemoCounter();
+
+//demoCounter.increment("x");
+//demoCounter.increment("y");
+//demoCounter1.increment("z");
+//console.log(DemoCounter.counter);
+//console.log(DemoCounter.doSomething());
+
+//abstract class
+
+//abstract class Department {
+//    constructor(public name: string) {
+
+//    }
+//    printname(): void {
+//        console.log("Department Name: " + this.name);
+//    }
+//    abstract printmeeting(): void;
+//}
+
+//class CSE_Department extends Department {
+//    constructor() {
+//        super("CSE DEPARTMENT");
+//    }
+//    printname() {
+//        console.log("Department of CSE");
+//    }
+
+//    printmeeting() {
+//        console.log("Programming Contest");
+//    }
+//    generateReports(): void {
+//        console.log("Generating accounting reports...");
+//    }
+//}
+
+//let department: Department; // ok to create a reference to an abstract type
+//department = new CSE_Department(); // ok to create and assign a non - abstract subclass
+//department.printname();
+//department.printmeeting();
+////department.generateReports();// error: method doesn't exist on declared abstract type 
+
+//constructor Functions
+//bujhi nai
+
+//using class as an interface
+class point {
+    x: number;
+    y: number;
 }
-let grid1 = new Grid(1.0); // 1x scale
-let grid2 = new Grid(5.0); // 5x scale
-console.log(grid1.Calculation({ x: 10, y: 10 }));
-console.log(grid2.Calculation({ x: 10, y: 10 }));
+
+interface point3d extends point {
+    z: number;
+}
+
+//Generic Classes
+
+
+
