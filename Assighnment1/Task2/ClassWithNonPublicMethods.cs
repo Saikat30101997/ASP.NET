@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task2
 {
-    public class ClassWithNonPublicMethods
+     public class ClassWithNonPublicMethods
     {
         private void PrivateMethod(string value)
         {

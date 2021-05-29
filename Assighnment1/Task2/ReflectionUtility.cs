@@ -8,7 +8,7 @@ namespace Task2
 {
     public class ReflectionUtility
     {
-
+        
         public void CallNonPublicMethod(object targetObject, string methodName, object[] args)
         {
 
@@ -23,7 +23,7 @@ namespace Task2
             }
         }
 
-
+       
 
     }
 }
