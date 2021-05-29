@@ -1,3 +1,4 @@
+/*/*/ // <reference path="demo1.ts" />*/*/
 /*let list: number[] = [1, 2, 3];
 
 for (let i = 0; i < list.length; i++) {
@@ -5,21 +6,6 @@ for (let i = 0; i < list.length; i++) {
 }
 
 */
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 /*let x: [string, number];
 x = ["Saikat", 10];
 console.log(x[0].substring(1));
@@ -455,34 +441,105 @@ Rahim.Display();
 //console.log(DemoCounter.counter);
 //console.log(DemoCounter.doSomething());
 //abstract class
-var Department = /** @class */ (function () {
-    function Department(name) {
-        this.name = name;
+//abstract class Department {
+//    constructor(public name: string) {
+//    }
+//    printname(): void {
+//        console.log("Department Name: " + this.name);
+//    }
+//    abstract printmeeting(): void;
+//}
+//class CSE_Department extends Department {
+//    constructor() {
+//        super("CSE DEPARTMENT");
+//    }
+//    printname() {
+//        console.log("Department of CSE");
+//    }
+//    printmeeting() {
+//        console.log("Programming Contest");
+//    }
+//    generateReports(): void {
+//        console.log("Generating accounting reports...");
+//    }
+//}
+//let department: Department; // ok to create a reference to an abstract type
+//department = new CSE_Department(); // ok to create and assign a non - abstract subclass
+//department.printname();
+//department.printmeeting();
+////department.generateReports();// error: method doesn't exist on declared abstract type 
+//constructor Functions
+//bujhi nai
+//using class as an interface
+//class point {
+//    x: number;
+//    y: number;
+//}
+//interface point3d extends point {
+//    z: number;
+//}
+//Generics
+// jodi amra generic chara knu ekta identity function declare kori\
+//function identity(arg: number): number {
+//    return arg;
+//}
+//console.log(identity(5));
+//jodi any use kore kori
+//function identity(arg: any): any {
+//    return arg;
+//}
+//console.log(identity(5));
+//Generic use kore jodi kori
+//function identity<T>(arg: T): T {
+//    return arg;
+//}
+//let id = identity<string>("Hello"); // declare kora jay evabe
+//console.log(id);
+//let id1 = identity("Saikat"); //
+//console.log(id1);
+//using namespace
+//namespace Newname {
+//    export class DemoCounter {
+//        static counter: number = 0;
+//        _str: string = null;
+//        increment(str: string): void {
+//            DemoCounter.counter++;
+//            this._str = str;
+//        }
+//        static doSomething(): void {
+//            console.log("Hello");
+//        }
+//    }
+//}
+//let democounter = new Newname.DemoCounter();
+//democounter.increment("x");
+//democounter.increment("y");
+//console.log(Newname.DemoCounter.counter);
+//using multiple namespace
+//namespace Newname {
+//    export class DemoCounter {
+//        static counter: number = 0;
+//        _str: string = null;
+//        increment(str: string): void {
+//            DemoCounter.counter++;
+//            this._str = str;
+//        }
+//    }
+//}
+//let democ = new Newname.DemoCounter();
+//democ.increment("x");
+//console.log(Newname.DemoCounter.counter);
+////Newname.c1.doSomething();
+//union type
+function printId(id) {
+    if (typeof id === "string") { ///The triple equals operator (===) returns true if both operands are of the same type and contain the same value. If comparing different types for equality, the result is false.
+        // In this branch, id is of type 'string'
+        console.log(id.toUpperCase());
     }
-    Department.prototype.printname = function () {
-        console.log("Department Name: " + this.name);
-    };
-    return Department;
-}());
-var CSE_Department = /** @class */ (function (_super) {
-    __extends(CSE_Department, _super);
-    function CSE_Department() {
-        return _super.call(this, "CSE DEPARTMENT") || this;
+    else {
+        // Here, id is of type 'number'
+        console.log(id);
     }
-    CSE_Department.prototype.printname = function () {
-        console.log("Department of CSE");
-    };
-    CSE_Department.prototype.printmeeting = function () {
-        console.log("Programming Contest");
-    };
-    CSE_Department.prototype.generateReports = function () {
-        console.log("Generating accounting reports...");
-    };
-    return CSE_Department;
-}(Department));
-var department; // ok to create a reference to an abstract type
-department = new CSE_Department(); // ok to create and assign a non - abstract subclass
-department.printname();
-department.printmeeting();
-//department.generateReports();// error: method doesn't exist on declared abstract type 
+}
+printId("Hello");
 //# sourceMappingURL=demo.js.map

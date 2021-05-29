@@ -1,4 +1,6 @@
-﻿/*let list: number[] = [1, 2, 3];
+﻿/*/*/// <reference path="demo1.ts" />*/*/
+
+/*let list: number[] = [1, 2, 3];
 
 for (let i = 0; i < list.length; i++) {
     console.log(list[i]);
@@ -526,16 +528,87 @@ Rahim.Display();
 //bujhi nai
 
 //using class as an interface
-class point {
-    x: number;
-    y: number;
+//class point {
+//    x: number;
+//    y: number;
+//}
+
+//interface point3d extends point {
+//    z: number;
+//}
+
+//Generics
+// jodi amra generic chara knu ekta identity function declare kori\
+//function identity(arg: number): number {
+//    return arg;
+//}
+
+//console.log(identity(5));
+
+//jodi any use kore kori
+
+//function identity(arg: any): any {
+//    return arg;
+//}
+//console.log(identity(5));
+
+//Generic use kore jodi kori
+//function identity<T>(arg: T): T {
+//    return arg;
+//}
+//let id = identity<string>("Hello"); // declare kora jay evabe
+//console.log(id);
+//let id1 = identity("Saikat"); //
+//console.log(id1);
+//using namespace
+//namespace Newname {
+//    export class DemoCounter {
+//        static counter: number = 0;
+//        _str: string = null;
+//        increment(str: string): void {
+//            DemoCounter.counter++;
+//            this._str = str;
+//        }
+//        static doSomething(): void {
+//            console.log("Hello");
+//        }
+//    }
+ 
+//}
+//let democounter = new Newname.DemoCounter();
+//democounter.increment("x");
+//democounter.increment("y");
+//console.log(Newname.DemoCounter.counter);
+
+//using multiple namespace
+
+//namespace Newname {
+//    export class DemoCounter {
+//        static counter: number = 0;
+//        _str: string = null;
+//        increment(str: string): void {
+//            DemoCounter.counter++;
+//            this._str = str;
+//        }
+       
+//    }
+
+//}
+
+//let democ = new Newname.DemoCounter();
+//democ.increment("x");
+//console.log(Newname.DemoCounter.counter);
+
+////Newname.c1.doSomething();
+//union type
+function printId(id: number | string) {  // ekhane id ta ami number type o nite parbo  othoba string type o nite parbo 
+    if (typeof id === "string") {    ///The triple equals operator (===) returns true if both operands are of the same type and contain the same value. If comparing different types for equality, the result is false.
+        // In this branch, id is of type 'string'
+        console.log(id.toUpperCase());
+    } else {
+        // Here, id is of type 'number'
+        console.log(id);
+    }
 }
 
-interface point3d extends point {
-    z: number;
-}
-
-//Generic Classes
-
-
-
+printId("Hello");
