@@ -6,20 +6,20 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-
+using SerilogDemo.Services;
 namespace SerilogDemo.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private IDataBaseService _databaseService;
+         public HomeController(IDataBaseService dataBaseService)
         {
-            _logger = logger;
+            _databaseService = dataBaseService;
         }
-
+        
         public IActionResult Index()
         {
+            var databaseservice = _databaseService.Getname();
             return View();
         }
 

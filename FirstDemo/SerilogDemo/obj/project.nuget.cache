@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "z7tDyFJRAiyMkm4VbchHL6FzC84csO10zUeEIABzkFzwhgUJijByYttavnL49jLwnVzoMXBbFv1Km8vEsQjDZA==",
+  "dgSpecHash": "D6WQmvVRfWw0ckWvVTYQCNwGUATV9p3QqavVlkTJylKU81vlcfkzY3pFWaRLhx4WCercIjwCY0u8XvnZmPbUqQ==",
   "success": true,
   "projectFilePath": "G:\\ASP.NET\\FirstDemo\\SerilogDemo\\SerilogDemo.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Saikat\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\mailkit\\2.6.0\\mailkit.2.6.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.5\\microsoft.aspnetcore.cryptography.internal.5.0.5.nupkg.sha512",

@@ -76,7 +76,7 @@ namespace FirstDemo
             });
 
             services.AddTransient<IDataDriver, LocalDriver>(); // amra jodi kokhno DI project e korte chai tahole built in DI korbo tahole asp.net er built in use korte parboo.. tobe eta asp.net er built in amra mainly kaj ta korbo autofac diye jeta third party lib
-
+            
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();

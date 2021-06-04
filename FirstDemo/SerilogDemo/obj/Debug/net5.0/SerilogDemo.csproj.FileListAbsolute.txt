@@ -101,3 +101,5 @@ G:\ASP.NET\FirstDemo\SerilogDemo\bin\Debug\net5.0\MailKit.dll
 G:\ASP.NET\FirstDemo\SerilogDemo\bin\Debug\net5.0\MimeKit.dll
 G:\ASP.NET\FirstDemo\SerilogDemo\bin\Debug\net5.0\BouncyCastle.Crypto.dll
 G:\ASP.NET\FirstDemo\SerilogDemo\bin\Debug\net5.0\Serilog.Sinks.Email.dll
+G:\ASP.NET\FirstDemo\SerilogDemo\bin\Debug\net5.0\Autofac.dll
+G:\ASP.NET\FirstDemo\SerilogDemo\bin\Debug\net5.0\Autofac.Extensions.DependencyInjection.dll
