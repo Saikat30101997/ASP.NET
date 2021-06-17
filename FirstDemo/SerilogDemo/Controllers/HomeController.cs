@@ -19,7 +19,7 @@ namespace SerilogDemo.Controllers
         
         public IActionResult Index()
         {
-            var databaseservice = _databaseService.Getname();
+              var databaseservice = _databaseService.Getname();
             return View();
         }
 

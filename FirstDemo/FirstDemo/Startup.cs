@@ -1,4 +1,4 @@
-using FirstDemo.Data;
+
 using FirstDemo.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -16,6 +16,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac.Extensions.DependencyInjection;
 using Autofac;
+
 
 namespace FirstDemo
 {
@@ -55,10 +56,15 @@ namespace FirstDemo
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            //seession er jonno etaa lagbe asp.net e cookie bole configuration ache setar settings
+            //var connectionStringName = "DefaultConnection"; // kun Connection nam string er rakhlm
+            //var connectionString = Configuration.GetConnectionString(connectionStringName); //connectionstring e pass koree dilam
+            //var migrationAssemblyName = typeof(Startup).Assembly.FullName;
+            //services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseSqlServer(connectionString));
+
+            //services.AddDbContext<>(options =>   // Class Library te J TrainingContext Create korechi seta diyee dilam ConnectionString Create korar jonno 
+            //   options.UseSqlServer(connectionString,b=>b.MigrationsAssembly(migrationAssemblyName)));
+            ////seession er jonno etaa lagbe asp.net e cookie bole configuration ache setar settings
             services.ConfigureApplicationCookie(options =>
             {
                 // Cookie settings
@@ -78,8 +84,8 @@ namespace FirstDemo
             services.AddTransient<IDataDriver, LocalDriver>(); // amra jodi kokhno DI project e korte chai tahole built in DI korbo tahole asp.net er built in use korte parboo.. tobe eta asp.net er built in amra mainly kaj ta korbo autofac diye jeta third party lib
             
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            //services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
       
             services.Configure<SmtpConfiguration>(Configuration.GetSection("Smtp")); // eta diye smtp section configure korlam. obossoi smtpConfiguration class create korte hobe..
             services.AddControllersWithViews();

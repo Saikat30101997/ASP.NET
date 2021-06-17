@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstDemo", "FirstDemo\Firs
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SerilogDemo", "SerilogDemo\SerilogDemo.csproj", "{69B8480A-19F7-4EC5-9373-A61C81151007}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FirstDemo.Data", "FirstDemo.Data\FirstDemo.Data.csproj", "{2B42B5A0-B3FF-4E9E-9F98-13A98883560A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogDemo.Data", "SerilogDemo.Data\SerilogDemo.Data.csproj", "{5AB4132D-EE1F-4A32-9CF8-029D8F0EEF76}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{69B8480A-19F7-4EC5-9373-A61C81151007}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69B8480A-19F7-4EC5-9373-A61C81151007}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69B8480A-19F7-4EC5-9373-A61C81151007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B42B5A0-B3FF-4E9E-9F98-13A98883560A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B42B5A0-B3FF-4E9E-9F98-13A98883560A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B42B5A0-B3FF-4E9E-9F98-13A98883560A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B42B5A0-B3FF-4E9E-9F98-13A98883560A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB4132D-EE1F-4A32-9CF8-029D8F0EEF76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB4132D-EE1F-4A32-9CF8-029D8F0EEF76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB4132D-EE1F-4A32-9CF8-029D8F0EEF76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB4132D-EE1F-4A32-9CF8-029D8F0EEF76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

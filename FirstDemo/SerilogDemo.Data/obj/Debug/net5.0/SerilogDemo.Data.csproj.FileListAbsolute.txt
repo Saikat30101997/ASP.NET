@@ -1,0 +1,12 @@
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\bin\Debug\net5.0\SerilogDemo.Data.deps.json
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\bin\Debug\net5.0\SerilogDemo.Data.dll
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\bin\Debug\net5.0\ref\SerilogDemo.Data.dll
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\bin\Debug\net5.0\SerilogDemo.Data.pdb
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\obj\Debug\net5.0\SerilogDemo.Data.csprojAssemblyReference.cache
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\obj\Debug\net5.0\SerilogDemo.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\obj\Debug\net5.0\SerilogDemo.Data.AssemblyInfoInputs.cache
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\obj\Debug\net5.0\SerilogDemo.Data.AssemblyInfo.cs
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\obj\Debug\net5.0\SerilogDemo.Data.csproj.CoreCompileInputs.cache
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\obj\Debug\net5.0\SerilogDemo.Data.dll
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\obj\Debug\net5.0\ref\SerilogDemo.Data.dll
+G:\ASP.NET\FirstDemo\SerilogDemo.Data\obj\Debug\net5.0\SerilogDemo.Data.pdb

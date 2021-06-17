@@ -1,0 +1,12 @@
+G:\ASP.NET\FirstDemo\FirstDemo.Data\obj\Debug\net5.0\FirstDemo.Data.csprojAssemblyReference.cache
+G:\ASP.NET\FirstDemo\FirstDemo.Data\obj\Debug\net5.0\FirstDemo.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\FirstDemo\FirstDemo.Data\obj\Debug\net5.0\FirstDemo.Data.AssemblyInfoInputs.cache
+G:\ASP.NET\FirstDemo\FirstDemo.Data\obj\Debug\net5.0\FirstDemo.Data.AssemblyInfo.cs
+G:\ASP.NET\FirstDemo\FirstDemo.Data\obj\Debug\net5.0\FirstDemo.Data.csproj.CoreCompileInputs.cache
+G:\ASP.NET\FirstDemo\FirstDemo.Data\bin\Debug\net5.0\FirstDemo.Data.deps.json
+G:\ASP.NET\FirstDemo\FirstDemo.Data\bin\Debug\net5.0\FirstDemo.Data.dll
+G:\ASP.NET\FirstDemo\FirstDemo.Data\bin\Debug\net5.0\ref\FirstDemo.Data.dll
+G:\ASP.NET\FirstDemo\FirstDemo.Data\bin\Debug\net5.0\FirstDemo.Data.pdb
+G:\ASP.NET\FirstDemo\FirstDemo.Data\obj\Debug\net5.0\FirstDemo.Data.dll
+G:\ASP.NET\FirstDemo\FirstDemo.Data\obj\Debug\net5.0\ref\FirstDemo.Data.dll
+G:\ASP.NET\FirstDemo\FirstDemo.Data\obj\Debug\net5.0\FirstDemo.Data.pdb
