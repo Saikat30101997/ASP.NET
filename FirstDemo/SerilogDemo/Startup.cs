@@ -1,5 +1,6 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using FirstDemo.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -16,6 +17,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
+
 namespace SerilogDemo
 {
     public class Startup
@@ -30,15 +33,28 @@ namespace SerilogDemo
         public static ILifetimeScope AutofacContainer { get; set; }
         public void ConfigureContainer(ContainerBuilder builder)
         {
+            var connectionInfo = GetConnectionStringAndAssemblyName();
             builder.RegisterModule(new WebModule());
+            builder.RegisterModule(new DataModule(connectionInfo.connectionString, connectionInfo.migrationAssemblyName));
         }
 
+
+        private (string connectionString,string migrationAssemblyName) GetConnectionStringAndAssemblyName() // Code Duptlication avoid korar jonno ekbare use kore fellam
+        {
+            var connectionStringName = "DefaultConnection";
+            var connectionString = Configuration.GetConnectionString(connectionStringName);
+            var migrationAssemblyName = typeof(Startup).Assembly.FullName;
+            return (connectionString, migrationAssemblyName);
+    }
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var connectionInfo = GetConnectionStringAndAssemblyName();
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(connectionInfo.connectionString));
+
+            services.AddDbContext<TrainingContext>(options =>
+             options.UseSqlServer(connectionInfo.connectionString, b => b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddTransient<IDataDriver, LocalDriver>();
 

@@ -9,8 +9,8 @@ namespace FirstDemo.Data
 {
     public class TrainingContext:DbContext  // etar Referta diye dite hobe webproj er startup.cs er file ConfigureService method e 
     {
-        private string _connectionString; //ConnectionString er jonno
-        private string _migrationAssemblyName; //eta lagbe karon WebProject er sate TrainingContext Connected na Connection korar jonno
+        private readonly string _connectionString; //ConnectionString er jonno
+        private readonly string _migrationAssemblyName; //eta lagbe karon WebProject er sate TrainingContext Connected na Connection korar jonno
                                                //eta reference create kore webproject er sathe er reference name lage 
 
         public TrainingContext(string connectionString,string migrationAssemblyName) //ei duita jinis lagbee connectionstring r assembly refernce

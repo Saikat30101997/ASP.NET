@@ -2631,6 +2631,32 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "FirstDemo.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
+        },
+        "compile": {
+          "bin/placeholder/FirstDemo.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FirstDemo.Data.dll": {}
+        }
+      },
+      "SerilogDemo.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.5"
+        },
+        "compile": {
+          "bin/placeholder/SerilogDemo.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SerilogDemo.Data.dll": {}
+        }
       }
     }
   },
@@ -8689,11 +8715,22 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "FirstDemo.Data/1.0.0": {
+      "type": "project",
+      "path": "../FirstDemo.Data/FirstDemo.Data.csproj",
+      "msbuildProject": "../FirstDemo.Data/FirstDemo.Data.csproj"
+    },
+    "SerilogDemo.Data/1.0.0": {
+      "type": "project",
+      "path": "../SerilogDemo.Data/SerilogDemo.Data.csproj",
+      "msbuildProject": "../SerilogDemo.Data/SerilogDemo.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
+      "FirstDemo.Data >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.5",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.5",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.5",
@@ -8702,7 +8739,8 @@
       "Serilog.AspNetCore >= 4.1.0",
       "Serilog.Settings.Configuration >= 3.2.0-dev-00239",
       "Serilog.Sinks.Email >= 2.4.0",
-      "Serilog.Sinks.MSSqlServer >= 5.6.0"
+      "Serilog.Sinks.MSSqlServer >= 5.6.0",
+      "SerilogDemo.Data >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8731,7 +8769,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\ASP.NET\\FirstDemo\\FirstDemo.Data\\FirstDemo.Data.csproj": {
+              "projectPath": "G:\\ASP.NET\\FirstDemo\\FirstDemo.Data\\FirstDemo.Data.csproj"
+            },
+            "G:\\ASP.NET\\FirstDemo\\SerilogDemo.Data\\SerilogDemo.Data.csproj": {
+              "projectPath": "G:\\ASP.NET\\FirstDemo\\SerilogDemo.Data\\SerilogDemo.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
