@@ -1,6 +1,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using ForeEntityFrameWork.Data;
+using ForeEntityFrameWork.Training;
+using ForeEntityFrameWork.Training.Context;
 using ForEntityFrameWork.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -47,7 +48,7 @@ namespace ForEntityFrameWork
         {
             var connectionInfo = GetConnectionStringAndAssemblyName();
 
-            builder.RegisterModule(new DataModule(connectionInfo.connectionString,
+            builder.RegisterModule(new TrainingModule(connectionInfo.connectionString,
                 connectionInfo.migrationAssemblyName));
         }
 
@@ -84,8 +85,7 @@ namespace ForEntityFrameWork
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-
+            app.UseStaticFiles(); 
             app.UseRouting();
 
             app.UseAuthentication();
@@ -93,6 +93,10 @@ namespace ForEntityFrameWork
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                name: "areas",
+                pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+              );
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

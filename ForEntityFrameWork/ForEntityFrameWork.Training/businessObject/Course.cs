@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ForeEntityFrameWork.Data
+namespace ForEntityFrameWork.Training.businessObject
 {
     public class Course
     {
-        public int Id { get; set; }
         public string Title { get; set; }
         public int Fees { get; set; }
         public DateTime StartDate { get; set; }
-        public List<Topic> Topics { get; set; } //ekta Course e onk gulaa topic thakbe 
     }
 }

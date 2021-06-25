@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ForeEntityFrameWork.Data
+namespace ForeEntityFrameWork.Training.Entities
 {
     public class Student
     {

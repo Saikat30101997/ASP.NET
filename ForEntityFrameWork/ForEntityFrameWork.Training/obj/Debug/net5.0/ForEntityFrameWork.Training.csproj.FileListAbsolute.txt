@@ -1,0 +1,12 @@
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\bin\Debug\net5.0\ForEntityFrameWork.Training.deps.json
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\bin\Debug\net5.0\ForEntityFrameWork.Training.dll
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\bin\Debug\net5.0\ref\ForEntityFrameWork.Training.dll
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\bin\Debug\net5.0\ForEntityFrameWork.Training.pdb
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEntityFrameWork.Training.csprojAssemblyReference.cache
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEntityFrameWork.Training.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEntityFrameWork.Training.AssemblyInfoInputs.cache
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEntityFrameWork.Training.AssemblyInfo.cs
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEntityFrameWork.Training.csproj.CoreCompileInputs.cache
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEntityFrameWork.Training.dll
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ref\ForEntityFrameWork.Training.dll
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEntityFrameWork.Training.pdb
