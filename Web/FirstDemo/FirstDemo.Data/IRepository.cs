@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace FirstDemo.Data
 {
-    public class Student
+    public interface IRepository<T>
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public DateTime DateOfBirth { get; set; }
+        void Add(T item);
+        void Remove(T item);
+        void Update(T item);
+        IList<T> GetAll();
     }
 }

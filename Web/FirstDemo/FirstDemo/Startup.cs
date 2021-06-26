@@ -1,6 +1,8 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using FirstDemo.Data;
+using FirstDemo.Training;
+using FirstDemo.Training.Contexts;
 using FristDemo.Data;
 using FristDemo.Models;
 using FristDemo.Services;
@@ -43,7 +45,7 @@ namespace FristDemo
         {
             var connectionInfo = GetConnectionStringAndAssemblyName();
 
-            builder.RegisterModule(new DataModule(connectionInfo.connectionString, 
+            builder.RegisterModule(new TrainingModule(connectionInfo.connectionString, 
                 connectionInfo.migrationAssemblyName));
             builder.RegisterModule(new WebModule());
         }

@@ -1,18 +1,20 @@
 ﻿using Autofac;
+using FirstDemo.Training.Contexts;
+using FirstDemo.Training.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FirstDemo.Data
+namespace FirstDemo.Training
 {
-    public class DataModule : Module
+    public class TrainingModule : Module
     {
         private readonly string _connectionString;
         private readonly string _migrationAssemblyName;
 
-        public DataModule(string connectionString, string migrationAssemblyName)
+        public TrainingModule(string connectionString, string migrationAssemblyName)
         {
             _connectionString = connectionString;
             _migrationAssemblyName = migrationAssemblyName;
@@ -23,6 +25,9 @@ namespace FirstDemo.Data
             builder.RegisterType<TrainingContext>().AsSelf()
                 .WithParameter("connectionString", _connectionString)
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<CourseService>().As<ICourseService>()
                 .InstancePerLifetimeScope();
 
             base.Load(builder);
