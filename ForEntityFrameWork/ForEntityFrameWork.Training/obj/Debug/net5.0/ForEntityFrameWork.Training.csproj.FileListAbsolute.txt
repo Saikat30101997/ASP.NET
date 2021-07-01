@@ -10,3 +10,6 @@ G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEn
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEntityFrameWork.Training.dll
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ref\ForEntityFrameWork.Training.dll
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEntityFrameWork.Training.pdb
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\bin\Debug\net5.0\ForeEntityFrameWork.Data.dll
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\bin\Debug\net5.0\ForeEntityFrameWork.Data.pdb
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\obj\Debug\net5.0\ForEntityFrameWork.Training.csproj.CopyComplete

@@ -91,7 +91,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "G:\\ASP.NET\\ForEntityFrameWork\\ForeEntityFrameWork.Data\\ForeEntityFrameWork.Data.csproj": {
+                "projectPath": "G:\\ASP.NET\\ForEntityFrameWork\\ForeEntityFrameWork.Data\\ForeEntityFrameWork.Data.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

@@ -2230,6 +2230,7 @@
       "ForEntityFrameWork.Training/1.0.0": {
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "ForeEntityFrameWork.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7"
         },
         "runtime": {

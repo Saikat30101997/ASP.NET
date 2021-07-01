@@ -1506,6 +1506,20 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "ForeEntityFrameWork.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7"
+        },
+        "compile": {
+          "bin/placeholder/ForeEntityFrameWork.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ForeEntityFrameWork.Data.dll": {}
+        }
       }
     }
   },
@@ -5754,11 +5768,17 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "ForeEntityFrameWork.Data/1.0.0": {
+      "type": "project",
+      "path": "../ForeEntityFrameWork.Data/ForeEntityFrameWork.Data.csproj",
+      "msbuildProject": "../ForeEntityFrameWork.Data/ForeEntityFrameWork.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
+      "ForeEntityFrameWork.Data >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.7"
     ]
   },
@@ -5788,7 +5808,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\ASP.NET\\ForEntityFrameWork\\ForeEntityFrameWork.Data\\ForeEntityFrameWork.Data.csproj": {
+              "projectPath": "G:\\ASP.NET\\ForEntityFrameWork\\ForeEntityFrameWork.Data\\ForeEntityFrameWork.Data.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
