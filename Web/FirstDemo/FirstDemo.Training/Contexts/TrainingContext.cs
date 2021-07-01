@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FirstDemo.Training.Contexts
 {
-    public class TrainingContext : DbContext
+    public class TrainingContext : DbContext, ITrainingContext
     {
         private readonly string _connectionString;
         private readonly string _migrationAssemblyName;

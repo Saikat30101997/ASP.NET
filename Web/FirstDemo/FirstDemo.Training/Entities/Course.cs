@@ -1,9 +1,10 @@
-﻿using System;
+﻿using FirstDemo.Data;
+using System;
 using System.Collections.Generic;
 
 namespace FirstDemo.Training.Entities
 {
-    public class Course
+    public class Course : IEntity<int>
     {
         public int Id { get; set; }
         public string Title { get; set; }

@@ -1,6 +1,8 @@
 ﻿using Autofac;
 using FirstDemo.Training.Contexts;
+using FirstDemo.Training.Repositories;
 using FirstDemo.Training.Services;
+using FirstDemo.Training.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +27,18 @@ namespace FirstDemo.Training
             builder.RegisterType<TrainingContext>().AsSelf()
                 .WithParameter("connectionString", _connectionString)
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<TrainingContext>().As<ITrainingContext>()
+                .WithParameter("connectionString", _connectionString)
+                .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<StudentRepository>().As<IStudentRepository>()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<CourseRepository>().As<ICourseRepository>()
+                .InstancePerLifetimeScope();
+            builder.RegisterType<TrainingUnitOfWork>().As<ITrainingUnitOfWork>()
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<CourseService>().As<ICourseService>()

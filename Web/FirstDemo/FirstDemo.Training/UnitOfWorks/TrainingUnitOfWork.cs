@@ -13,13 +13,16 @@ namespace FirstDemo.Training.UnitOfWorks
 {
     public class TrainingUnitOfWork : UnitOfWork, ITrainingUnitOfWork
     {
-        public IRepository<Student> Students { get; private set; }
-        public IRepository<Course> Courses { get; private set; }
+        public IStudentRepository Students { get; private set; }
+        public ICourseRepository Courses { get; private set; }
 
-        public TrainingUnitOfWork(TrainingContext context) : base(context)
+        public TrainingUnitOfWork(ITrainingContext context,
+            IStudentRepository students,
+            ICourseRepository courses
+            ) : base((DbContext)context)
         {
-            Students = new StudentRepository(context);
-            Courses = new CourseRepository(context);
+            Students = students;
+            Courses = courses;
         }
     }
 }
