@@ -1,5 +1,4 @@
-﻿
-using ForeEntityFrameWork.Training.Context;
+﻿using ForeEntityFrameWork.Training.Context;
 using ForeEntityFrameWork.Training.Entities;
 using ForEntityFrameWork.Data;
 using System;
@@ -10,12 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForEntityFrameWork.Training.Repositories
 {
-    public class StudentRepository : Repository<Student,int,TrainingDbContext>,
-        IStudentRepository
+    public interface ICourseRepository : IRepository<Course,int,TrainingDbContext>
     {
-        public StudentRepository(TrainingDbContext context):base(context)
-        {
-
-        }
     }
 }

@@ -1,5 +1,8 @@
-﻿using ForeEntityFrameWork.Data;
+﻿
+using ForeEntityFrameWork.Training.Context;
 using ForeEntityFrameWork.Training.Entities;
+using ForEntityFrameWork.Data;
+using ForEntityFrameWork.Training.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +13,7 @@ namespace ForEntityFrameWork.Training.UnitOfWorks
 {
     public interface ITrainingUnitOfWork :IUnitOfWork
     {
-        public IRepository<Student>Students { get; }
-        public IRepository<Course> Courses { get; }
+        public IStudentRepository Students { get; }
+        public ICourseRepository Courses { get; }
     }
 }
