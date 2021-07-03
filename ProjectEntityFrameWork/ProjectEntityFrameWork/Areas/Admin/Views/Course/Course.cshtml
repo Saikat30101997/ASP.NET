@@ -1,0 +1,12 @@
+﻿@model ProjectEntityFrameWork.Areas.Admin.Models.CourseListModel
+@{
+    ViewData["Title"] = "Course";
+}
+@{ 
+    foreach (var item in Model.Courses)
+    {
+        <h1>@item.Title</h1>
+        <h1>@item.Fees</h1>
+    }
+}
+
