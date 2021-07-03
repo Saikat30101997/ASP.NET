@@ -16,6 +16,7 @@ namespace ForEntityFrameWork.Areas.Admin.Models
         public CourseListModel()
         {
             _courseService = Startup.AutofacContainer.Resolve<ICourseService>();
+
         }
         public CourseListModel(ICourseService courseService)
         {

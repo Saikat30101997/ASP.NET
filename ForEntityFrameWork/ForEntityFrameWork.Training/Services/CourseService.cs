@@ -1,4 +1,4 @@
-﻿using ForeEntityFrameWork.Training.Context;
+﻿using ForEntityFrameWork.Training.Context;
 using ForEntityFrameWork.Training.businessObject;
 using ForEntityFrameWork.Training.UnitOfWorks;
 using ForeEntityFrameWork.Training;
@@ -12,8 +12,8 @@ namespace ForEntityFrameWork.Training.Services
 {
     public class CourseService : ICourseService
     {
-        private readonly TrainingUnitOfWork _trainingUnitOfWork;
-        public CourseService(TrainingUnitOfWork trainingUnitOfWork)
+        private readonly ITrainingUnitOfWork _trainingUnitOfWork;
+        public CourseService(ITrainingUnitOfWork trainingUnitOfWork)
         {
             _trainingUnitOfWork = trainingUnitOfWork;
         }
@@ -37,7 +37,7 @@ namespace ForEntityFrameWork.Training.Services
         public void CreateCourse(Course course)
         {
             _trainingUnitOfWork.Courses.Add(
-                new ForeEntityFrameWork.Training.Entities.Course
+                new ForEntityFrameWork.Training.Entities.Course
                 {
                     Title = course.Title,
                     Fees = course.Fees,

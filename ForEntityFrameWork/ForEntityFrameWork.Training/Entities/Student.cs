@@ -1,7 +1,7 @@
 ﻿using ForEntityFrameWork.Data;
 using System;
 
-namespace ForeEntityFrameWork.Training.Entities
+namespace ForEntityFrameWork.Training.Entities
 {
     public class Student : IEntity<int>
     {

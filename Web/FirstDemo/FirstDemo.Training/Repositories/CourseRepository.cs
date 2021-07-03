@@ -16,6 +16,7 @@ namespace FirstDemo.Training.Repositories
         public CourseRepository(TrainingContext context)
             : base(context)
         {
+
         }
     }
 }

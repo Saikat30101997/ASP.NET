@@ -1,5 +1,5 @@
-﻿using ForeEntityFrameWork.Training.Context;
-using ForeEntityFrameWork.Training.Entities;
+﻿using ForEntityFrameWork.Training.Context;
+using ForEntityFrameWork.Training.Entities;
 using ForEntityFrameWork.Data;
 using System;
 using System.Collections.Generic;

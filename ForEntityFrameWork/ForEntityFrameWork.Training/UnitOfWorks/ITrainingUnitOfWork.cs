@@ -1,6 +1,6 @@
 ﻿
-using ForeEntityFrameWork.Training.Context;
-using ForeEntityFrameWork.Training.Entities;
+using ForEntityFrameWork.Training.Context;
+using ForEntityFrameWork.Training.Entities;
 using ForEntityFrameWork.Data;
 using ForEntityFrameWork.Training.Repositories;
 using System;
@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace ForEntityFrameWork.Training.UnitOfWorks
 {
-    public interface ITrainingUnitOfWork :IUnitOfWork
+    public interface ITrainingUnitOfWork : IUnitOfWork
     {
-        public IStudentRepository Students { get; }
-        public ICourseRepository Courses { get; }
+          IStudentRepository Students { get; }
+          ICourseRepository Courses { get; }
     }
 }

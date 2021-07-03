@@ -1,0 +1,247 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork\\ProjectEntityFrameWork.csproj": {}
+  },
+  "projects": {
+    "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Data\\ProjectEntityFrameWork.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Data\\ProjectEntityFrameWork.Data.csproj",
+        "projectName": "ProjectEntityFrameWork.Data",
+        "projectPath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Data\\ProjectEntityFrameWork.Data.csproj",
+        "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
+        "outputPath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Training\\ProjectEntityFrameWork.Training.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Training\\ProjectEntityFrameWork.Training.csproj",
+        "projectName": "ProjectEntityFrameWork.Training",
+        "projectPath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Training\\ProjectEntityFrameWork.Training.csproj",
+        "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
+        "outputPath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Training\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Data\\ProjectEntityFrameWork.Data.csproj": {
+                "projectPath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Data\\ProjectEntityFrameWork.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork\\ProjectEntityFrameWork.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork\\ProjectEntityFrameWork.csproj",
+        "projectName": "ProjectEntityFrameWork",
+        "projectPath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork\\ProjectEntityFrameWork.csproj",
+        "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
+        "outputPath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Training\\ProjectEntityFrameWork.Training.csproj": {
+                "projectPath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Training\\ProjectEntityFrameWork.Training.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

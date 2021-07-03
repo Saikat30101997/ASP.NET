@@ -1,6 +1,8 @@
 ﻿using Autofac;
-using ForeEntityFrameWork.Training.Context;
+using ForEntityFrameWork.Training.Context;
+using ForEntityFrameWork.Training.Repositories;
 using ForEntityFrameWork.Training.Services;
+using ForEntityFrameWork.Training.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +28,22 @@ namespace ForeEntityFrameWork.Training
                 .WithParameter("connectionString", _connectionString)
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
+            builder.RegisterType<TrainingDbContext>().As<ITrainingDbContext>()
+                .WithParameter("connectionString", _connectionString)
+                .WithParameter("migrationAssemblyName", _migrationAssemblyName)
+                .InstancePerLifetimeScope();
 
-            builder.RegisterType<CourseService>().As<ICourseService>().InstancePerLifetimeScope();
+            builder.RegisterType<StudentRepository>().As<IStudentRepository>()
+              .InstancePerLifetimeScope();
+            builder.RegisterType<CourseRepository>().As<ICourseRepository>()
+              .InstancePerLifetimeScope();
+            builder.RegisterType<TrainingUnitOfWork>().As<ITrainingUnitOfWork>()
+               .InstancePerLifetimeScope();
+
+            builder.RegisterType<CourseService>().As<ICourseService>()
+                .InstancePerLifetimeScope();
+           
+          
 
             base.Load(builder);
         }

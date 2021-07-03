@@ -1,7 +1,7 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using ForeEntityFrameWork.Training;
-using ForeEntityFrameWork.Training.Context;
+using ForEntityFrameWork.Training.Context;
 using ForEntityFrameWork.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

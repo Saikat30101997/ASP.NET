@@ -1,0 +1,12 @@
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\bin\Debug\net5.0\ProjectEntityFrameWork.Data.deps.json
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\bin\Debug\net5.0\ProjectEntityFrameWork.Data.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\bin\Debug\net5.0\ref\ProjectEntityFrameWork.Data.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\bin\Debug\net5.0\ProjectEntityFrameWork.Data.pdb
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\obj\Debug\net5.0\ProjectEntityFrameWork.Data.csprojAssemblyReference.cache
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\obj\Debug\net5.0\ProjectEntityFrameWork.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\obj\Debug\net5.0\ProjectEntityFrameWork.Data.AssemblyInfoInputs.cache
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\obj\Debug\net5.0\ProjectEntityFrameWork.Data.AssemblyInfo.cs
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\obj\Debug\net5.0\ProjectEntityFrameWork.Data.csproj.CoreCompileInputs.cache
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\obj\Debug\net5.0\ProjectEntityFrameWork.Data.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\obj\Debug\net5.0\ref\ProjectEntityFrameWork.Data.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Data\obj\Debug\net5.0\ProjectEntityFrameWork.Data.pdb

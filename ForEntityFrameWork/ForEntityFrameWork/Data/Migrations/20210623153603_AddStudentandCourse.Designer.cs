@@ -2,7 +2,7 @@
 using System;
 
 using ForeEntityFrameWork.Training;
-using ForeEntityFrameWork.Training.Context;
+using ForEntityFrameWork.Training.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
