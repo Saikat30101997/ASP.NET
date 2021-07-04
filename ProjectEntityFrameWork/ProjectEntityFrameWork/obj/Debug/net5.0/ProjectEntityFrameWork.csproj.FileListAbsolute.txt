@@ -430,7 +430,6 @@ G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\scoped
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\ProjectEntityFrameWork.TagHelpers.input.cache
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\ProjectEntityFrameWork.TagHelpers.output.cache
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\ProjectEntityFrameWork.RazorCoreGenerate.cache
-G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
@@ -453,8 +452,7 @@ G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\Projec
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\ProjectEntityFrameWork.Training.pdb
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\ProjectEntityFrameWork.Data.pdb
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
-G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_LoginPartial.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
-G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Course\Course.cshtml.g.cs
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminMenuPartial.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs

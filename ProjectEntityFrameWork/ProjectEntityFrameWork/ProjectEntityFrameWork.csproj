@@ -20,11 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Data\" />
+    <ProjectReference Include="..\ProjectEntityFrameWork.Training\ProjectEntityFrameWork.Training.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ProjectEntityFrameWork.Training\ProjectEntityFrameWork.Training.csproj" />
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
   </ItemGroup>
 
 </Project>

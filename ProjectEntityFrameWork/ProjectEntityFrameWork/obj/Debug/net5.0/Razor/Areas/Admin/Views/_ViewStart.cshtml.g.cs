@@ -26,15 +26,8 @@ using ProjectEntityFrameWork.Models;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\Areas\Admin\Views\_ViewImports.cshtml"
-using ProjectEntityFrameWork.Areas.Admin.Models;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Areas/Admin/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"653a0f16f0d7c78218b89757dfcdc61197233bd4", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7466c0ca6fdc7b6bf03ad344d2b289e1cd4492bd", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
