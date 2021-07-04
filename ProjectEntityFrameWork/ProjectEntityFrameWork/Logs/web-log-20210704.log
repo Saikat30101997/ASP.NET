@@ -16,3 +16,9 @@ ProjectEntityFrameWork.Areas.Admin.Controllers.HomeController.Index (ProjectEnti
    at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2021-07-04 12:23:29.827 +06:00 [INF] Application Starting up
+2021-07-04 23:52:39.200 +06:00 [INF] Application Starting up
+2021-07-04 23:53:29.485 +06:00 [INF] Application Starting up
+2021-07-04 23:54:26.922 +06:00 [INF] Application Starting up
+2021-07-04 23:56:30.981 +06:00 [INF] Application Starting up
+2021-07-04 23:57:33.988 +06:00 [INF] Application Starting up
+2021-07-04 23:59:36.959 +06:00 [INF] Application Starting up
