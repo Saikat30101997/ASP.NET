@@ -19,7 +19,7 @@ namespace FirstDemo.Data.Migrations
                 .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("FirstDemo.Data.Course", b =>
+            modelBuilder.Entity("FirstDemo.Training.Entities.Course", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -40,7 +40,22 @@ namespace FirstDemo.Data.Migrations
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("FirstDemo.Data.Student", b =>
+            modelBuilder.Entity("FirstDemo.Training.Entities.CourseStudents", b =>
+                {
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CourseId", "StudentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("CourseStudents");
+                });
+
+            modelBuilder.Entity("FirstDemo.Training.Entities.Student", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -58,7 +73,7 @@ namespace FirstDemo.Data.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("FirstDemo.Data.Topic", b =>
+            modelBuilder.Entity("FirstDemo.Training.Entities.Topic", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -81,9 +96,28 @@ namespace FirstDemo.Data.Migrations
                     b.ToTable("Topics");
                 });
 
-            modelBuilder.Entity("FirstDemo.Data.Topic", b =>
+            modelBuilder.Entity("FirstDemo.Training.Entities.CourseStudents", b =>
                 {
-                    b.HasOne("FirstDemo.Data.Course", "Course")
+                    b.HasOne("FirstDemo.Training.Entities.Course", "Course")
+                        .WithMany("EnrolledStudents")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FirstDemo.Training.Entities.Student", "Student")
+                        .WithMany("EnrolledCourses")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Student");
+                });
+
+            modelBuilder.Entity("FirstDemo.Training.Entities.Topic", b =>
+                {
+                    b.HasOne("FirstDemo.Training.Entities.Course", "Course")
                         .WithMany("Topics")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -92,9 +126,16 @@ namespace FirstDemo.Data.Migrations
                     b.Navigation("Course");
                 });
 
-            modelBuilder.Entity("FirstDemo.Data.Course", b =>
+            modelBuilder.Entity("FirstDemo.Training.Entities.Course", b =>
                 {
+                    b.Navigation("EnrolledStudents");
+
                     b.Navigation("Topics");
+                });
+
+            modelBuilder.Entity("FirstDemo.Training.Entities.Student", b =>
+                {
+                    b.Navigation("EnrolledCourses");
                 });
 #pragma warning restore 612, 618
         }

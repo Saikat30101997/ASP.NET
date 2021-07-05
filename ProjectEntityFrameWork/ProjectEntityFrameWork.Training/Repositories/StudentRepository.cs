@@ -11,12 +11,12 @@ using System.Threading.Tasks;
 
 namespace ProjectEntityFrameWork.Training.Repositories
 {
-    public class StudentRepository : Repository<Student, int, TrainingContext>, 
+    public class StudentRepository : Repository<Student, int>, 
         IStudentRepository
     {
 
-        public StudentRepository(TrainingContext context)
-            : base(context)
+        public StudentRepository(ITrainingContext context)
+            : base((DbContext)context)
         {
 
         }

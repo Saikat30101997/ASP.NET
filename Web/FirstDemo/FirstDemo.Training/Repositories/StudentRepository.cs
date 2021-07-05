@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace FirstDemo.Training.Repositories
 {
-    public class StudentRepository : Repository<Student, int, TrainingContext>, 
+    public class StudentRepository : Repository<Student, int>, 
         IStudentRepository
     {
 

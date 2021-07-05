@@ -16,5 +16,24 @@ namespace ProjectEntityFrameWork.Areas.Admin.Controllers
             model.LoadModelData();
             return View(model);
         }
+
+        public IActionResult Enroll()
+        {
+            var model = new EnrollStudentModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Enroll(EnrollStudentModel enrollStudentModel)
+        {
+            if(ModelState.IsValid)
+            {
+                enrollStudentModel.EnrollStudent();
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
     }
 }

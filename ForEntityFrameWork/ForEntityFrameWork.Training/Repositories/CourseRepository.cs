@@ -7,13 +7,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace ForEntityFrameWork.Training.Repositories
 {
-    public class CourseRepository : Repository<Course,int,TrainingDbContext> ,
+    public class CourseRepository : Repository<Course,int> ,
         ICourseRepository
     {
-        public CourseRepository(TrainingDbContext context) : base(context)
+        public CourseRepository(ITrainingDbContext context) : 
+             base((DbContext)context)
         {
 
         }

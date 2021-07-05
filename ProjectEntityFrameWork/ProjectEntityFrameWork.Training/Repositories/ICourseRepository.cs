@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEntityFrameWork.Training.Repositories
 {
-    public interface ICourseRepository : IRepository<Course, int, TrainingContext>
+    public interface ICourseRepository : IRepository<Course, int>
     {
     }
 }

@@ -49,5 +49,24 @@ namespace ProjectEntityFrameWork.Training.Services
 
             _trainingUnitOfWork.Save();
         }
+        public void EnrollStudents(Course course,Student student)
+        {
+            var courseEntity = _trainingUnitOfWork.Courses.GetById(course.Id);
+            if (courseEntity == null)
+                throw new InvalidOperationException("Course was not Found");
+
+            if (courseEntity.EnrolledStudents == null)
+                courseEntity.EnrolledStudents = new List<Entities.CourseStudents>();
+
+            courseEntity.EnrolledStudents.Add(new Entities.CourseStudents {
+            
+               Student = new Entities.Student
+               {
+                   Name = student.Name,
+                   DateOfBirth = student.DateOfBirth
+               }
+            });
+
+        }
     }
 }

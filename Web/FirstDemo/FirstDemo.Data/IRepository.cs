@@ -6,9 +6,8 @@ using System.Linq.Expressions;
 
 namespace FirstDemo.Data
 {
-    public interface IRepository<TEntity, TKey, TContext>
+    public interface IRepository<TEntity, TKey>
         where TEntity : class, IEntity<TKey>
-        where TContext : DbContext
     {
         void Add(TEntity entity);
         void Remove(TKey id);

@@ -27,6 +27,7 @@ namespace FirstDemo.Training.Services
             {
                 var course = new Course()
                 {
+                    Id = entity.Id,
                     Title = entity.Title,
                     Fees = entity.Fees
                 };
@@ -46,6 +47,28 @@ namespace FirstDemo.Training.Services
                     StartDate = course.StartDate
                 }
             );
+
+            _trainingUnitOfWork.Save();
+        }
+
+        public void EnrollStudent(Course course, Student student)
+        {
+            var courseEntity = _trainingUnitOfWork.Courses.GetById(course.Id);
+
+            if (courseEntity == null)
+                throw new InvalidOperationException("Course was not found");
+
+            if(courseEntity.EnrolledStudents == null)
+                courseEntity.EnrolledStudents = new List<Entities.CourseStudents>();
+
+            courseEntity.EnrolledStudents.Add(new Entities.CourseStudents
+            {
+                Student = new Entities.Student
+                {
+                    Name = student.Name,
+                    DateOfBirth = student.DateOfBirth
+                }
+            });
 
             _trainingUnitOfWork.Save();
         }

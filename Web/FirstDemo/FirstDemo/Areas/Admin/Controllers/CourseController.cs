@@ -18,5 +18,22 @@ namespace FirstDemo.Areas.Admin.Controllers
             model.LoadModelData();
             return View(model);
         }
+
+        public IActionResult Enroll()
+        {
+            var model = new EnrollStudentModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Enroll(EnrollStudentModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                model.EnrollStudent();
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

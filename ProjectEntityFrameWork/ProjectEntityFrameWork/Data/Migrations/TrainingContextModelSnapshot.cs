@@ -40,6 +40,21 @@ namespace ProjectEntityFrameWork.Data.Migrations
                     b.ToTable("Courses");
                 });
 
+            modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.CourseStudents", b =>
+                {
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CourseId", "StudentId");
+
+                    b.HasIndex("StudentId");
+
+                    b.ToTable("CourseStudents");
+                });
+
             modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.Student", b =>
                 {
                     b.Property<int>("Id")
@@ -81,6 +96,25 @@ namespace ProjectEntityFrameWork.Data.Migrations
                     b.ToTable("Topics");
                 });
 
+            modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.CourseStudents", b =>
+                {
+                    b.HasOne("ProjectEntityFrameWork.Training.Entities.Course", "Course")
+                        .WithMany("EnrolledStudents")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ProjectEntityFrameWork.Training.Entities.Student", "Student")
+                        .WithMany("EnrolledCourses")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.Topic", b =>
                 {
                     b.HasOne("ProjectEntityFrameWork.Training.Entities.Course", "Course")
@@ -94,7 +128,14 @@ namespace ProjectEntityFrameWork.Data.Migrations
 
             modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.Course", b =>
                 {
+                    b.Navigation("EnrolledStudents");
+
                     b.Navigation("Topics");
+                });
+
+            modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.Student", b =>
+                {
+                    b.Navigation("EnrolledCourses");
                 });
 #pragma warning restore 612, 618
         }

@@ -12,5 +12,7 @@ namespace ProjectEntityFrameWork.Training.Entities
         public int Fees { get; set; }
         public DateTime StartDate { get; set; }
         public List<Topic> Topics { get; set; }
+
+        public List<CourseStudents> EnrolledStudents { get; set; }
     }
 }

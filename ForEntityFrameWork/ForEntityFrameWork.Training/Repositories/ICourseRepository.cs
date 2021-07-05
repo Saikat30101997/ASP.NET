@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForEntityFrameWork.Training.Repositories
 {
-    public interface ICourseRepository : IRepository<Course,int,TrainingDbContext>
+    public interface ICourseRepository : IRepository<Course,int>
     {
 
     }

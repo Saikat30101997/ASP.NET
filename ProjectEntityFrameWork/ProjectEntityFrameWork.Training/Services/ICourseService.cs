@@ -11,5 +11,6 @@ namespace ProjectEntityFrameWork.Training.Services
     public interface ICourseService
     {
         IList<Course> GetAllCourses();
+        void EnrollStudents(Course course, Student student);
     }
 }

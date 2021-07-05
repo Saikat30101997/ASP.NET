@@ -8,15 +8,15 @@ using System.Linq.Dynamic.Core;
 
 namespace ProjectEntityFrameWork.Data
 {
-    public abstract class Repository<TEntity, TKey, TContext>
-        : IRepository<TEntity, TKey, TContext>
+    public abstract class Repository<TEntity, TKey>
+        : IRepository<TEntity, TKey>
         where TEntity : class, IEntity<TKey>
-        where TContext : DbContext
+      
     {
-        protected TContext _dbContext;
+        protected DbContext _dbContext;
         protected DbSet<TEntity> _dbSet;
 
-        public Repository(TContext context)
+        public Repository(DbContext context)
         {
             _dbContext = context;
             _dbSet = _dbContext.Set<TEntity>();
