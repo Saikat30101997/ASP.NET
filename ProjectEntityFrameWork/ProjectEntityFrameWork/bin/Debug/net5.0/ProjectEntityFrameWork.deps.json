@@ -41,6 +41,7 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.7",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2",
+          "ProjectEntityFrameWork.Common": "1.0.0",
           "ProjectEntityFrameWork.Training": "1.0.0",
           "Serilog.AspNetCore": "4.1.0",
           "Serilog.Sinks.File": "5.0.0",
@@ -2215,6 +2216,17 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "ProjectEntityFrameWork.Common/1.0.0": {
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0"
+        },
+        "runtime": {
+          "ProjectEntityFrameWork.Common.dll": {}
+        },
+        "compile": {
+          "ProjectEntityFrameWork.Common.dll": {}
+        }
+      },
       "ProjectEntityFrameWork.Data/1.0.0": {
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "7.1.0",
@@ -2232,6 +2244,7 @@
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
+          "ProjectEntityFrameWork.Common": "1.0.0",
           "ProjectEntityFrameWork.Data": "1.0.0"
         },
         "runtime": {
@@ -4982,6 +4995,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "ProjectEntityFrameWork.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "ProjectEntityFrameWork.Data/1.0.0": {
       "type": "project",

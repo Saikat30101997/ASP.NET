@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using ProjectEntityFrameWork.Data;
 using ProjectEntityFrameWork.Training;
 using ProjectEntityFrameWork.Training.Contexts;
+using ProjectEntityFrameWork.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,7 @@ namespace ProjectEntityFrameWork
 
             builder.RegisterModule(new TrainingModule(connectionInfo.connectionString,
                 connectionInfo.migrationAssemblyName));
+            builder.RegisterModule(new CommonModule());
             builder.RegisterModule(new WebModule());
         }
 

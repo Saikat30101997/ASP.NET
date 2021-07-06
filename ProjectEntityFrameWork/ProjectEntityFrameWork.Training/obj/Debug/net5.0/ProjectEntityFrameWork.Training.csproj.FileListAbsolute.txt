@@ -13,3 +13,5 @@ G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Training\obj\Debug\net5
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Training\obj\Debug\net5.0\ProjectEntityFrameWork.Training.dll
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Training\obj\Debug\net5.0\ref\ProjectEntityFrameWork.Training.dll
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Training\obj\Debug\net5.0\ProjectEntityFrameWork.Training.pdb
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Training\bin\Debug\net5.0\ProjectEntityFrameWork.Common.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Training\bin\Debug\net5.0\ProjectEntityFrameWork.Common.pdb

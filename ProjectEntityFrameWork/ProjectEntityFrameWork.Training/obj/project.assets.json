@@ -1516,6 +1516,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "ProjectEntityFrameWork.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0"
+        },
+        "compile": {
+          "bin/placeholder/ProjectEntityFrameWork.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProjectEntityFrameWork.Common.dll": {}
+        }
+      },
       "ProjectEntityFrameWork.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5815,6 +5828,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "ProjectEntityFrameWork.Common/1.0.0": {
+      "type": "project",
+      "path": "../ProjectEntityFrameWork.Common/ProjectEntityFrameWork.Common.csproj",
+      "msbuildProject": "../ProjectEntityFrameWork.Common/ProjectEntityFrameWork.Common.csproj"
+    },
     "ProjectEntityFrameWork.Data/1.0.0": {
       "type": "project",
       "path": "../ProjectEntityFrameWork.Data/ProjectEntityFrameWork.Data.csproj",
@@ -5825,6 +5843,7 @@
     "net5.0": [
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.7",
+      "ProjectEntityFrameWork.Common >= 1.0.0",
       "ProjectEntityFrameWork.Data >= 1.0.0"
     ]
   },
@@ -5855,6 +5874,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Common\\ProjectEntityFrameWork.Common.csproj": {
+              "projectPath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Common\\ProjectEntityFrameWork.Common.csproj"
+            },
             "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Data\\ProjectEntityFrameWork.Data.csproj": {
               "projectPath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Data\\ProjectEntityFrameWork.Data.csproj"
             }

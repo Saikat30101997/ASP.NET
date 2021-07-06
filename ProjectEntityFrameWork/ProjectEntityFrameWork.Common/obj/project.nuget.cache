@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "sd/FIzGJJteQA2PZc7LL32i9TvZ4y+yM6FzPJAf0mWarZCNWUk9M5EhroYucM63fp2DgMFEvj5vVyBu4Giv6+w==",
+  "success": true,
+  "projectFilePath": "G:\\ASP.NET\\ProjectEntityFrameWork\\ProjectEntityFrameWork.Common\\ProjectEntityFrameWork.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Saikat\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

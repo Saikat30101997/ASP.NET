@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ProjectEntityFrameWork.Common\ProjectEntityFrameWork.Common.csproj" />
     <ProjectReference Include="..\ProjectEntityFrameWork.Data\ProjectEntityFrameWork.Data.csproj" />
   </ItemGroup>
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
+using ProjectEntityFrameWork.Training.BusinessObjects;
 
 namespace ProjectEntityFrameWork.Areas.Admin.Models
 {
@@ -27,7 +28,14 @@ namespace ProjectEntityFrameWork.Areas.Admin.Models
 
         public void CreateCourse()
         {
-            throw new NotImplementedException();
+            var course = new Course
+            {
+                Title = Title,
+                Fees = Fees,
+                StartDate = StartDate
+            };
+
+            _courseService.CreateCourse(course);
         }
     }
 }
