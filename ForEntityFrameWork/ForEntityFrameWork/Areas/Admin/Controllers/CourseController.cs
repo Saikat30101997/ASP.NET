@@ -10,11 +10,13 @@ namespace ForEntityFrameWork.Areas.Admin.Controllers
     [Area("Admin")]
     public class CourseController : Controller
     {
-        public IActionResult Course()
+        public IActionResult Index()
         {
-            var model = new CourseListModel();
+            var model =new CoureListModel();
             model.LoadModelData();
             return View(model);
         }
+
+       
     }
 }
