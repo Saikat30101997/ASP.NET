@@ -11,7 +11,7 @@ namespace ProjectEntityFrameWork.Data
     public abstract class Repository<TEntity, TKey>
         : IRepository<TEntity, TKey>
         where TEntity : class, IEntity<TKey>
-      
+       
     {
         protected DbContext _dbContext;
         protected DbSet<TEntity> _dbSet;
