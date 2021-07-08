@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ForEntityFrameWork.Common;
 
 namespace ForEntityFrameWork
 {
@@ -50,6 +51,8 @@ namespace ForEntityFrameWork
 
             builder.RegisterModule(new TrainingModule(connectionInfo.connectionString,
                 connectionInfo.migrationAssemblyName));
+            builder.RegisterModule(new WebModule());
+            builder.RegisterModule(new CommonModule());
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.

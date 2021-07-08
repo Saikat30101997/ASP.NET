@@ -31,7 +31,23 @@ namespace ForEntityFrameWork.Training.Context
             base.OnConfiguring(dbContextOptionsBuilder);
         }
 
-        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CourseStudents>()
+                .HasKey(cs => new { cs.CourseId, cs.StudentId });
+
+            modelBuilder.Entity<CourseStudents>()
+                .HasOne(cs => cs.Course)
+                .WithMany(c => c.EnrollStudents)
+                .HasForeignKey(cs => cs.CourseId);
+
+            modelBuilder.Entity<CourseStudents>()
+                .HasOne(cs => cs.Student)
+                .WithMany(s => s.EnrollCourses)
+                .HasForeignKey(cs => cs.StudentId);
+
+            base.OnModelCreating(modelBuilder);
+        }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Student> Students { get; set; }

@@ -10,5 +10,6 @@ namespace ForEntityFrameWork.Training.Services
     public interface ICourseService
     {
         IList<Course> GetAllCourses();
+        void CreateCourse(Course course);
     }
 }

@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ForeEntityFrameWork.Data\ForeEntityFrameWork.Data.csproj" />
+    <ProjectReference Include="..\ForEntityFrameWork.Common\ForEntityFrameWork.Common.csproj" />
     <ProjectReference Include="..\ForEntityFrameWork.Training\ForEntityFrameWork.Training.csproj" />
   </ItemGroup>
 

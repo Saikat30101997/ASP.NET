@@ -9,6 +9,7 @@
       "ForEntityFrameWork.Training/1.0.0": {
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "ForEntityFrameWork.Common": "1.0.0",
           "ForeEntityFrameWork.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7"
         },
@@ -1081,6 +1082,14 @@
         "runtime": {
           "ForeEntityFrameWork.Data.dll": {}
         }
+      },
+      "ForEntityFrameWork.Common/1.0.0": {
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0"
+        },
+        "runtime": {
+          "ForEntityFrameWork.Common.dll": {}
+        }
       }
     }
   },
@@ -1770,6 +1779,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "ForeEntityFrameWork.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ForEntityFrameWork.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

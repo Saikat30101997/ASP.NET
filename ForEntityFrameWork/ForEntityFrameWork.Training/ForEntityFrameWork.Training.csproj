@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ForeEntityFrameWork.Data\ForeEntityFrameWork.Data.csproj" />
+    <ProjectReference Include="..\ForEntityFrameWork.Common\ForEntityFrameWork.Common.csproj" />
   </ItemGroup>
 
 </Project>

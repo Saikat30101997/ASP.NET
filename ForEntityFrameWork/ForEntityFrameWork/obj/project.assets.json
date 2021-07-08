@@ -2470,11 +2470,25 @@
           "bin/placeholder/ForeEntityFrameWork.Data.dll": {}
         }
       },
+      "ForEntityFrameWork.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0"
+        },
+        "compile": {
+          "bin/placeholder/ForEntityFrameWork.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ForEntityFrameWork.Common.dll": {}
+        }
+      },
       "ForEntityFrameWork.Training/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "ForEntityFrameWork.Common": "1.0.0",
           "ForeEntityFrameWork.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7"
         },
@@ -8305,6 +8319,11 @@
       "path": "../ForeEntityFrameWork.Data/ForeEntityFrameWork.Data.csproj",
       "msbuildProject": "../ForeEntityFrameWork.Data/ForeEntityFrameWork.Data.csproj"
     },
+    "ForEntityFrameWork.Common/1.0.0": {
+      "type": "project",
+      "path": "../ForEntityFrameWork.Common/ForEntityFrameWork.Common.csproj",
+      "msbuildProject": "../ForEntityFrameWork.Common/ForEntityFrameWork.Common.csproj"
+    },
     "ForEntityFrameWork.Training/1.0.0": {
       "type": "project",
       "path": "../ForEntityFrameWork.Training/ForEntityFrameWork.Training.csproj",
@@ -8314,6 +8333,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
+      "ForEntityFrameWork.Common >= 1.0.0",
       "ForEntityFrameWork.Training >= 1.0.0",
       "ForeEntityFrameWork.Data >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.7",
@@ -8356,6 +8376,9 @@
           "projectReferences": {
             "G:\\ASP.NET\\ForEntityFrameWork\\ForeEntityFrameWork.Data\\ForeEntityFrameWork.Data.csproj": {
               "projectPath": "G:\\ASP.NET\\ForEntityFrameWork\\ForeEntityFrameWork.Data\\ForeEntityFrameWork.Data.csproj"
+            },
+            "G:\\ASP.NET\\ForEntityFrameWork\\ForEntityFrameWork.Common\\ForEntityFrameWork.Common.csproj": {
+              "projectPath": "G:\\ASP.NET\\ForEntityFrameWork\\ForEntityFrameWork.Common\\ForEntityFrameWork.Common.csproj"
             },
             "G:\\ASP.NET\\ForEntityFrameWork\\ForEntityFrameWork.Training\\ForEntityFrameWork.Training.csproj": {
               "projectPath": "G:\\ASP.NET\\ForEntityFrameWork\\ForEntityFrameWork.Training\\ForEntityFrameWork.Training.csproj"

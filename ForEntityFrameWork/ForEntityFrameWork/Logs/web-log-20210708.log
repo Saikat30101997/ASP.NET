@@ -1,1 +1,25 @@
 2021-07-08 01:39:48.000 +06:00 [INF] Application Starting up
+2021-07-08 12:00:23.789 +06:00 [INF] Application Starting up
+2021-07-08 12:07:51.373 +06:00 [INF] Application Starting up
+2021-07-08 12:33:48.817 +06:00 [INF] Application Starting up
+2021-07-08 12:35:33.887 +06:00 [INF] Application Starting up
+2021-07-08 12:42:50.078 +06:00 [INF] Application Starting up
+2021-07-08 12:46:48.512 +06:00 [INF] Application Starting up
+2021-07-08 12:49:45.858 +06:00 [INF] Application Starting up
+2021-07-08 12:54:38.004 +06:00 [INF] Application Starting up
+2021-07-08 12:57:06.329 +06:00 [INF] Application Starting up
+2021-07-08 22:19:36.658 +06:00 [INF] Application Starting up
+2021-07-08 22:21:17.447 +06:00 [INF] Application Starting up
+2021-07-08 22:22:54.725 +06:00 [INF] Application Starting up
+2021-07-08 22:25:14.505 +06:00 [INF] Application Starting up
+2021-07-08 22:26:02.028 +06:00 [INF] Application Starting up
+2021-07-08 22:26:37.898 +06:00 [ERR] Course Creation Failed
+ForEntityFrameWork.Training.Exceptions.DuplicateTitleException: Course Title already exists
+   at ForEntityFrameWork.Training.Services.CourseService.CreateCourse(Course course) in G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\Services\CourseService.cs:line 46
+   at ForEntityFrameWork.Areas.Admin.Models.CreateCourseModel.Create() in G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\Areas\Admin\Models\CreateCourseModel.cs:line 32
+   at ForEntityFrameWork.Areas.Admin.Controllers.CourseController.Create(CreateCourseModel courseModel) in G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\Areas\Admin\Controllers\CourseController.cs:line 38
+2021-07-08 22:26:46.519 +06:00 [ERR] Course Creation Failed
+ForEntityFrameWork.Training.Exceptions.DuplicateTitleException: Course Title already exists
+   at ForEntityFrameWork.Training.Services.CourseService.CreateCourse(Course course) in G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork.Training\Services\CourseService.cs:line 46
+   at ForEntityFrameWork.Areas.Admin.Models.CreateCourseModel.Create() in G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\Areas\Admin\Models\CreateCourseModel.cs:line 32
+   at ForEntityFrameWork.Areas.Admin.Controllers.CourseController.Create(CreateCourseModel courseModel) in G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\Areas\Admin\Controllers\CourseController.cs:line 38
