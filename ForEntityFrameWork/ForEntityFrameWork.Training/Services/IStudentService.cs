@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForEntityFrameWork.Training.businessObject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace ForEntityFrameWork.Training.Services
 {
     public interface IStudentService
     {
-
+        IList<Student> GetAllStudents();
     }
 }

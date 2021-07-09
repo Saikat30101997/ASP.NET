@@ -1,4 +1,5 @@
-﻿using ForEntityFrameWork.Training.UnitOfWorks;
+﻿using ForEntityFrameWork.Training.businessObject;
+using ForEntityFrameWork.Training.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,24 @@ namespace ForEntityFrameWork.Training.Services
         public StudentService(ITrainingUnitOfWork trainingUnitOfWork)
         {
             _trainingUnitOfWork = trainingUnitOfWork;
+        }
+
+        public IList<Student> GetAllStudents()
+        {
+            var studentList = _trainingUnitOfWork.Students.GetAll();
+            var students= new List<Student>();
+            foreach (var entities in studentList)
+            {
+                var student = new Student
+                {
+                    Id = entities.Id,
+                    Name = entities.Name,
+                    DateOfBirth = entities.DateOfBirth
+                };
+                students.Add(student);
+            }
+            return students;
+
         }
       
 

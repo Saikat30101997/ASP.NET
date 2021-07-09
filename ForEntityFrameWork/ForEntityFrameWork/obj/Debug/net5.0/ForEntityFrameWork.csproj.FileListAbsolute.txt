@@ -461,3 +461,4 @@ G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Ad
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\bin\Debug\net5.0\ForEntityFrameWork.Common.dll
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\bin\Debug\net5.0\ForEntityFrameWork.Common.pdb
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Course\Create.cshtml.g.cs
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Student\Index.cshtml.g.cs

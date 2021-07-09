@@ -42,8 +42,10 @@ namespace ForeEntityFrameWork.Training
 
             builder.RegisterType<CourseService>().As<ICourseService>()
                 .InstancePerLifetimeScope();
-           
-          
+
+            builder.RegisterType<StudentService>().As<IStudentService>()
+             .InstancePerLifetimeScope();
+
 
             base.Load(builder);
         }
