@@ -1,10 +1,6 @@
 ﻿using ForEntityFrameWork.Training.businessObject;
 using ForEntityFrameWork.Training.UnitOfWorks;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ForEntityFrameWork.Training.Services
 {
@@ -24,7 +20,7 @@ namespace ForEntityFrameWork.Training.Services
             {
                 var teacher = new Teacher()
                 {
-                    Id=entities.Id,
+                    Id = entities.Id,
                     Name = entities.Name,
                     Designation = entities.Designation
                 };

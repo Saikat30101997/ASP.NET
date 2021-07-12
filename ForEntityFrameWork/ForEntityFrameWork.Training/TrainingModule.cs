@@ -50,9 +50,6 @@ namespace ForeEntityFrameWork.Training
 
             builder.RegisterType<TeacherService>().As<ITeacherService>()
                 .InstancePerLifetimeScope();
-
-    
-
             base.Load(builder);
         }
     }

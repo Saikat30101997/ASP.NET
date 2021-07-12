@@ -10,5 +10,6 @@ namespace ForEntityFrameWork.Training.Services
     public interface IStudentService
     {
         IList<Student> GetAllStudents();
+        void CreateStudent(Student student);
     }
 }

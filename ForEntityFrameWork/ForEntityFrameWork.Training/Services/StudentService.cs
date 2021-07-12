@@ -1,4 +1,5 @@
 ﻿using ForEntityFrameWork.Training.businessObject;
+using ForEntityFrameWork.Training.Exceptions;
 using ForEntityFrameWork.Training.UnitOfWorks;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,23 @@ namespace ForEntityFrameWork.Training.Services
                 students.Add(student);
             }
             return students;
+
+        }
+
+        public void CreateStudent(Student student)
+        {
+            if (student == null)
+                throw new InvalidParameterException("Student was not provided");
+            if(student.Name==null)
+                throw new InvalidParameterException("Student was not provided");
+
+            _trainingUnitOfWork.Students.Add(
+                new Entities.Student
+                {
+                    Name=student.Name,
+                    DateOfBirth = student.DateOfBirth
+                });
+            _trainingUnitOfWork.Save();
 
         }
       
