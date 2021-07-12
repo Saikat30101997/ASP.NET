@@ -15,5 +15,6 @@ namespace ForEntityFrameWork.Training.UnitOfWorks
     {
           IStudentRepository Students { get; }
           ICourseRepository Courses { get; }
+          ITeacherRepository Teachers { get; }
     }
 }

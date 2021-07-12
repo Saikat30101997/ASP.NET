@@ -18,11 +18,13 @@ namespace ForEntityFrameWork.Training.UnitOfWorks
         public IStudentRepository Students { get; private set; }
 
         public ICourseRepository Courses { get; private set; }
+        public ITeacherRepository Teachers { get; private set; }
         public TrainingUnitOfWork(ITrainingDbContext context,IStudentRepository students,
-            ICourseRepository courses) : base ((DbContext)context)
+            ICourseRepository courses,ITeacherRepository teachers) : base ((DbContext)context)
         {
             Students = students;
             Courses = courses;
+            Teachers = teachers;
         }
     }
 }

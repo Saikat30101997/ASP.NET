@@ -1,4 +1,4 @@
-﻿@model ForEntityFrameWork.Areas.Admin.Models.StudentListModel
+﻿@model ForEntityFrameWork.Areas.Admin.Models.TeacherListModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -22,12 +22,12 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>All Available Students</h1>
+                <h1>All Teachers</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Students</li>
+                    <li class="breadcrumb-item active">Teachers</li>
                 </ol>
             </div>
         </div>
@@ -40,7 +40,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h3 class="card-title">Available Students</h3>
+                        <h3 class="card-title">All Teachers</h3>
                     </div>
                     <!-- /.card-header -->
                     <div class="card-body">
@@ -49,19 +49,19 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Name</th>
-                                    <th>Date Of Birth</th>
+                                    <th>Designation</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach (var course in Model.students)
+                                @foreach (var course in Model.Teachers)
                                 {
                                     <tr>
                                         <td>@course.Id</td>
                                         <td>
                                             @course.Name
                                         </td>
-                                        <td>@course.DateOfBirth</td>
+                                        <td>@course.Designation</td>
 
                                     </tr>
 
@@ -72,7 +72,7 @@
                                 <tr>
                                     <th>Id</th>
                                     <th>Name</th>
-                                    <th>Date Of Birth</th>
+                                    <th>Designation</th>
 
                                 </tr>
                             </tfoot>

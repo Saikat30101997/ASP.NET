@@ -13,7 +13,12 @@ namespace ForEntityFrameWork.Training.Entities
         public string Title { get; set; }
         public int Fees { get; set; }
         public DateTime StartDate { get; set; }
+      
         public List<Topic> Topics { get; set; } //ekta Course e onk gulaa topic thakbe 
         public List<CourseStudents> EnrollStudents { get; set; }
+
+        public int TeacherId { get; set; }
+        public Teacher Teacher { get; set; }
+
     }
 }
