@@ -58,6 +58,7 @@ namespace ForEntityFrameWork.Training.Services
                 });
             _trainingUnitOfWork.Save();
         }
+       
         private bool IsTitleAlreadyUsed(string name) =>
             _trainingUnitOfWork.Courses.GetCount(x => x.Title == name) > 0;
 
