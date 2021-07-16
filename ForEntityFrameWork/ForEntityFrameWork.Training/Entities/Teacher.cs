@@ -13,6 +13,5 @@ namespace ForEntityFrameWork.Training.Entities
         public string Name { get; set; }
         public string Designation { get; set; }
         public List<Course> Courses { get; set; }
-
     }
 }

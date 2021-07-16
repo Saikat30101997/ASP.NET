@@ -1,0 +1,15 @@
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\bin\Debug\net5.0\EntityFrameWorkEx.Training.deps.json
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\bin\Debug\net5.0\EntityFrameWorkEx.Training.dll
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\bin\Debug\net5.0\ref\EntityFrameWorkEx.Training.dll
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\bin\Debug\net5.0\EntityFrameWorkEx.Training.pdb
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\bin\Debug\net5.0\EntityFrameWorkEx.Data.dll
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\bin\Debug\net5.0\EntityFrameWorkEx.Data.pdb
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\obj\Debug\net5.0\EntityFrameWorkEx.Training.csprojAssemblyReference.cache
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\obj\Debug\net5.0\EntityFrameWorkEx.Training.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\obj\Debug\net5.0\EntityFrameWorkEx.Training.AssemblyInfoInputs.cache
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\obj\Debug\net5.0\EntityFrameWorkEx.Training.AssemblyInfo.cs
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\obj\Debug\net5.0\EntityFrameWorkEx.Training.csproj.CoreCompileInputs.cache
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\obj\Debug\net5.0\EntityFrameWorkEx.Training.csproj.CopyComplete
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\obj\Debug\net5.0\EntityFrameWorkEx.Training.dll
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\obj\Debug\net5.0\ref\EntityFrameWorkEx.Training.dll
+G:\ASP.NET\EntityFrameWorkEx\EntityFrameWorkEx.Training\obj\Debug\net5.0\EntityFrameWorkEx.Training.pdb

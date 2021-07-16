@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameWorkEx", "EntityFrameWorkEx\EntityFrameWorkEx.csproj", "{264CF4C1-051D-4B93-9772-D81E8F54D087}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameWorkEx", "EntityFrameWorkEx\EntityFrameWorkEx.csproj", "{264CF4C1-051D-4B93-9772-D81E8F54D087}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameWorkEx.Data", "EntityFrameWorkEx.Data\EntityFrameWorkEx.Data.csproj", "{7FF57D5D-C9EA-4355-BA00-9AC3C07A9EAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFrameWorkEx.Data", "EntityFrameWorkEx.Data\EntityFrameWorkEx.Data.csproj", "{7FF57D5D-C9EA-4355-BA00-9AC3C07A9EAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameWorkEx.Training", "EntityFrameWorkEx.Training\EntityFrameWorkEx.Training.csproj", "{4CA306CF-3F1B-45F0-A6A1-9C6D11BDB4D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7FF57D5D-C9EA-4355-BA00-9AC3C07A9EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FF57D5D-C9EA-4355-BA00-9AC3C07A9EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FF57D5D-C9EA-4355-BA00-9AC3C07A9EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CA306CF-3F1B-45F0-A6A1-9C6D11BDB4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CA306CF-3F1B-45F0-A6A1-9C6D11BDB4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CA306CF-3F1B-45F0-A6A1-9C6D11BDB4D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CA306CF-3F1B-45F0-A6A1-9C6D11BDB4D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TwUl3ME9ysQ00s72+o6Xx1sbuCA0v9+EpoxbDrXLIWmKjWqNN/0U/HWlfwYstac0PRTt8zQ9R7vI4dKFxdu8Tw==",
+  "dgSpecHash": "hzlpkEKFyL7phISwBzLa9mF5pocZ40s7SatR2kjeHKSVASDe7MFjkonVOW281ewdveqXenh7GL5opzzWKqVjWg==",
   "success": true,
   "projectFilePath": "G:\\ASP.NET\\EntityFrameWorkEx\\EntityFrameWorkEx\\EntityFrameWorkEx.csproj",
   "expectedPackageFiles": [
@@ -92,6 +92,7 @@
     "C:\\Users\\Saikat\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\system.linq.dynamic.core\\1.2.10\\system.linq.dynamic.core.1.2.10.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
