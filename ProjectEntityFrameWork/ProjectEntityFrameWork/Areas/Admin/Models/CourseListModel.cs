@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using ProjectEntityFrameWork.Models;
 using ProjectEntityFrameWork.Training.BusinessObjects;
 using ProjectEntityFrameWork.Training.Services;
 using System;
@@ -27,9 +28,28 @@ namespace ProjectEntityFrameWork.Areas.Admin.Models
             Courses = _courseService.GetAllCourses();
         }
 
-        internal object GetCourses()
+        internal object GetCourses(DataTablesAjaxRequestModel tableModel) //tuple return korbe courseservice er
         {
-            throw new NotImplementedException();
+            var data = _courseService.GetCourses(
+               tableModel.PageIndex,
+               tableModel.PageSize,
+               tableModel.SearchText,
+               tableModel.GetSortText(new string[] { "Title", "Fees", "StartDate" }));
+
+            return new
+            {
+                recordsTotal = data.total,
+                recordsFiltered = data.totalDisplay,
+                data = (from record in data.records
+                        select new string[]
+                        {
+                                record.Title,
+                                record.Fees.ToString(),
+                                record.StartDate.ToString(),
+                                record.Id.ToString()
+                        }
+                    ).ToArray()
+            };
         }
     }
 }

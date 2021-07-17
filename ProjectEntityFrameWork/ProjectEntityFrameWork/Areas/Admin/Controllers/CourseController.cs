@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjectEntityFrameWork.Areas.Admin.Models;
+using ProjectEntityFrameWork.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,9 +26,10 @@ namespace ProjectEntityFrameWork.Areas.Admin.Controllers
 
         public JsonResult GetCourseData()
         {
+            var dataTableModel = new DataTablesAjaxRequestModel(Request);
             var model = new CourseListModel();
-            var data = model.GetCourses();
-            return Json(model);
+            var data = model.GetCourses(dataTableModel);
+            return Json(data);
         }
         public IActionResult Enroll()
         {

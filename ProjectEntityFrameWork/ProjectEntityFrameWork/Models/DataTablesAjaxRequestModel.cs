@@ -61,7 +61,7 @@ namespace ProjectEntityFrameWork.Models
             }
         }
 
-        public static object EmptyResult
+        public static object EmptyResult //empty result er json jodi knu data database theke return na ashey
         {
             get
             {
