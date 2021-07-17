@@ -91,7 +91,23 @@ namespace ProjectEntityFrameWork.Training.Services
         public (IList<Course> records, int total, int totalDisplay) GetCourses(int pageIndex, 
             int pageSize, string searchText, string sortText)
         {
-            throw new NotImplementedException();
+            var courseData =  _trainingUnitOfWork.Courses.GetDynamic(string.IsNullOrWhiteSpace(searchText) ? null : x => x.Title.Contains(searchText), sortText, string.Empty,
+                pageIndex,pageSize);
+
+            var resultData = (from course in courseData.data
+                              select new Course
+                              {
+                                  Id = course.Id,
+                                  Title = course.Title,
+                                  Fees = course.Fees,
+                                  StartDate = course.StartDate
+
+                              }).ToList();
+
+
+            return (resultData, courseData.total, courseData.totalDisplay);
+           
+           
         }
     }
 }

@@ -12,10 +12,35 @@
     <script src="/admin/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script>
-    $(function () {
-            
-            $('#courses').DataTable();
-        });</script>
+        $(function () {
+            $('#courses').DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": "/Admin/Course/GetCourseData",
+                "columnDefs": [
+                    {
+                        "orderable": false,
+                        "targets": 3,
+                        "render": function (data, type, row) {
+                           
+                            return `<button type="submit" class="btn btn-info btn-sm" onclick="window.location.href='/admin/course/edit/${data}'" value='${data}'>
+                                        <i class="fas fa-pencil-alt">
+                                        </i>
+                                        Edit
+                                    </button>
+                                    <button type="submit" class="btn btn-danger btn-sm show-bs-modal" href="#" data-id='${data}' value='${data}'>
+                                        <i class="fas fa-trash">
+                                        </i>
+                                        Delete
+                                    </button>`;
+                        }
+                    }
+                ]
+
+            });
+        })
+
+      </script>
 }
 
 
@@ -53,23 +78,15 @@
                                                 <th>Title</th>
                                                 <th>Fees</th>
                                                 <th>Start Date</th> 
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            @foreach (var course in Model.Courses)
-                                            {
-                                                <tr>
-                                                    <td>@course.Title</td>
-                                                    <td>@course.Fees</td>
-                                                    <td>@course.StartDate</td>
-                                                </tr>
-                                            }
-                                        </tbody>
                                         <tfoot>
                                             <tr>
                                                 <th>Title</th>
                                                 <th>Fees</th>
                                                 <th>Start Date</th> 
+                                                <th>Action</th>
                                             </tr>
                                         </tfoot>
                                     </table>
