@@ -23,6 +23,12 @@ namespace ProjectEntityFrameWork.Areas.Admin.Controllers
             return View(model);
         }
 
+        public JsonResult GetCourseData()
+        {
+            var model = new CourseListModel();
+            var data = model.GetCourses();
+            return Json(model);
+        }
         public IActionResult Enroll()
         {
             var model = new EnrollStudentModel();

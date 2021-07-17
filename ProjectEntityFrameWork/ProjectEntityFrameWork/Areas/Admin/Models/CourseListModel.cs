@@ -26,5 +26,10 @@ namespace ProjectEntityFrameWork.Areas.Admin.Models
         {
             Courses = _courseService.GetAllCourses();
         }
+
+        internal object GetCourses()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
