@@ -17,5 +17,6 @@ namespace ProjectEntityFrameWork.Training.Services
             string searchText, string sortText);
         Course GetCourse(int id);
         void Update(Course course);
+        void DeleteCourse(int id);
     }
 }

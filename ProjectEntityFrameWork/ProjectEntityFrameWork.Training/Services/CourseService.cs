@@ -144,5 +144,11 @@ namespace ProjectEntityFrameWork.Training.Services
 
             
         }
+
+        public void DeleteCourse(int id)
+        {
+            _trainingUnitOfWork.Courses.Remove(id);
+            _trainingUnitOfWork.Save();
+        }
     }
 }

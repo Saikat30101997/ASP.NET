@@ -47,5 +47,10 @@ namespace ProjectEntityFrameWork.Areas.Admin.Models
                     ).ToArray()
             };
         }
+
+         public void Delete(int id)
+        {
+            _courseService.DeleteCourse(id);
+        }
     }
 }

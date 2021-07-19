@@ -90,8 +90,15 @@ namespace ProjectEntityFrameWork.Areas.Admin.Controllers
                     _logger.LogError(ex, "Course Edition Failed");
                 }
             }
+            //  return RedirectToAction(nameof(Index));
+            return View(model);
+        }
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult Delete(int Id)
+        {
+            var model = new CourseListModel();
+            model.Delete(Id);
             return RedirectToAction(nameof(Index));
         }
-
     }
 }
