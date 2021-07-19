@@ -15,5 +15,7 @@ namespace ProjectEntityFrameWork.Training.Services
         void EnrollStudents(Course course, Student student);
         (IList<Course>records,int total,int totalDisplay) GetCourses(int pageIndex, int pageSize, 
             string searchText, string sortText);
+        Course GetCourse(int id);
+        void Update(Course course);
     }
 }

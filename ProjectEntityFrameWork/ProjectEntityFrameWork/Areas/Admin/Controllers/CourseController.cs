@@ -20,7 +20,6 @@ namespace ProjectEntityFrameWork.Areas.Admin.Controllers
         public IActionResult Index()
         {
             var model = new CourseListModel();
-            model.LoadModelData();
             return View(model);
         }
 
@@ -68,6 +67,30 @@ namespace ProjectEntityFrameWork.Areas.Admin.Controllers
                 }
             }
             return View();
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var model = new EditCourseModel();
+            model.LoadModelData(id);
+            return View(model);
+        }
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult Edit(EditCourseModel model)
+        {
+           if(ModelState.IsValid)
+            {
+                try
+                {
+                    model.Update();
+                }
+                catch(Exception ex)
+                {
+                    ModelState.AddModelError("", "Cann't Edit Course");
+                    _logger.LogError(ex, "Course Edition Failed");
+                }
+            }
+            return RedirectToAction(nameof(Index));
         }
 
     }

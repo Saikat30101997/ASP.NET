@@ -461,3 +461,4 @@ G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Course\Create.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\ProjectEntityFrameWork.Common.dll
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\ProjectEntityFrameWork.Common.pdb
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Course\Edit.cshtml.g.cs

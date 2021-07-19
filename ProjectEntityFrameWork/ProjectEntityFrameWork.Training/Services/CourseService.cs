@@ -84,6 +84,8 @@ namespace ProjectEntityFrameWork.Training.Services
 
         private bool IsTitleAlreadyUsed(string title) =>
             _trainingUnitOfWork.Courses.GetCount(x => x.Title == title) > 0;
+        private bool IsTitleAlreadyUsed(string title,int id) =>
+            _trainingUnitOfWork.Courses.GetCount(x => x.Title == title && x.Id!=id) > 0;
 
         private bool IsValidStartDate(DateTime date) =>
             date.Subtract(_dateTimeUtility.Now).TotalDays > 30;
@@ -106,8 +108,41 @@ namespace ProjectEntityFrameWork.Training.Services
 
 
             return (resultData, courseData.total, courseData.totalDisplay);
-           
-           
+        }
+        public Course GetCourse(int Id)
+        {
+            var course = _trainingUnitOfWork.Courses.GetById(Id);
+
+            return new Course
+            {
+                Id = course.Id,
+                Title = course.Title,
+                Fees = course.Fees,
+                StartDate = course.StartDate
+                
+            };
+        }
+
+        public void Update(Course course)
+        {
+            if (course == null)
+                throw new InvalidOperationException("Course is Missing");
+            if (IsTitleAlreadyUsed(course.Title, course.Id))
+                throw new DuplicateTitleException("Title is Already in Database");
+
+            var courseEntity = _trainingUnitOfWork.Courses.GetById(course.Id);
+            if (courseEntity != null)
+            {
+                courseEntity.Title = course.Title;
+                courseEntity.Fees = course.Fees;
+                courseEntity.StartDate = course.StartDate;
+
+                _trainingUnitOfWork.Save();
+            }
+            else
+                throw new InvalidOperationException("Couldn't Find Course");
+
+            
         }
     }
 }
