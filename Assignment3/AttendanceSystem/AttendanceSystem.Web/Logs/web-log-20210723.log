@@ -1,0 +1,12 @@
+2021-07-23 17:49:33.102 +06:00 [INF] Application Starting up
+2021-07-23 20:54:57.447 +06:00 [INF] Application Starting up
+2021-07-23 21:28:04.855 +06:00 [INF] Application Starting up
+2021-07-23 23:21:24.534 +06:00 [INF] Application Starting up
+2021-07-23 23:22:37.548 +06:00 [ERR] Student edition Failed
+AttendanceSystem.Management.Exceptions.DuplicateStudentException: Student already in this List
+   at AttendanceSystem.Management.Services.StudentService.Update(Student student) in G:\Assignment3\AttendanceSystem\AttendanceSystem.Management\Services\StudentService.cs:line 71
+   at AttendanceSystem.Web.Areas.Admin.Models.Students.EditListModel.Update() in G:\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Models\Students\EditListModel.cs:line 46
+   at AttendanceSystem.Web.Areas.Admin.Controllers.StudentController.Edit(EditListModel model) in G:\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Controllers\StudentController.cs:line 69
+2021-07-23 23:31:57.065 +06:00 [INF] Application Starting up
+2021-07-23 23:33:22.610 +06:00 [INF] Application Starting up
+2021-07-23 23:35:03.538 +06:00 [INF] Application Starting up

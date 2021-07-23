@@ -1,0 +1,37 @@
+﻿using AttendanceSystem.Management.Entities;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AttendanceSystem.Management.Contexts
+{
+    public class AttendanceDbContext : DbContext , IAttendanceDbContext
+    {
+        private readonly string _connectionString;
+        private readonly string _migrationAssemblyName;
+
+        public AttendanceDbContext(string connectionString, string migrationAssemblyName)
+        {
+            _connectionString = connectionString;
+            _migrationAssemblyName = migrationAssemblyName;
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
+        {
+            if (!dbContextOptionsBuilder.IsConfigured)
+            {
+                dbContextOptionsBuilder.UseSqlServer(
+                    _connectionString,
+                    m => m.MigrationsAssembly(_migrationAssemblyName));
+            }
+
+            base.OnConfiguring(dbContextOptionsBuilder);
+        }
+
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Attendance> Attendances { get; set; }
+    }
+}

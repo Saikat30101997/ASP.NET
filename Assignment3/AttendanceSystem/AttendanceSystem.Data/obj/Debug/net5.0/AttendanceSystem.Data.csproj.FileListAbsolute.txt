@@ -1,0 +1,12 @@
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\bin\Debug\net5.0\AttendanceSystem.Data.deps.json
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\bin\Debug\net5.0\AttendanceSystem.Data.dll
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\bin\Debug\net5.0\ref\AttendanceSystem.Data.dll
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\bin\Debug\net5.0\AttendanceSystem.Data.pdb
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.csprojAssemblyReference.cache
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.AssemblyInfoInputs.cache
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.AssemblyInfo.cs
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.csproj.CoreCompileInputs.cache
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.dll
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\ref\AttendanceSystem.Data.dll
+G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.pdb
