@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AttendanceSystem.Web", "AttendanceSystem.Web\AttendanceSystem.Web.csproj", "{10ED7229-FD09-44DA-97D4-CF82800463F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceSystem.Data", "AttendanceSystem.Data\AttendanceSystem.Data.csproj", "{80D14C38-821B-490B-983B-4E294337A488}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AttendanceSystem.Data", "AttendanceSystem.Data\AttendanceSystem.Data.csproj", "{80D14C38-821B-490B-983B-4E294337A488}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceSystem.Management", "AttendanceSystem.Management\AttendanceSystem.Management.csproj", "{42BCD3C2-8AC3-44B4-B61C-8054F69EB37F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AttendanceSystem.Management", "AttendanceSystem.Management\AttendanceSystem.Management.csproj", "{42BCD3C2-8AC3-44B4-B61C-8054F69EB37F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttendanceSystem.Common", "AttendanceSystem.Common\AttendanceSystem.Common.csproj", "{73B93DB9-D14E-47AD-972D-8E2152AAAF82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{42BCD3C2-8AC3-44B4-B61C-8054F69EB37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42BCD3C2-8AC3-44B4-B61C-8054F69EB37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42BCD3C2-8AC3-44B4-B61C-8054F69EB37F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B93DB9-D14E-47AD-972D-8E2152AAAF82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B93DB9-D14E-47AD-972D-8E2152AAAF82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B93DB9-D14E-47AD-972D-8E2152AAAF82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B93DB9-D14E-47AD-972D-8E2152AAAF82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U1h9HEYgPmjdUMpmNd4gFagWnyrQRuPZYh3ZSE7+3ETyxsH2QRszX3V1WVHxh8hOdJOcD90u6x2eppHDYQPXgw==",
+  "dgSpecHash": "FW0uU8etho2KLGFC2qosE154khVDW/h01n+KZpbXB4O7WBXRQMPdtRXkEo/k8MLgrx/2c6W1WwwZ2kvAo78pwA==",
   "success": true,
-  "projectFilePath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj",
+  "projectFilePath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Saikat\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.1.0\\autofac.extensions.dependencyinjection.7.1.0.nupkg.sha512",

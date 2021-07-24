@@ -10,3 +10,15 @@ G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\Attendanc
 G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.dll
 G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\ref\AttendanceSystem.Data.dll
 G:\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.pdb
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\bin\Debug\net5.0\AttendanceSystem.Data.deps.json
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\bin\Debug\net5.0\AttendanceSystem.Data.dll
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\bin\Debug\net5.0\ref\AttendanceSystem.Data.dll
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\bin\Debug\net5.0\AttendanceSystem.Data.pdb
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.csprojAssemblyReference.cache
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.AssemblyInfoInputs.cache
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.AssemblyInfo.cs
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.csproj.CoreCompileInputs.cache
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.dll
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\ref\AttendanceSystem.Data.dll
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Data\obj\Debug\net5.0\AttendanceSystem.Data.pdb

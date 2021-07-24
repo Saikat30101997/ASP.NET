@@ -13,7 +13,9 @@ namespace AttendanceSystem.Web.Areas.Admin.Models.Students
     {
         [Required,MaxLength(300)]
         public string Name { get; set; }
+        [Required,Range(11608001,11608099)]
         public int StudentRollNumber { get; set; }
+
         private readonly IStudentService _studentService;
         public CreateListModel()
         {

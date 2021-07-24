@@ -1,17 +1,77 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj": {}
+    "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj": {}
   },
   "projects": {
-    "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj": {
+    "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Common\\AttendanceSystem.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj",
-        "projectName": "AttendanceSystem.Data",
-        "projectPath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj",
+        "projectUniqueName": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Common\\AttendanceSystem.Common.csproj",
+        "projectName": "AttendanceSystem.Common",
+        "projectPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Common\\AttendanceSystem.Common.csproj",
         "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
-        "outputPath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\obj\\",
+        "outputPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Autofac.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.205\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj",
+        "projectName": "AttendanceSystem.Data",
+        "projectPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj",
+        "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
+        "outputPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -68,14 +128,14 @@
         }
       }
     },
-    "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj": {
+    "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj",
+        "projectUniqueName": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj",
         "projectName": "AttendanceSystem.Management",
-        "projectPath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj",
+        "projectPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj",
         "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
-        "outputPath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\obj\\",
+        "outputPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -92,8 +152,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj": {
-                "projectPath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj"
+              "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Common\\AttendanceSystem.Common.csproj": {
+                "projectPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Common\\AttendanceSystem.Common.csproj"
+              },
+              "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj": {
+                "projectPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj"
               }
             }
           }

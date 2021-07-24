@@ -1,0 +1,38 @@
+2021-07-24 12:44:10.418 +06:00 [INF] Application Starting up
+2021-07-24 13:01:37.417 +06:00 [INF] Application Starting up
+2021-07-24 13:03:06.330 +06:00 [INF] Application Starting up
+2021-07-24 22:00:31.688 +06:00 [INF] Application Starting up
+2021-07-24 22:03:46.718 +06:00 [INF] Application Starting up
+2021-07-24 22:04:41.793 +06:00 [ERR] Attendance Creation Failed
+System.InvalidOperationException: Date is not Today
+   at AttendanceSystem.Management.Services.AttendanceService.Create(Attendance attendance) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Management\Services\AttendanceService.cs:line 32
+   at AttendanceSystem.Web.Areas.Admin.Models.Attendances.CreateAttendanceModel.CreateAttendance() in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Models\Attendances\CreateAttendanceModel.cs:line 37
+   at AttendanceSystem.Web.Areas.Admin.Controllers.AttendanceController.Create(CreateAttendanceModel model) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Controllers\AttendanceController.cs:line 44
+2021-07-24 22:04:49.757 +06:00 [ERR] Attendance Creation Failed
+System.InvalidOperationException: Date is not Today
+   at AttendanceSystem.Management.Services.AttendanceService.Create(Attendance attendance) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Management\Services\AttendanceService.cs:line 32
+   at AttendanceSystem.Web.Areas.Admin.Models.Attendances.CreateAttendanceModel.CreateAttendance() in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Models\Attendances\CreateAttendanceModel.cs:line 37
+   at AttendanceSystem.Web.Areas.Admin.Controllers.AttendanceController.Create(CreateAttendanceModel model) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Controllers\AttendanceController.cs:line 44
+2021-07-24 22:05:17.347 +06:00 [ERR] Attendance Creation Failed
+System.InvalidOperationException: Date is not Today
+   at AttendanceSystem.Management.Services.AttendanceService.Create(Attendance attendance) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Management\Services\AttendanceService.cs:line 32
+   at AttendanceSystem.Web.Areas.Admin.Models.Attendances.CreateAttendanceModel.CreateAttendance() in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Models\Attendances\CreateAttendanceModel.cs:line 37
+   at AttendanceSystem.Web.Areas.Admin.Controllers.AttendanceController.Create(CreateAttendanceModel model) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Controllers\AttendanceController.cs:line 44
+2021-07-24 22:09:56.939 +06:00 [INF] Application Starting up
+2021-07-24 22:11:09.955 +06:00 [ERR] Attendance Creation Failed
+System.InvalidOperationException: Date is not Today
+   at AttendanceSystem.Management.Services.AttendanceService.Create(Attendance attendance) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Management\Services\AttendanceService.cs:line 32
+   at AttendanceSystem.Web.Areas.Admin.Models.Attendances.CreateAttendanceModel.CreateAttendance() in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Models\Attendances\CreateAttendanceModel.cs:line 37
+   at AttendanceSystem.Web.Areas.Admin.Controllers.AttendanceController.Create(CreateAttendanceModel model) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Controllers\AttendanceController.cs:line 44
+2021-07-24 22:44:13.001 +06:00 [ERR] Attendance Creation Failed
+System.InvalidOperationException: Date is not Today
+   at AttendanceSystem.Management.Services.AttendanceService.Create(Attendance attendance) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Management\Services\AttendanceService.cs:line 32
+   at AttendanceSystem.Web.Areas.Admin.Models.Attendances.CreateAttendanceModel.CreateAttendance() in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Models\Attendances\CreateAttendanceModel.cs:line 37
+   at AttendanceSystem.Web.Areas.Admin.Controllers.AttendanceController.Create(CreateAttendanceModel model) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Controllers\AttendanceController.cs:line 44
+2021-07-24 22:44:26.413 +06:00 [ERR] Attendance Creation Failed
+System.InvalidOperationException: Date is not Today
+   at AttendanceSystem.Management.Services.AttendanceService.Create(Attendance attendance) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Management\Services\AttendanceService.cs:line 32
+   at AttendanceSystem.Web.Areas.Admin.Models.Attendances.CreateAttendanceModel.CreateAttendance() in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Models\Attendances\CreateAttendanceModel.cs:line 37
+   at AttendanceSystem.Web.Areas.Admin.Controllers.AttendanceController.Create(CreateAttendanceModel model) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Controllers\AttendanceController.cs:line 44
+2021-07-24 23:23:50.087 +06:00 [INF] Application Starting up
+2021-07-24 23:36:03.883 +06:00 [INF] Application Starting up

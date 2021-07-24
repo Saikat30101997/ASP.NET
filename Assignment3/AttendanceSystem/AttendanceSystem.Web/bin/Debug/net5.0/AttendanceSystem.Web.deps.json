@@ -2653,6 +2653,17 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "AttendanceSystem.Common/1.0.0": {
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0"
+        },
+        "runtime": {
+          "AttendanceSystem.Common.dll": {}
+        },
+        "compile": {
+          "AttendanceSystem.Common.dll": {}
+        }
+      },
       "AttendanceSystem.Data/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8",
@@ -2667,6 +2678,7 @@
       },
       "AttendanceSystem.Management/1.0.0": {
         "dependencies": {
+          "AttendanceSystem.Common": "1.0.0",
           "AttendanceSystem.Data": "1.0.0",
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.8"
@@ -5692,6 +5704,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "AttendanceSystem.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "AttendanceSystem.Data/1.0.0": {
       "type": "project",

@@ -5,14 +5,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using AttendanceSystem.Management.BusinessObjects;
+using System.ComponentModel.DataAnnotations;
 
 namespace AttendanceSystem.Web.Areas.Admin.Models.Students
 {
     public class EditListModel
     {
-        
+        [Required]
         public int? Id { get; set; }
+        [Required,MaxLength(300)]
         public string Name { get; set; }
+        [Required, Range(11608001, 11608099)]
         public int? StudentRollNumber { get; set; }
 
         private readonly IStudentService _studentService;

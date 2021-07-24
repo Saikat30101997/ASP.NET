@@ -1,3 +1,4 @@
+using AttendanceSystem.Common;
 using AttendanceSystem.Management;
 using AttendanceSystem.Management.Contexts;
 using AttendanceSystem.Web.Data;
@@ -44,6 +45,7 @@ namespace AttendanceSystem.Web
             builder.RegisterModule(new AttendanceModule(connectionInfo.connectionString,
                 connectionInfo.migrationAssemblyName));
             builder.RegisterModule(new WebModule());
+            builder.RegisterModule(new CommonModule());
         }
         private (string connectionString, string migrationAssemblyName) GetConnectionStringAndAssemblyName()
         {

@@ -43,6 +43,8 @@ namespace AttendanceSystem.Management
               .InstancePerLifetimeScope();
             builder.RegisterType<StudentService>().As<IStudentService>()
                 .InstancePerLifetimeScope();
+            builder.RegisterType<AttendanceService>().As<IAttendanceService>()
+             .InstancePerLifetimeScope();
 
             base.Load(builder);
         }

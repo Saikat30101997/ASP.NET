@@ -1516,6 +1516,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "AttendanceSystem.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0"
+        },
+        "compile": {
+          "bin/placeholder/AttendanceSystem.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AttendanceSystem.Common.dll": {}
+        }
+      },
       "AttendanceSystem.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5820,6 +5833,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "AttendanceSystem.Common/1.0.0": {
+      "type": "project",
+      "path": "../AttendanceSystem.Common/AttendanceSystem.Common.csproj",
+      "msbuildProject": "../AttendanceSystem.Common/AttendanceSystem.Common.csproj"
+    },
     "AttendanceSystem.Data/1.0.0": {
       "type": "project",
       "path": "../AttendanceSystem.Data/AttendanceSystem.Data.csproj",
@@ -5828,6 +5846,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AttendanceSystem.Common >= 1.0.0",
       "AttendanceSystem.Data >= 1.0.0",
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.8"
@@ -5839,11 +5858,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj",
+      "projectUniqueName": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj",
       "projectName": "AttendanceSystem.Management",
-      "projectPath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj",
+      "projectPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\AttendanceSystem.Management.csproj",
       "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
-      "outputPath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\obj\\",
+      "outputPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Management\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5860,8 +5879,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj": {
-              "projectPath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj"
+            "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Common\\AttendanceSystem.Common.csproj": {
+              "projectPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Common\\AttendanceSystem.Common.csproj"
+            },
+            "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj": {
+              "projectPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj"
             }
           }
         }

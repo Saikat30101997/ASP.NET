@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj": {}
+    "G:\\ASP.NET\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj": {}
   },
   "projects": {
-    "G:\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj": {
+    "G:\\ASP.NET\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj",
+        "projectUniqueName": "G:\\ASP.NET\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj",
         "projectName": "TicketBookingSystem.Data",
-        "projectPath": "G:\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj",
+        "projectPath": "G:\\ASP.NET\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj",
         "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
-        "outputPath": "G:\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\obj\\",
+        "outputPath": "G:\\ASP.NET\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -5840,11 +5840,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Booking\\TicketBookingSystem.Booking.csproj",
+      "projectUniqueName": "G:\\ASP.NET\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Booking\\TicketBookingSystem.Booking.csproj",
       "projectName": "TicketBookingSystem.Booking",
-      "projectPath": "G:\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Booking\\TicketBookingSystem.Booking.csproj",
+      "projectPath": "G:\\ASP.NET\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Booking\\TicketBookingSystem.Booking.csproj",
       "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
-      "outputPath": "G:\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Booking\\obj\\",
+      "outputPath": "G:\\ASP.NET\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Booking\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5861,8 +5861,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "G:\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj": {
-              "projectPath": "G:\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj"
+            "G:\\ASP.NET\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj": {
+              "projectPath": "G:\\ASP.NET\\Assignment3\\TicketBookingSystem\\TicketBookingSystem.Data\\TicketBookingSystem.Data.csproj"
             }
           }
         }

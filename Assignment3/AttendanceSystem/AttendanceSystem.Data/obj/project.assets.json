@@ -5758,11 +5758,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj",
+      "projectUniqueName": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj",
       "projectName": "AttendanceSystem.Data",
-      "projectPath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj",
+      "projectPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\AttendanceSystem.Data.csproj",
       "packagesPath": "C:\\Users\\Saikat\\.nuget\\packages\\",
-      "outputPath": "G:\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\obj\\",
+      "outputPath": "G:\\ASP.NET\\Assignment3\\AttendanceSystem\\AttendanceSystem.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Saikat\\AppData\\Roaming\\NuGet\\NuGet.Config",

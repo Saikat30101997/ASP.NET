@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AttendanceSystem.Common\AttendanceSystem.Common.csproj" />
     <ProjectReference Include="..\AttendanceSystem.Data\AttendanceSystem.Data.csproj" />
   </ItemGroup>
 
