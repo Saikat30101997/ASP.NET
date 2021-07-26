@@ -43,5 +43,10 @@ namespace AttendanceSystem.Web.Areas.Admin.Models.Attendances
                     ).ToArray()
             };
         }
+
+        public  void DeleteAttendance(int id)
+        {
+            _attendanceService.Delete(id);
+        }
     }
 }

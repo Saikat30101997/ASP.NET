@@ -12,7 +12,7 @@ namespace AttendanceSystem.Common.Utilities
         {
             get
             {
-                return DateTime.Now;
+                return DateTime.Today;
             }
         }
     }

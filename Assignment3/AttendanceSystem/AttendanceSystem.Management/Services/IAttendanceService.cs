@@ -12,5 +12,8 @@ namespace AttendanceSystem.Management.Services
         (IList<Attendance>records,int total,int totalDisplay) GetAttendances(int pageIndex, 
             int pageSize, string searchText, string sortText);
         void Create(Attendance attendance);
+        Attendance GetAttendance(int id);
+        void Update(Attendance attendance);
+        void Delete(int id);
     }
 }

@@ -1,0 +1,6 @@
+2021-07-26 11:46:35.073 +06:00 [INF] Application Starting up
+2021-07-26 11:56:11.597 +06:00 [ERR] Attendance Creation Failed
+System.InvalidOperationException: Date is not Today
+   at AttendanceSystem.Management.Services.AttendanceService.Create(Attendance attendance) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Management\Services\AttendanceService.cs:line 32
+   at AttendanceSystem.Web.Areas.Admin.Models.Attendances.CreateAttendanceModel.CreateAttendance() in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Models\Attendances\CreateAttendanceModel.cs:line 37
+   at AttendanceSystem.Web.Areas.Admin.Controllers.AttendanceController.Create(CreateAttendanceModel model) in G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\Areas\Admin\Controllers\AttendanceController.cs:line 44

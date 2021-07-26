@@ -936,3 +936,4 @@ G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\obj\Debug\net5.0\Ra
 G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\bin\Debug\net5.0\AttendanceSystem.Common.dll
 G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\bin\Debug\net5.0\AttendanceSystem.Common.pdb
 G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Attendance\Create.cshtml.g.cs
+G:\ASP.NET\Assignment3\AttendanceSystem\AttendanceSystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Attendance\Edit.cshtml.g.cs

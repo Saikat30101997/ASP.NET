@@ -13,9 +13,10 @@ namespace AttendanceSystem.Web.Areas.Admin.Models.Students
     {
         [Required]
         public int? Id { get; set; }
-        [Required,MaxLength(300)]
+        [Required,MaxLength(300,ErrorMessage ="Name must be in 300 characters")]
         public string Name { get; set; }
-        [Required, Range(11608001, 11608099)]
+        [Required, Range(11608001, 11608099,ErrorMessage ="Roll number must be between " +
+            "11608001 and 11608099")]
         public int? StudentRollNumber { get; set; }
 
         private readonly IStudentService _studentService;

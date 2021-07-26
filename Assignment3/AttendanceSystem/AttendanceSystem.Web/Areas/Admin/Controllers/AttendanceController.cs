@@ -52,5 +52,36 @@ namespace AttendanceSystem.Web.Areas.Admin.Controllers
             }
             return View();
         }
+
+        public IActionResult Edit(int id)
+        {
+            var model =new  EditAttendanceModel();
+            model.LoadModelData(id);
+            return View(model);
+        }
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult Edit(EditAttendanceModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                try
+                {
+                    model.Update();
+                }
+                catch(Exception ex)
+                {
+                    ModelState.AddModelError("", "Failed to edit attendance");
+                    _logger.LogError(ex, "Attendance is not edited");
+                }
+            }
+            return View();
+        }
+        [HttpPost, ValidateAntiForgeryToken]
+        public IActionResult Delete(int id)
+        {
+            var model = new AttendanceListModel();
+            model.DeleteAttendance(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
