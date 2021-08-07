@@ -1,4 +1,5 @@
 ﻿
+using AutoMapper;
 using ProjectEntityFrameWork.Common.Utilities;
 using ProjectEntityFrameWork.Training.BusinessObjects;
 using ProjectEntityFrameWork.Training.Exceptions;
@@ -15,11 +16,14 @@ namespace ProjectEntityFrameWork.Training.Services
     {
         private readonly ITrainingUnitOfWork _trainingUnitOfWork;
         private readonly IDateTimeUtility _dateTimeUtility;
+        private readonly IMapper _mapper;
 
-        public CourseService(ITrainingUnitOfWork trainingUnitOfWork,IDateTimeUtility dateTimeUtility)
+        public CourseService(ITrainingUnitOfWork trainingUnitOfWork,IDateTimeUtility dateTimeUtility,
+            IMapper mapper)
         {
             _trainingUnitOfWork = trainingUnitOfWork;
             _dateTimeUtility = dateTimeUtility;
+            _mapper = mapper;
         }
 
         public IList<Course> GetAllCourses()
@@ -97,14 +101,7 @@ namespace ProjectEntityFrameWork.Training.Services
                 pageIndex,pageSize);
 
             var resultData = (from course in courseData.data
-                              select new Course
-                              {
-                                  Id = course.Id,
-                                  Title = course.Title,
-                                  Fees = course.Fees,
-                                  StartDate = course.StartDate
-
-                              }).ToList();
+                              select _mapper.Map<Course>(course)).ToList();
 
 
             return (resultData, courseData.total, courseData.totalDisplay);

@@ -35,7 +35,7 @@ namespace ProjectEntityFrameWork.Areas.Admin.Models
                tableModel.PageSize,
                tableModel.SearchText,
                tableModel.GetSortText(new string[] { "Title", "Fees", "StartDate" }));
-
+             
             return new
             {
                 recordsTotal = data.total,

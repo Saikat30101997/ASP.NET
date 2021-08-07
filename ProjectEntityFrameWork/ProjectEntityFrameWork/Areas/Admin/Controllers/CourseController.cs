@@ -19,6 +19,7 @@ namespace ProjectEntityFrameWork.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.SomeData = "All availabe Courses";
             var model = new CourseListModel();
             return View(model);
         }
