@@ -56,12 +56,7 @@ namespace ProjectEntityFrameWork.Training.Services
                 throw new InvalidOperationException("StartDate should be atleast 30 days ahead");
             
                 _trainingUnitOfWork.Courses.Add(
-                    new Entities.Course
-                    {
-                        Title = course.Title,
-                        Fees = course.Fees,
-                        StartDate = course.StartDate
-                    }
+                  _mapper.Map<Entities.Course>(course)
                 );
 
                 _trainingUnitOfWork.Save();      
@@ -110,14 +105,8 @@ namespace ProjectEntityFrameWork.Training.Services
         {
             var course = _trainingUnitOfWork.Courses.GetById(Id);
 
-            return new Course
-            {
-                Id = course.Id,
-                Title = course.Title,
-                Fees = course.Fees,
-                StartDate = course.StartDate
-                
-            };
+            return _mapper.Map<Course>(course);
+         
         }
 
         public void Update(Course course)
@@ -130,10 +119,7 @@ namespace ProjectEntityFrameWork.Training.Services
             var courseEntity = _trainingUnitOfWork.Courses.GetById(course.Id);
             if (courseEntity != null)
             {
-                courseEntity.Title = course.Title;
-                courseEntity.Fees = course.Fees;
-                courseEntity.StartDate = course.StartDate;
-
+                _mapper.Map(course, courseEntity);
                 _trainingUnitOfWork.Save();
             }
             else
