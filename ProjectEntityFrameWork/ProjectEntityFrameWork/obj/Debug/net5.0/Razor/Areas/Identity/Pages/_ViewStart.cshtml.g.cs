@@ -26,15 +26,8 @@ using ProjectEntityFrameWork.Areas.Identity;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 3 "G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\Areas\Identity\Pages\_ViewImports.cshtml"
-using ProjectEntityFrameWork.Areas.Identity.Pages;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"43e0bf0d61f9a553d2f59156ad2cdff9b3bdd158", @"/Areas/Identity/Pages/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b977a027f709c67174cd35218641df8db7807e4d", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9a23d1e5c1a4dd8038f54ecbdd4ceb765247abab", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

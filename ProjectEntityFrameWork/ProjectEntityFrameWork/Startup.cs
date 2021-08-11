@@ -72,7 +72,6 @@ namespace ProjectEntityFrameWork
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
-            services.AddRazorPages();
             services.AddDatabaseDeveloperPageExceptionFilter();
         }
 
