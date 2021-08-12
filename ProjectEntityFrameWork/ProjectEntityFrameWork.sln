@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEntityFrameWork.Data
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEntityFrameWork.Training", "ProjectEntityFrameWork.Training\ProjectEntityFrameWork.Training.csproj", "{0712A22F-43CA-4525-B804-F939D465A480}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEntityFrameWork.Common", "ProjectEntityFrameWork.Common\ProjectEntityFrameWork.Common.csproj", "{EC3A7D5D-0263-4C3F-91B8-C9CC5942631C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEntityFrameWork.Common", "ProjectEntityFrameWork.Common\ProjectEntityFrameWork.Common.csproj", "{EC3A7D5D-0263-4C3F-91B8-C9CC5942631C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEntityFrameWork.Membership", "ProjectEntityFrameWork.Membership\ProjectEntityFrameWork.Membership.csproj", "{37DE6F5E-01D8-446C-9379-7B52C9043671}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{EC3A7D5D-0263-4C3F-91B8-C9CC5942631C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC3A7D5D-0263-4C3F-91B8-C9CC5942631C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC3A7D5D-0263-4C3F-91B8-C9CC5942631C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37DE6F5E-01D8-446C-9379-7B52C9043671}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37DE6F5E-01D8-446C-9379-7B52C9043671}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37DE6F5E-01D8-446C-9379-7B52C9043671}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37DE6F5E-01D8-446C-9379-7B52C9043671}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

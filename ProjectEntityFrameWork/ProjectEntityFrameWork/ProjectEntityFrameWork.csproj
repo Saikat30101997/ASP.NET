@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProjectEntityFrameWork.Common\ProjectEntityFrameWork.Common.csproj" />
+    <ProjectReference Include="..\ProjectEntityFrameWork.Membership\ProjectEntityFrameWork.Membership.csproj" />
     <ProjectReference Include="..\ProjectEntityFrameWork.Training\ProjectEntityFrameWork.Training.csproj" />
   </ItemGroup>
 

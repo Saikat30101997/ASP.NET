@@ -470,3 +470,5 @@ G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\AutoMa
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\ProjectEntityFrameWork.Membership.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\ProjectEntityFrameWork.Membership.pdb

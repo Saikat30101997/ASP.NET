@@ -1,0 +1,12 @@
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\bin\Debug\net5.0\ProjectEntityFrameWork.Membership.deps.json
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\bin\Debug\net5.0\ProjectEntityFrameWork.Membership.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\bin\Debug\net5.0\ref\ProjectEntityFrameWork.Membership.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\bin\Debug\net5.0\ProjectEntityFrameWork.Membership.pdb
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\obj\Debug\net5.0\ProjectEntityFrameWork.Membership.csprojAssemblyReference.cache
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\obj\Debug\net5.0\ProjectEntityFrameWork.Membership.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\obj\Debug\net5.0\ProjectEntityFrameWork.Membership.AssemblyInfoInputs.cache
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\obj\Debug\net5.0\ProjectEntityFrameWork.Membership.AssemblyInfo.cs
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\obj\Debug\net5.0\ProjectEntityFrameWork.Membership.csproj.CoreCompileInputs.cache
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\obj\Debug\net5.0\ProjectEntityFrameWork.Membership.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\obj\Debug\net5.0\ref\ProjectEntityFrameWork.Membership.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Membership\obj\Debug\net5.0\ProjectEntityFrameWork.Membership.pdb

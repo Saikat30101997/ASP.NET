@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ProjectEntityFrameWork.Data;
+
 using ProjectEntityFrameWork.Training;
 using ProjectEntityFrameWork.Training.Contexts;
 using ProjectEntityFrameWork.Common;
@@ -17,6 +17,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ProjectEntityFrameWork.Membership.Contexts;
+using ProjectEntityFrameWork.Membership.Entities;
+using ProjectEntityFrameWork.Membership;
+using ProjectEntityFrameWork.Membership.Services;
 
 namespace ProjectEntityFrameWork
 {
@@ -47,6 +51,8 @@ namespace ProjectEntityFrameWork
                 connectionInfo.migrationAssemblyName));
             builder.RegisterModule(new CommonModule());
             builder.RegisterModule(new WebModule());
+            builder.RegisterModule(new MembershipModule(connectionInfo.connectionString, 
+                connectionInfo.migrationAssemblyName));
         }
 
         private (string connectionString, string migrationAssemblyName) GetConnectionStringAndAssemblyName()
@@ -61,17 +67,47 @@ namespace ProjectEntityFrameWork
             var connectionInfo = GetConnectionStringAndAssemblyName();
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(connectionInfo.connectionString));
+                options.UseSqlServer(connectionInfo.connectionString, b =>
+                b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
 
             services.AddDbContext<TrainingContext>(options =>
                 options.UseSqlServer(connectionInfo.connectionString, b =>
                 b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services
+                  .AddIdentity<ApplicationUser, Role>()
+                  .AddEntityFrameworkStores<ApplicationDbContext>()
+                  .AddUserManager<UserManager>()
+                  .AddRoleManager<RoleManager>()
+                  .AddSignInManager<SignInManager>()
+                  .AddDefaultUI()
+                  .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Password settings.
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 6;
+                options.Password.RequiredUniqueChars = 1;
+
+                // Lockout settings.
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                options.Lockout.MaxFailedAccessAttempts = 5;
+                options.Lockout.AllowedForNewUsers = true;
+
+                // User settings.
+                options.User.AllowedUserNameCharacters =
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                options.User.RequireUniqueEmail = false;
+            });
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
+            services.AddRazorPages();
             services.AddDatabaseDeveloperPageExceptionFilter();
         }
 

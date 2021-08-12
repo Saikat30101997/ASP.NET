@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjectEntityFrameWork.Data;
+using ProjectEntityFrameWork.Membership.Contexts;
 using System;
 
 namespace ProjectEntityFrameWork.Data.Migrations
