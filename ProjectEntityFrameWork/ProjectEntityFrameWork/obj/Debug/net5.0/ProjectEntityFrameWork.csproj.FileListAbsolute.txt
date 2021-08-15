@@ -472,3 +472,5 @@ G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\ProjectEntityFrameWork.Membership.dll
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\ProjectEntityFrameWork.Membership.pdb
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Views\Home\Sass.cshtml.g.cs
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Views\Home\HTML.cshtml.g.cs

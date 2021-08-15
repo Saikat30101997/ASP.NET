@@ -6,6 +6,8 @@ namespace ProjectEntityFrameWork.Migrations.ApplicationDb
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+         
+
             migrationBuilder.AlterColumn<string>(
                 name: "Name",
                 table: "AspNetUserTokens",
@@ -53,6 +55,7 @@ namespace ProjectEntityFrameWork.Migrations.ApplicationDb
                 oldClrType: typeof(string),
                 oldType: "nvarchar(128)",
                 oldMaxLength: 128);
+        
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

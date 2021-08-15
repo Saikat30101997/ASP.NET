@@ -10,8 +10,8 @@ using ProjectEntityFrameWork.Membership.Contexts;
 namespace ProjectEntityFrameWork.Migrations.ApplicationDb
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210812184631_AddNameInUserSecond")]
-    partial class AddNameInUserSecond
+    [Migration("20210815053407_AddModifications")]
+    partial class AddModifications
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

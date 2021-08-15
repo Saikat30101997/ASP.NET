@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjectEntityFrameWork.Areas.Admin.Models;
 using ProjectEntityFrameWork.Models;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEntityFrameWork.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin"),Authorize]
     public class CourseController : Controller
     {
         private readonly ILogger<CourseController> _logger;
