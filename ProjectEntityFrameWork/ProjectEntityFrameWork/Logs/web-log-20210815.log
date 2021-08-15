@@ -38,3 +38,5 @@ System.InvalidOperationException: StatusCode cannot be set because the response 
 2021-08-15 11:52:23.484 +06:00 [INF] Application Starting up
 2021-08-15 11:52:34.618 +06:00 [INF] User logged in.
 2021-08-15 12:47:21.251 +06:00 [INF] Application Starting up
+2021-08-15 23:58:37.881 +06:00 [INF] Application Starting up
+2021-08-15 23:59:46.827 +06:00 [INF] User created a new account with password.

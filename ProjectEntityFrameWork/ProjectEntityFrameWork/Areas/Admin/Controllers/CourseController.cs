@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEntityFrameWork.Areas.Admin.Controllers
 {
-    [Area("Admin"),Authorize]
+    [Area("Admin"), Authorize(Roles = "Admin") ]
     public class CourseController : Controller
     {
         private readonly ILogger<CourseController> _logger;

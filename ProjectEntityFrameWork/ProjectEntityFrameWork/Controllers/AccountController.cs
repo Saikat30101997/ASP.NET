@@ -21,14 +21,14 @@ namespace ProjectEntityFrameWork.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<AccountController> _logger;
-        private readonly RoleManager<ApplicationUser> _roleManager;
+        private readonly RoleManager<Role> _roleManager;
         private readonly IEmailSender _emailSender;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<AccountController> logger,
-            IEmailSender emailSender, RoleManager<ApplicationUser> roleManager)
+            IEmailSender emailSender, RoleManager<Role> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -43,6 +43,11 @@ namespace ProjectEntityFrameWork.Controllers
             var model = new RegisterModel();
             model.ReturnUrl = returnUrl;
             model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            //await _roleManager.CreateAsync(new Role("Admin"));
+            //await _roleManager.CreateAsync(new Role("Teacher"));
+            //await _roleManager.CreateAsync(new Role("Student"));
+
+
             return View(model);
         }
         [HttpPost,ValidateAntiForgeryToken]
@@ -54,6 +59,7 @@ namespace ProjectEntityFrameWork.Controllers
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
+                await _userManager.AddToRoleAsync(user, "Admin");
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
