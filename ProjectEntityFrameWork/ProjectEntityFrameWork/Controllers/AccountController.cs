@@ -43,7 +43,7 @@ namespace ProjectEntityFrameWork.Controllers
             var model = new RegisterModel();
             model.ReturnUrl = returnUrl;
             model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-            //await _roleManager.CreateAsync(new Role("Admin"));
+            //await _roleManager.CreateAsync(new Role("Admin")); //Role based Authorization 
             //await _roleManager.CreateAsync(new Role("Teacher"));
             //await _roleManager.CreateAsync(new Role("Student"));
 

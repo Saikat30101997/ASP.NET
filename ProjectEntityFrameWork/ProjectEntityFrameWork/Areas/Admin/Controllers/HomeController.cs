@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEntityFrameWork.Areas.Admin.Controllers
 {
-    [Area("Admin"),Authorize(Roles ="Admin")]
+    [Area("Admin"),Authorize(Roles ="Admin")]   //Authorize Roll and policy egular name add kora jaay 
     public class HomeController : Controller
     {
         public IActionResult Index()

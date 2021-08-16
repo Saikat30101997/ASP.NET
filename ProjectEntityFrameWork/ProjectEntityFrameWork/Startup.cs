@@ -104,6 +104,16 @@ namespace ProjectEntityFrameWork
                 options.User.RequireUniqueEmail = false;
             });
 
+            services.AddAuthorization(options =>   //policy base authorization 
+            {
+                options.AddPolicy("AdminAccess", policy =>    //AdminAccess policy r nam 
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireRole("Admin");  //Admin er Role
+                    policy.RequireRole("Teacher"); //Teacher er Role 
+                });
+            });
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
