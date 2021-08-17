@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEntityFrameWork.Areas.Admin.Controllers
 {
-    [Area("Admin"), Authorize(Policy = "AdminAccess") ] //Authorize Roll and policy egular name add kora jaay 
+    [Area("Admin"), Authorize(Policy = "AdminandTeacherAccess") ] //Authorize Roll and policy egular name add kora jaay 
     public class CourseController : Controller
     {
         private readonly ILogger<CourseController> _logger;

@@ -21,6 +21,8 @@ using ProjectEntityFrameWork.Membership.Contexts;
 using ProjectEntityFrameWork.Membership.Entities;
 using ProjectEntityFrameWork.Membership;
 using ProjectEntityFrameWork.Membership.Services;
+using Microsoft.AspNetCore.Authorization;
+using ProjectEntityFrameWork.Membership.BusinessObjects;
 
 namespace ProjectEntityFrameWork
 {
@@ -104,15 +106,30 @@ namespace ProjectEntityFrameWork
                 options.User.RequireUniqueEmail = false;
             });
 
-            services.AddAuthorization(options =>   //policy base authorization 
+            services.AddAuthorization(options =>
             {
-                options.AddPolicy("AdminAccess", policy =>    //AdminAccess policy r nam 
+                options.AddPolicy("AdminandTeacherAccess", policy =>
                 {
                     policy.RequireAuthenticatedUser();
-                    policy.RequireRole("Admin");  //Admin er Role
-                    policy.RequireRole("Teacher"); //Teacher er Role 
+                    policy.RequireRole("Teacher");
+                    policy.RequireRole("Admin");
+                  
+                });
+
+                options.AddPolicy("RestrictedArea", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("view_permission","true");
+                });
+
+                options.AddPolicy("ViewPermission", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.Requirements.Add(new ViewRequirement());
                 });
             });
+
+            services.AddSingleton<IAuthorizationHandler, ViewRequirementHandler>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllersWithViews();
