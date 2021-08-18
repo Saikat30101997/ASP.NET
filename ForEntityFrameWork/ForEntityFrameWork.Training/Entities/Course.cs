@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ForEntityFrameWork.Training.Entities
 {
-    public class Course : IEntity<int>
+    public class Course : IEntity<int> 
     {
         public int Id { get; set; }
         public string Title { get; set; }

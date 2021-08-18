@@ -386,7 +386,6 @@ G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\scopedcss\bund
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\ForEntityFrameWork.TagHelpers.input.cache
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\ForEntityFrameWork.TagHelpers.output.cache
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\ForEntityFrameWork.RazorCoreGenerate.cache
-G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
@@ -464,3 +463,7 @@ G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Ad
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Student\Index.cshtml.g.cs
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Teacher\Index.cshtml.g.cs
 G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Areas\Admin\Views\Student\Create.cshtml.g.cs
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\bin\Debug\net5.0\ForEntityFrameWork.Membership.dll
+G:\ASP.NET\ForEntityFrameWork\ForEntityFrameWork\bin\Debug\net5.0\ForEntityFrameWork.Membership.pdb
