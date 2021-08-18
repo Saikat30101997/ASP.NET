@@ -106,6 +106,25 @@ namespace ForEntityFrameWork
                 options.User.RequireUniqueEmail = false;
             });
 
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AdminandTeacherAccess", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireRole("Teacher");
+                    policy.RequireRole("Admin");
+
+                });
+
+                options.AddPolicy("RestrictedArea", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("view_permission", "true");
+                });
+                
+            });
+
+
             services.AddHttpContextAccessor();
             services.AddControllersWithViews();
             services.AddRazorPages();

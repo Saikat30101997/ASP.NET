@@ -1,5 +1,6 @@
 ﻿
 
+using ForEntityFrameWork.Membership.Entities;
 using ForEntityFrameWork.Models.Account;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
@@ -20,21 +21,23 @@ namespace ForEntityFrameWork.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<AccountController> _logger;
+        private readonly RoleManager<Role> _roleManager;
         private readonly IEmailSender _emailSender;
 
         public AccountController(
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager,
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager,
             ILogger<AccountController> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender, RoleManager<Role> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _roleManager = roleManager;
         }
 
         public async Task<IActionResult> Register(string returnUrl = null)
@@ -56,8 +59,10 @@ namespace ForEntityFrameWork.Controllers
             model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
+                await _userManager.AddToRoleAsync(user, "Admin");
+                await _userManager.AddToRoleAsync(user, "Teacher");
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");

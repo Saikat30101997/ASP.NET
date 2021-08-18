@@ -1,4 +1,5 @@
 ﻿using ForEntityFrameWork.Areas.Admin.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ForEntityFrameWork.Areas.Admin.Controllers
 {
-    [Area("Admin")]
+    [Area("Admin"),Authorize(Policy = "AdminandTeacherAccess")]
     public class CourseController : Controller
     {
         private readonly ILogger<CourseController> _logger;
