@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ProjectEntityFrameWork.Membership.Entities;
+using ProjectEntityFrameWork.Membership.Seeds;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,6 +37,14 @@ namespace ProjectEntityFrameWork.Membership.Contexts
             }
 
             base.OnConfiguring(dbContextOptionsBuilder);
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)  
+        {
+            
+            modelBuilder.Entity<Role>()
+                .HasData(DataSeed.Roles);
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
