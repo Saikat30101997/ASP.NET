@@ -19,6 +19,27 @@ namespace TicketBookingSystem.Booking.Services
             _mapper = mapper;
         }
 
+        public void CreateCustomer(Customer customer)
+        {
+            if (customer == null)
+                throw new InvalidOperationException("Customer is not provided");
+            _bookingUnitOfWork.Customers.Add(
+                _mapper.Map<Entities.Customer>(customer));
+            _bookingUnitOfWork.Save();
+        }
+
+        public void Delete(int id)
+        {
+            _bookingUnitOfWork.Customers.Remove(id);
+            _bookingUnitOfWork.Save();
+        }
+
+        public Customer GetCustomer(int id)
+        {
+            var customer = _bookingUnitOfWork.Customers.GetById(id);
+            return _mapper.Map<Customer>(customer);
+        }
+
         public (IList<Customer> records, int total, int totalDisplay) GetCustomers(int pageIndex, int pageSize, 
             string searchText, string sortText)
         {
@@ -35,6 +56,22 @@ namespace TicketBookingSystem.Booking.Services
                               }).ToList();
 
             return (resultdata, customerData.total, customerData.totalDisplay);
+        }
+
+        public void Update(Customer customer)
+        {
+
+            if (customer == null)
+                throw new InvalidOperationException("Customer is not provided");
+
+            var customerEntity = _bookingUnitOfWork.Customers.GetById(customer.Id);
+            if (customerEntity != null)
+            {
+                _mapper.Map(customer, customerEntity);
+                _bookingUnitOfWork.Save();
+            }
+            else
+                throw new InvalidOperationException("Could not find Customer");
         }
     }
 }

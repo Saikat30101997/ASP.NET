@@ -11,5 +11,9 @@ namespace TicketBookingSystem.Booking.Services
     {
         (IList<Customer>records,int total,int totalDisplay) GetCustomers(int pageIndex, int pageSize, 
             string searchText, string sortText);
+        void CreateCustomer(Customer customer);
+        Customer GetCustomer(int id);
+        void Update(Customer customer);
+        void Delete(int id);
     }
 }

@@ -44,5 +44,10 @@ namespace TicketBookingSystem.Web.Areas.Admin.Models.Customers
                     ).ToArray()
             };
         }
+
+        internal void DeleteCustomer(int id)
+        {
+            _customerService.Delete(id);
+        }
     }
 }

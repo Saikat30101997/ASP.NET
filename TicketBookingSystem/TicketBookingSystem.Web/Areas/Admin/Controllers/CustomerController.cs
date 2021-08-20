@@ -31,5 +31,59 @@ namespace TicketBookingSystem.Web.Areas.Admin.Controllers
             var data = model.GetCustomers(tableModel);
             return Json(data);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost,ValidateAntiForgeryToken]
+        public IActionResult Create(CreateCustomerModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                try
+                {
+                    model.Create();
+                }
+                catch(Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Failed to create Customer");
+                    _logger.LogError(ex, "Customer Creation Failed");
+                }
+            }
+            return View(model);
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var model = new EditCustomerModel();
+            model.GetCustomer(id);
+            return View(model);
+        }
+        [HttpPost,ValidateAntiForgeryToken]
+        public IActionResult Edit(EditCustomerModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    model.Update();
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Failed to Edit Customer");
+                    _logger.LogError(ex, "Customer Edition Failed");
+                }
+            }
+            return View(model);
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var model = new CustomerListModel();
+            model.DeleteCustomer(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
+    
 }
