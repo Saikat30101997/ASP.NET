@@ -42,7 +42,7 @@ namespace ProjectEntityFrameWork.Membership.Contexts
         {
             
             modelBuilder.Entity<Role>()
-                .HasData(DataSeed.Roles);
+                .HasData(DataSeed.Roles);   //seeding apply data initialization er jonno dataseeding use koraa hy 
 
             base.OnModelCreating(modelBuilder);
         }

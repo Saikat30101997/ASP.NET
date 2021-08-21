@@ -1,8 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@using ProjectEntityFrameWork.Membership.Entities
+@using ProjectEntityFrameWork.Membership.Entities 
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
-
+<!--loginpartial e obossoi add kora lage-->
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))
 {

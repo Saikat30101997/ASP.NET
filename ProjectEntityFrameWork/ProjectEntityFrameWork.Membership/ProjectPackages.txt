@@ -1,0 +1,8 @@
+﻿1.Autofac.Extensions.DependencyInjection
+2.Microsoft.AspNetCore.Identity.EntityFrameworkCore
+3.Microsoft.AspNetCore.Identity.UI //email add korar jonno 
+4.Microsoft.EntityFrameworkCore
+5.Microsoft.EntityFrameworkCore.SqlServer
+6.Microsoft.Extensions.Identity.Stores //Entity 6 ta use korbe 
+
+obossoi main project er sathe package gular version same thakte hobe.. 

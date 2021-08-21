@@ -68,7 +68,7 @@ namespace ProjectEntityFrameWork
         {
             var connectionInfo = GetConnectionStringAndAssemblyName();
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<ApplicationDbContext>(options => // applicationdbcontext jodi alada project e thake tahole seta k migration er maddhome add korar jonno
                 options.UseSqlServer(connectionInfo.connectionString, b =>
                 b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
 
@@ -76,16 +76,16 @@ namespace ProjectEntityFrameWork
                 options.UseSqlServer(connectionInfo.connectionString, b =>
                 b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
 
-            services
+            services  // service class gula k customize korte pari shey jonno egula k alada kore customize korar jonno use kora hy
                   .AddIdentity<ApplicationUser, Role>()
                   .AddEntityFrameworkStores<ApplicationDbContext>()
-                  .AddUserManager<UserManager>()
+                  .AddUserManager<UserManager>() //userM,RolM,SighnM egula service class
                   .AddRoleManager<RoleManager>()
                   .AddSignInManager<SignInManager>()
                   .AddDefaultUI()
                   .AddDefaultTokenProviders();
 
-            services.Configure<IdentityOptions>(options =>
+            services.Configure<IdentityOptions>(options => //password config er jonno 
             {
                 // Password settings.
                 options.Password.RequireDigit = false;
@@ -105,8 +105,18 @@ namespace ProjectEntityFrameWork
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = false;
             });
+            services.ConfigureApplicationCookie(options =>
+            {
+                // Cookie settings
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
 
-            services.AddAuthorization(options =>
+                options.LoginPath = "/Account/Signin";
+                options.AccessDeniedPath = "/Account/AccessDenied";
+                options.SlidingExpiration = true;
+            });
+
+            services.AddAuthorization(options =>  //policy and claim er jonno use kora hy 
             {
                 options.AddPolicy("AdminandTeacherAccess", policy =>
                 {
@@ -129,9 +139,9 @@ namespace ProjectEntityFrameWork
                 });
             });
 
-            services.AddSingleton<IAuthorizationHandler, ViewRequirementHandler>();
-
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            //services.AddSingleton<IAuthorizationHandler, ViewRequirementHandler>(); // claim based er jonno ekhane 
+             
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); //automapper config er jonno must 
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
             services.AddRazorPages();

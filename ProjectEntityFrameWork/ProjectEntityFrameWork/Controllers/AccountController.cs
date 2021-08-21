@@ -18,7 +18,7 @@ namespace ProjectEntityFrameWork.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly SignInManager<ApplicationUser> _signInManager; // ekhane identity user bad diye entity Applicationuser use korchi 
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<AccountController> _logger;
         private readonly RoleManager<Role> _roleManager;
@@ -42,8 +42,8 @@ namespace ProjectEntityFrameWork.Controllers
         {
             var model = new RegisterModel();
             model.ReturnUrl = returnUrl;
-            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-            //await _roleManager.CreateAsync(new Role("Admin")); //Role based Authorization 
+            model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList(); //amdr jodi onno account gulo login kraa lage google ba facebook
+            //await _roleManager.CreateAsync(new Role("Admin")); //Role based Authorization role gula entry seeding diye o koraa jay 
             //await _roleManager.CreateAsync(new Role("Teacher"));
             //await _roleManager.CreateAsync(new Role("Student"));
 
