@@ -1,9 +1,5 @@
 ﻿using Autofac;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using TicketBookingSystem.Booking.Contexts;
 using TicketBookingSystem.Booking.Repositories;
 using TicketBookingSystem.Booking.Services;
@@ -43,6 +39,10 @@ namespace TicketBookingSystem.Booking
 
             builder.RegisterType<CustomerService>().As<ICustomerService>()
              .InstancePerLifetimeScope();
+
+            builder.RegisterType<TicketService>().As<ITicketService>()
+             .InstancePerLifetimeScope();
+
 
             base.Load(builder);
         }
