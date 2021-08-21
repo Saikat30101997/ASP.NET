@@ -4,7 +4,7 @@ using System;
 using Autofac;
 using ProjectEntityFrameWork.Common.Utilities;
 
-namespace ProjectEntityFrameWork.Training
+namespace ProjectEntityFrameWork.Common
 {
     public class CommonModule : Module
     {
