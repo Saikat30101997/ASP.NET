@@ -30,7 +30,7 @@ namespace ProjectEntityFrameWork.Membership.Contexts
         protected override void OnConfiguring(DbContextOptionsBuilder dbContextOptionsBuilder)
         {
             if (!dbContextOptionsBuilder.IsConfigured)
-            {
+            { 
                 dbContextOptionsBuilder.UseSqlServer(
                     _connectionString,
                     m => m.MigrationsAssembly(_migrationAssemblyName));

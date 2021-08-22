@@ -56,6 +56,7 @@ namespace ProjectEntityFrameWork.Api
             builder.RegisterModule(new TrainingModule(connectionInfo.connectionString,
                 connectionInfo.migrationAssemblyName));
             builder.RegisterModule(new CommonModule());
+            builder.RegisterModule(new ApiModule());
             builder.RegisterModule(new MembershipModule(connectionInfo.connectionString,
                 connectionInfo.migrationAssemblyName));
         }
@@ -115,12 +116,12 @@ namespace ProjectEntityFrameWork.Api
             services.AddAuthentication()  // Microsoft.AspNetCore.Authentication.jwtbearer ei package lagbee // jwt r jonno ekta appsettings e config kora lagbe.. 
                 .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, x =>
                 {
-                    x.RequireHttpsMetadata = false;
-                    x.SaveToken = true;
+                    x.RequireHttpsMetadata = false; //https lagbe kinaa 
+                    x.SaveToken = true; //token save koraa
                     x.TokenValidationParameters = new TokenValidationParameters
                     {
-                        ValidateIssuerSigningKey = true,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration["Jwt:Key"])),
+                        ValidateIssuerSigningKey = true, //issuer korbe kinaa
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration["Jwt:Key"])), //encrypted korbe issuer key ta diyee
                         ValidateIssuer = true,
                         ValidateAudience = true,
                         ValidIssuer = Configuration["Jwt:Issuer"],
@@ -132,21 +133,8 @@ namespace ProjectEntityFrameWork.Api
 
             services.AddAuthorization(options =>  //policy and claim er jonno use kora hy 
             {
-                options.AddPolicy("AdminandTeacherAccess", policy =>
-                {
-                    policy.RequireAuthenticatedUser();
-                    policy.RequireRole("Teacher");
-                    policy.RequireRole("Admin");
-
-                });
-
-                options.AddPolicy("RestrictedArea", policy =>
-                {
-                    policy.RequireAuthenticatedUser();
-                    policy.RequireClaim("view_permission", "true");
-                });
-
-                options.AddPolicy("ViewPermission", policy =>
+                
+                options.AddPolicy("AccessPermission", policy =>
                 {
                     policy.RequireAuthenticatedUser();
                     policy.Requirements.Add(new ApiRequirement());
