@@ -19,6 +19,7 @@ namespace TicketBookingSystem.Web.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.SomeData = "All Available Tickets";
             var model = new TicketListModel();
             return View(model);
         }
@@ -29,6 +30,62 @@ namespace TicketBookingSystem.Web.Areas.Admin.Controllers
             var model = new TicketListModel();
             var data = model.GetTickets(tableModel);
             return Json(data);
+        }
+
+        public ActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost,ValidateAntiForgeryToken]
+        public ActionResult Create(CreateTicketModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                try
+                {
+                    model.Create();
+
+                }
+                catch(Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Failed to create Ticket");
+                    _logger.LogError(ex, "Ticket creation failed");
+                }
+            }
+            return View(model);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var model = new EditTicketModel();
+            model.GetTicket(id);
+            return View(model);
+        }
+        [HttpPost, ValidateAntiForgeryToken]
+        public ActionResult Edit(EditTicketModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    model.Update();
+
+                }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(string.Empty, "Failed to edit Ticket");
+                    _logger.LogError(ex, "Ticket edition failed");
+                }
+            }
+            return View(model);
+            
+        }
+
+        public ActionResult Delete(int id)
+        {
+            var model = new TicketListModel();
+            model.Delete(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

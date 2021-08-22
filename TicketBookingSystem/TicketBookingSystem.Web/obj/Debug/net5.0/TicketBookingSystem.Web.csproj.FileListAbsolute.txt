@@ -463,3 +463,6 @@ G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Web\obj\Debug\net5.0\Razor\Ar
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_DeletePopUpPartial.cshtml.g.cs
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Customer\Create.cshtml.g.cs
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Customer\Edit.cshtml.g.cs
+G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Ticket\Index.cshtml.g.cs
+G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Ticket\Create.cshtml.g.cs
+G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Ticket\Edit.cshtml.g.cs

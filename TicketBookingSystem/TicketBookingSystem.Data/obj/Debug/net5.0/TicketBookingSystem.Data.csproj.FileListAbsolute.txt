@@ -2,7 +2,6 @@ G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\bin\Debug\net5.0\TicketB
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\bin\Debug\net5.0\TicketBookingSystem.Data.dll
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\bin\Debug\net5.0\ref\TicketBookingSystem.Data.dll
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\bin\Debug\net5.0\TicketBookingSystem.Data.pdb
-G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\obj\Debug\net5.0\TicketBookingSystem.Data.csprojAssemblyReference.cache
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\obj\Debug\net5.0\TicketBookingSystem.Data.GeneratedMSBuildEditorConfig.editorconfig
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\obj\Debug\net5.0\TicketBookingSystem.Data.AssemblyInfoInputs.cache
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\obj\Debug\net5.0\TicketBookingSystem.Data.AssemblyInfo.cs
@@ -10,3 +9,4 @@ G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\obj\Debug\net5.0\TicketB
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\obj\Debug\net5.0\TicketBookingSystem.Data.dll
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\obj\Debug\net5.0\ref\TicketBookingSystem.Data.dll
 G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\obj\Debug\net5.0\TicketBookingSystem.Data.pdb
+G:\ASP.NET\TicketBookingSystem\TicketBookingSystem.Data\obj\Debug\net5.0\TicketBookingSystem.Data.csprojAssemblyReference.cache
