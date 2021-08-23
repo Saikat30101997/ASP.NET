@@ -1,0 +1,15 @@
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\bin\Debug\net5.0\ECommerceSystem.ECommerce.deps.json
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\bin\Debug\net5.0\ECommerceSystem.ECommerce.dll
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\bin\Debug\net5.0\ref\ECommerceSystem.ECommerce.dll
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\bin\Debug\net5.0\ECommerceSystem.ECommerce.pdb
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\bin\Debug\net5.0\EcommerceSystem.Data.dll
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\bin\Debug\net5.0\EcommerceSystem.Data.pdb
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\obj\Debug\net5.0\ECommerceSystem.ECommerce.csprojAssemblyReference.cache
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\obj\Debug\net5.0\ECommerceSystem.ECommerce.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\obj\Debug\net5.0\ECommerceSystem.ECommerce.AssemblyInfoInputs.cache
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\obj\Debug\net5.0\ECommerceSystem.ECommerce.AssemblyInfo.cs
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\obj\Debug\net5.0\ECommerceSystem.ECommerce.csproj.CoreCompileInputs.cache
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\obj\Debug\net5.0\ECommerceSystem.ECommerce.csproj.CopyComplete
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\obj\Debug\net5.0\ECommerceSystem.ECommerce.dll
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\obj\Debug\net5.0\ref\ECommerceSystem.ECommerce.dll
+G:\ASP.NET\ECommerceSystem\ECommerceSystem.ECommerce\obj\Debug\net5.0\ECommerceSystem.ECommerce.pdb
