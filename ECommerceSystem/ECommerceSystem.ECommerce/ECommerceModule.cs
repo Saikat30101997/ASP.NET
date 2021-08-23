@@ -1,5 +1,8 @@
 ﻿using Autofac;
 using ECommerceSystem.ECommerce.Contexts;
+using ECommerceSystem.ECommerce.Repositories;
+using ECommerceSystem.ECommerce.Services;
+using ECommerceSystem.ECommerce.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,15 +34,14 @@ namespace ECommerceSystem.ECommerce
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
 
-            //builder.RegisterType<StudentRepository>().As<IStudentRepository>()
-            //    .InstancePerLifetimeScope();
-            //builder.RegisterType<CourseRepository>().As<ICourseRepository>()
-            //    .InstancePerLifetimeScope();
-            //builder.RegisterType<TrainingUnitOfWork>().As<ITrainingUnitOfWork>()
-            //    .InstancePerLifetimeScope();
+            builder.RegisterType<ProductRepository>().As<IProductRepository>()
+                .InstancePerLifetimeScope();
 
-            //builder.RegisterType<CourseService>().As<ICourseService>()
-            //    .InstancePerLifetimeScope();
+            builder.RegisterType<ECommerceUnitOfWork>().As<IECommerceUnitOfWork>()
+                .InstancePerLifetimeScope();
+
+            builder.RegisterType<ProductService>().As<IProductService>()
+                .InstancePerLifetimeScope();
 
             base.Load(builder);
         }
