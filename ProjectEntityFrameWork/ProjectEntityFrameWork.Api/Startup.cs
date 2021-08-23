@@ -111,7 +111,7 @@ namespace ProjectEntityFrameWork.Api
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = false;
             });
-
+            //ei upor porjnto startup class 
 
             services.AddAuthentication()  // Microsoft.AspNetCore.Authentication.jwtbearer ei package lagbee // jwt r jonno ekta appsettings e config kora lagbe.. 
                 .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, x =>
