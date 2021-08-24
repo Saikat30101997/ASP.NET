@@ -11,5 +11,9 @@ namespace ECommerceSystem.ECommerce.Services
     {
         (IList<Product>records,int total,int totalDisplay) GetProducts(int pageIndex, 
             int pageSize, string searchText, string sortText);
+        void CreateProduct(Product product);
+        Product GetProduct(int id);
+        void Update(Product product);
+        void Delete(int id);
     }
 }

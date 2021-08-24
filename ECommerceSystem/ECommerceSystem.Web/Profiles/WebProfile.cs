@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using ECommerceSystem.ECommerce.BusinessObjects;
+using ECommerceSystem.Web.Areas.Admin.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,8 @@ namespace ECommerceSystem.Web.Profiles
     {
         public WebProfile()
         {
-
+            CreateMap<CreateProductModel, Product>().ReverseMap();
+            CreateMap<EditProductModel, Product>().ReverseMap();
         }
     }
 }

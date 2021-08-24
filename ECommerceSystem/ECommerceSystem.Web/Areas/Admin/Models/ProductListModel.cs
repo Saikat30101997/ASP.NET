@@ -44,5 +44,10 @@ namespace ECommerceSystem.Web.Areas.Admin.Models
                     ).ToArray()
             };
         }
+
+        internal void Delete(int id)
+        {
+            _productService.Delete(id);
+        }
     }
 }

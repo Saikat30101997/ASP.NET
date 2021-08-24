@@ -30,5 +30,42 @@ namespace ECommerceSystem.ECommerce.Services
 
             return (resultData, productData.total, productData.totalDisplay);
         }
+
+        public void CreateProduct(Product product)
+        {
+            if (product == null)
+                throw new InvalidOperationException("product is not Provided");
+            _eCommerceUnitOfWork.Products.Add(
+                _mapper.Map<Entities.Product>(product));
+
+            _eCommerceUnitOfWork.Save();
+        }
+
+        public Product GetProduct(int id)
+        {
+            var product = _eCommerceUnitOfWork.Products.GetById(id);
+            return _mapper.Map<Product>(product);
+        }
+
+        public void Update(Product product)
+        {
+            if (product == null)
+                throw new InvalidOperationException("Product is not provided");
+
+            var productEntity = _eCommerceUnitOfWork.Products.GetById(product.Id);
+            if (productEntity != null)
+            {
+                _mapper.Map(product, productEntity);
+                _eCommerceUnitOfWork.Save();
+            }
+            else
+                throw new InvalidOperationException("Product was not found");
+        }
+
+        public void Delete(int id)
+        {
+            _eCommerceUnitOfWork.Products.Remove(id);
+            _eCommerceUnitOfWork.Save();
+        }
     }
 }
