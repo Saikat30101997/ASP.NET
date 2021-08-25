@@ -23,6 +23,11 @@ using ProjectEntityFrameWork.Membership;
 using ProjectEntityFrameWork.Membership.Services;
 using Microsoft.AspNetCore.Authorization;
 using ProjectEntityFrameWork.Membership.BusinessObjects;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace ProjectEntityFrameWork
 {
@@ -105,22 +110,54 @@ namespace ProjectEntityFrameWork
                 "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
                 options.User.RequireUniqueEmail = false;
             });
-            services.ConfigureApplicationCookie(options =>
-            {
-                // Cookie settings
-                options.Cookie.HttpOnly = true;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+            //ei pura jinis ta lagbe amr jokhn web api r concept main project e anii
 
-                options.LoginPath = "/Account/Signin";
-                options.AccessDeniedPath = "/Account/AccessDenied";
-                options.SlidingExpiration = true;
+            services.AddAuthentication()  // Microsoft.AspNetCore.Authentication.jwtbearer ei package lagbee // jwt r jonno ekta appsettings e config kora lagbe.. 
+                  .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options =>
+                  {
+                      options.LoginPath = new PathString("/Account/Login");
+                      options.AccessDeniedPath = new PathString("/Account/Login");
+                      options.LogoutPath = new PathString("/Account/Logout");
+                      options.Cookie.Name = "CustomerPortal.Identity";
+                      options.SlidingExpiration = true;
+                      options.ExpireTimeSpan = TimeSpan.FromDays(1);
+                  })
+                .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, x =>
+                {
+                x.RequireHttpsMetadata = false; //https lagbe kinaa 
+                    x.SaveToken = true; //token save koraa
+                    x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true, //issuer korbe kinaa
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Configuration["Jwt:Key"])), //encrypted korbe issuer key ta diyee
+                        ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidIssuer = Configuration["Jwt:Issuer"],
+                    ValidAudience = Configuration["Jwt:Audience"]
+                };
             });
+            //ei cookie setting ta r lagbe na karon cookie ta jwt r sate add koree disi jodi jwt config na kori tahole nicher ta lagbee 
+            //services.ConfigureApplicationCookie(options =>
+            //{
+            //    // Cookie settings
+            //    options.Cookie.HttpOnly = true;
+            //    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+
+            //    options.LoginPath = "/Account/Signin";
+            //    options.AccessDeniedPath = "/Account/AccessDenied";
+            //    options.SlidingExpiration = true;
+            //});
+
+            //by default shb gula uthentication scheme cookie r ta use korbe bt jodi prblm hy bydefault e tahole
+            //policy.AuthenticationSchemes.Add(CookieAuthenticationDefaults.AuthenticationScheme);
+            //evabe add korte hobe
 
             services.AddAuthorization(options =>  //policy and claim er jonno use kora hy 
             {
                 options.AddPolicy("AdminandTeacherAccess", policy =>
                 {
                     policy.RequireAuthenticatedUser();
+                
                     policy.RequireRole("Teacher");
                     policy.RequireRole("Admin");
                   
@@ -129,18 +166,29 @@ namespace ProjectEntityFrameWork
                 options.AddPolicy("RestrictedArea", policy =>
                 {
                     policy.RequireAuthenticatedUser();
+                  
                     policy.RequireClaim("view_permission","true");
                 });
 
                 options.AddPolicy("ViewPermission", policy =>
                 {
                     policy.RequireAuthenticatedUser();
+           
                     policy.Requirements.Add(new ViewRequirement());
+                });
+
+                options.AddPolicy("AccessPermission", policy =>
+                {
+                    policy.AuthenticationSchemes.Clear();
+                    policy.AuthenticationSchemes.Add(JwtBearerDefaults.AuthenticationScheme);
+                    policy.RequireAuthenticatedUser();
+                    policy.Requirements.Add(new ApiRequirement());
                 });
             });
 
-            //services.AddSingleton<IAuthorizationHandler, ViewRequirementHandler>(); // claim based er jonno ekhane 
-             
+            services.AddSingleton<IAuthorizationHandler, ViewRequirementHandler>(); // claim based er jonno ekhane 
+            services.AddSingleton<IAuthorizationHandler, ApiRequirementHandler>();
+
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); //automapper config er jonno must 
             services.AddControllersWithViews();
             services.AddHttpContextAccessor();
