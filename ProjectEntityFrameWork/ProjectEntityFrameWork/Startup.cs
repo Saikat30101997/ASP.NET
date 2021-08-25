@@ -166,7 +166,6 @@ namespace ProjectEntityFrameWork
                 options.AddPolicy("RestrictedArea", policy =>
                 {
                     policy.RequireAuthenticatedUser();
-                  
                     policy.RequireClaim("view_permission","true");
                 });
 
