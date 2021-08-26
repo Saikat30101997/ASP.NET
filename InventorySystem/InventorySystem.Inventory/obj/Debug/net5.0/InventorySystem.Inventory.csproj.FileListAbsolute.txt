@@ -1,0 +1,15 @@
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\bin\Debug\net5.0\InventorySystem.Inventory.deps.json
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\bin\Debug\net5.0\InventorySystem.Inventory.dll
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\bin\Debug\net5.0\ref\InventorySystem.Inventory.dll
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\bin\Debug\net5.0\InventorySystem.Inventory.pdb
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\bin\Debug\net5.0\InventorySystem.Data.dll
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\bin\Debug\net5.0\InventorySystem.Data.pdb
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\obj\Debug\net5.0\InventorySystem.Inventory.csprojAssemblyReference.cache
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\obj\Debug\net5.0\InventorySystem.Inventory.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\obj\Debug\net5.0\InventorySystem.Inventory.AssemblyInfoInputs.cache
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\obj\Debug\net5.0\InventorySystem.Inventory.AssemblyInfo.cs
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\obj\Debug\net5.0\InventorySystem.Inventory.csproj.CoreCompileInputs.cache
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\obj\Debug\net5.0\InventorySystem.Inventory.csproj.CopyComplete
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\obj\Debug\net5.0\InventorySystem.Inventory.dll
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\obj\Debug\net5.0\ref\InventorySystem.Inventory.dll
+G:\ASP.NET\InventorySystem\InventorySystem.Inventory\obj\Debug\net5.0\InventorySystem.Inventory.pdb

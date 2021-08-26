@@ -6,3 +6,49 @@
 2021-08-26 00:17:34.123 +06:00 [INF] User logged in.
 2021-08-26 00:17:35.771 +06:00 [INF] User logged out.
 2021-08-26 00:17:59.498 +06:00 [INF] User logged in.
+2021-08-26 11:19:07.738 +06:00 [INF] Application Starting up
+2021-08-26 11:19:26.349 +06:00 [INF] User logged in.
+2021-08-26 11:24:25.935 +06:00 [INF] Application Starting up
+2021-08-26 11:25:03.611 +06:00 [INF] User logged in.
+2021-08-26 11:26:47.985 +06:00 [INF] Application Starting up
+2021-08-26 11:27:19.324 +06:00 [INF] User logged in.
+2021-08-26 11:29:47.697 +06:00 [INF] Application Starting up
+2021-08-26 11:30:18.951 +06:00 [INF] User logged in.
+2021-08-26 11:30:22.419 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The AuthorizationPolicy named: 'AdminandTeacherAccess,DeletePermission' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-26 11:30:24.095 +06:00 [ERR] An exception occurred while calculating the database error page content. Skipping display of the database error page.
+System.InvalidOperationException: StatusCode cannot be set because the response has already started.
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.ThrowResponseAlreadyStartedException(String name)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContext.Microsoft.AspNetCore.Http.Features.IHttpResponseFeature.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Http.DefaultHttpResponse.set_StatusCode(Int32 value)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.Views.DatabaseErrorPage.ExecuteAsync()
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseDeveloperPageExceptionFilter.HandleExceptionAsync(ErrorContext errorContext, Func`2 next)
+2021-08-26 11:32:15.104 +06:00 [INF] Application Starting up
+2021-08-26 11:32:56.207 +06:00 [INF] User logged in.
+2021-08-26 11:33:29.513 +06:00 [INF] User logged out.
+2021-08-26 11:34:09.130 +06:00 [INF] User logged in.
+2021-08-26 11:35:31.033 +06:00 [INF] Application Starting up
+2021-08-26 11:36:56.719 +06:00 [INF] User logged in.
+2021-08-26 12:35:54.432 +06:00 [INF] Application Starting up
+2021-08-26 12:38:03.249 +06:00 [INF] User logged in.
+2021-08-26 12:46:39.690 +06:00 [INF] Application Starting up
+2021-08-26 12:47:42.448 +06:00 [INF] Application Starting up
+2021-08-26 12:48:16.500 +06:00 [INF] User logged in.
+2021-08-26 12:59:30.284 +06:00 [INF] Application Starting up
+2021-08-26 13:00:35.156 +06:00 [INF] User logged in.
+2021-08-26 13:02:46.210 +06:00 [INF] Application Starting up
+2021-08-26 13:03:28.429 +06:00 [INF] User logged in.
+2021-08-26 13:04:16.182 +06:00 [INF] Application Starting up
+2021-08-26 13:04:49.759 +06:00 [INF] User logged in.
+2021-08-26 13:05:48.786 +06:00 [INF] Application Starting up
+2021-08-26 13:06:38.515 +06:00 [INF] User logged in.
+2021-08-26 13:42:34.243 +06:00 [INF] Application Starting up
+2021-08-26 13:43:28.552 +06:00 [INF] Application Starting up
+2021-08-26 13:44:24.444 +06:00 [INF] User logged in.

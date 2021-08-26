@@ -169,13 +169,23 @@ namespace ProjectEntityFrameWork
                     policy.RequireClaim("view_permission","true");
                 });
 
+                options.AddPolicy("DeletePermission", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("delete_permission", "true");
+                });
+
                 options.AddPolicy("ViewPermission", policy =>
                 {
                     policy.RequireAuthenticatedUser();
-           
                     policy.Requirements.Add(new ViewRequirement());
                 });
 
+                options.AddPolicy("DeletePermissionAccess", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.Requirements.Add(new DeleteRequirement());
+                });
                 options.AddPolicy("AccessPermission", policy =>
                 {
                     policy.AuthenticationSchemes.Clear();
@@ -187,6 +197,7 @@ namespace ProjectEntityFrameWork
 
             services.AddSingleton<IAuthorizationHandler, ViewRequirementHandler>(); // claim based er jonno ekhane 
             services.AddSingleton<IAuthorizationHandler, ApiRequirementHandler>();
+            services.AddSingleton<IAuthorizationHandler, DeleteRequirementHandler>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); //automapper config er jonno must 
             services.AddControllersWithViews();
