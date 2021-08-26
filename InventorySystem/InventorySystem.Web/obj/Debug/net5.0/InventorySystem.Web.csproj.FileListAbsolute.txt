@@ -454,3 +454,8 @@ G:\ASP.NET\InventorySystem\InventorySystem.Web\bin\Debug\net5.0\InventorySystem.
 G:\ASP.NET\InventorySystem\InventorySystem.Web\bin\Debug\net5.0\InventorySystem.Inventory.dll
 G:\ASP.NET\InventorySystem\InventorySystem.Web\bin\Debug\net5.0\InventorySystem.Inventory.pdb
 G:\ASP.NET\InventorySystem\InventorySystem.Web\bin\Debug\net5.0\InventorySystem.Data.pdb
+G:\ASP.NET\InventorySystem\InventorySystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+G:\ASP.NET\InventorySystem\InventorySystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+G:\ASP.NET\InventorySystem\InventorySystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+G:\ASP.NET\InventorySystem\InventorySystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
+G:\ASP.NET\InventorySystem\InventorySystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminMenuPartial.cshtml.g.cs
