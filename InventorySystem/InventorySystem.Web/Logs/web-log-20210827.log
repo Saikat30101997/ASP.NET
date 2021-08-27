@@ -20,3 +20,25 @@ InventorySystem.Web.Areas.Admin.Controllers.ProductController.Create (InventoryS
    at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
 2021-08-27 17:15:54.328 +06:00 [INF] Application Starting up
+2021-08-27 17:34:56.029 +06:00 [INF] Application Starting up
+2021-08-27 17:35:16.169 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+InventorySystem.Web.Areas.Admin.Controllers.ProductController.Edit (InventorySystem.Web)
+InventorySystem.Web.Areas.Admin.Controllers.ProductController.Edit (InventorySystem.Web)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-27 17:35:48.375 +06:00 [INF] Application Starting up
+2021-08-27 17:38:24.000 +06:00 [INF] Application Starting up
+2021-08-27 17:39:11.446 +06:00 [INF] Application Starting up
+2021-08-27 17:40:06.451 +06:00 [INF] Application Starting up
+2021-08-27 17:43:39.785 +06:00 [INF] Application Starting up
+2021-08-27 17:45:30.150 +06:00 [INF] Application Starting up

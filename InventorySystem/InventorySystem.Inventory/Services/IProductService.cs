@@ -14,5 +14,6 @@ namespace InventorySystem.Inventory.Services
         void Create(Product product);
         Product GetProduct(int id);
         void Update(Product product);
+        void Delete(int id);
     }
 }

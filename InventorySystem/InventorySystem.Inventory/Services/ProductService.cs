@@ -28,6 +28,12 @@ namespace InventorySystem.Inventory.Services
             _inventoryUnitOfWork.Save();
         }
 
+        public void Delete(int id)
+        {
+            _inventoryUnitOfWork.Products.Remove(id);
+            _inventoryUnitOfWork.Save();
+        }
+
         public Product GetProduct(int id)
         {
             var product = _inventoryUnitOfWork.Products.GetById(id);

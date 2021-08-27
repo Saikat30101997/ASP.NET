@@ -50,14 +50,14 @@ namespace InventorySystem.Web.Areas.Admin.Controllers
             }
             return View();
         }
-
+        
         public IActionResult Edit(int id)
         {
             var model = new EditProductModel();
             model.GetProduct(id);
             return View(model);
         }
-
+        [HttpPost, ValidateAntiForgeryToken]
         public IActionResult Edit(EditProductModel model)
         {
 
@@ -74,6 +74,13 @@ namespace InventorySystem.Web.Areas.Admin.Controllers
                 }
             }
             return View();
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var model = new ProductListModel();
+            model.Delete(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

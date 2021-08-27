@@ -42,5 +42,10 @@ namespace InventorySystem.Web.Areas.Admin.Models.Products
                     ).ToArray()
             };
         }
+
+        internal void Delete(int id)
+        {
+            _productService.Delete(id);
+        }
     }
 }

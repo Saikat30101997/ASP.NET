@@ -462,3 +462,4 @@ G:\ASP.NET\InventorySystem\InventorySystem.Web\obj\Debug\net5.0\Razor\Areas\Admi
 G:\ASP.NET\InventorySystem\InventorySystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
 G:\ASP.NET\InventorySystem\InventorySystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_DeletePopUpPartial.cshtml.g.cs
 G:\ASP.NET\InventorySystem\InventorySystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Create.cshtml.g.cs
+G:\ASP.NET\InventorySystem\InventorySystem.Web\obj\Debug\net5.0\Razor\Areas\Admin\Views\Product\Edit.cshtml.g.cs
