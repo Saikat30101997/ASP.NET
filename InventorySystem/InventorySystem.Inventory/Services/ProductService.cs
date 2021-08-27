@@ -19,6 +19,21 @@ namespace InventorySystem.Inventory.Services
             _mapper = mapper;
         }
 
+        public void Create(Product product)
+        {
+            if (product == null)
+                throw new InvalidOperationException("Product is not provided");
+            _inventoryUnitOfWork.Products.Add(
+                _mapper.Map<Entities.Product>(product));
+            _inventoryUnitOfWork.Save();
+        }
+
+        public Product GetProduct(int id)
+        {
+            var product = _inventoryUnitOfWork.Products.GetById(id);
+            return _mapper.Map<Product>(product);
+        }
+
         public (IList<Product> records, int total, int totalDisplay) GetProducts(int pageIndex, 
             int pageSize, string searchText, string sortText)
         {
@@ -28,6 +43,20 @@ namespace InventorySystem.Inventory.Services
                               select _mapper.Map<Product>(product)).ToList();
 
             return (resultData, productData.total, productData.totalDisplay);
+        }
+
+        public void Update(Product product)
+        {
+            if (product == null)
+                throw new InvalidOperationException("Product is not provided");
+            var productEntity = _inventoryUnitOfWork.Products.GetById(product.Id);
+            if (productEntity != null)
+            {
+                _mapper.Map(product, productEntity);
+                _inventoryUnitOfWork.Save();
+            }
+            else
+                throw new InvalidOperationException("Product is not found");
         }
     }
 }

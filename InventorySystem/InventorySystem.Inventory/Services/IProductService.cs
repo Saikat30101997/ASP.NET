@@ -11,5 +11,8 @@ namespace InventorySystem.Inventory.Services
     {
         (IList<Product>records,int total,int totalDisplay) GetProducts(int pageIndex, 
             int pageSize, string searchText, string sortText);
+        void Create(Product product);
+        Product GetProduct(int id);
+        void Update(Product product);
     }
 }

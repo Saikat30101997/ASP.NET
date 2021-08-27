@@ -1,3 +1,22 @@
 2021-08-27 00:02:57.406 +06:00 [INF] Application Starting up
 2021-08-27 00:05:27.507 +06:00 [INF] Application Starting up
 2021-08-27 00:06:41.343 +06:00 [INF] Application Starting up
+2021-08-27 16:52:31.144 +06:00 [INF] Application Starting up
+2021-08-27 16:54:28.334 +06:00 [INF] Application Starting up
+2021-08-27 17:14:39.521 +06:00 [INF] Application Starting up
+2021-08-27 17:15:16.709 +06:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+InventorySystem.Web.Areas.Admin.Controllers.ProductController.Create (InventorySystem.Web)
+InventorySystem.Web.Areas.Admin.Controllers.ProductController.Create (InventorySystem.Web)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-08-27 17:15:54.328 +06:00 [INF] Application Starting up
