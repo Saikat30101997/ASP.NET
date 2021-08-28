@@ -16,7 +16,13 @@
             $('#courses').DataTable({
                 "processing": true,
                 "serverSide": true,
-                "ajax": "/Admin/Course/GetCourseData",
+                "ajax": {
+                    "url": "/Admin/Course/GetCourseData",
+                   // "url":"https://localhost:44388/api/course",
+                    "headers": {
+                        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2aWV3X3Blcm1pc3Npb24iOiJ0cnVlIiwibmJmIjoxNjMwMTY4MzgxLCJleHAiOjE2MzA3NzMxODEsImlhdCI6MTYzMDE2ODM4MSwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NDQzMjIiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDMyMiJ9.LV0fxrHQf1xCIczQUUpS9iBj7MTCS4p3SUuqWpnW2KE"
+                    },
+                },
                 "columnDefs": [
                     {
                         "orderable": false,

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEntityFrameWork.Areas.Admin.Controllers
 {
-    [Area("Admin"), Authorize(Policy  = "AdminandTeacherAccess",Roles ="Teacher") ] //Authorize Roll and policy egular name add kora jaay 
+    [Area("Admin"), Authorize(Policy  = "AdminandTeacherAccess")] //Authorize Roll and policy egular name add kora jaay 
     public class CourseController : Controller
     {
         private readonly ILogger<CourseController> _logger;
@@ -19,14 +19,14 @@ namespace ProjectEntityFrameWork.Areas.Admin.Controllers
         {
             _logger = logger;
         }
-        [Authorize(Policy = "DeletePermissionAccess")]
+  
         public IActionResult Index()
         {
             ViewBag.SomeData = "All availabe Courses";
             var model = new CourseListModel();
             return View(model);
         }
-        [Authorize(Policy = "DeletePermissionAccess")]
+
         public JsonResult GetCourseData()
         {
             var dataTableModel = new DataTablesAjaxRequestModel(Request);
@@ -97,7 +97,7 @@ namespace ProjectEntityFrameWork.Areas.Admin.Controllers
             //  return RedirectToAction(nameof(Index));
             return View(model);
         }
-        [HttpPost, ValidateAntiForgeryToken,Authorize(Policy = "DeletePermissionAccess")]
+        [HttpPost, ValidateAntiForgeryToken]
         public IActionResult Delete(int Id)
         {
             var model = new CourseListModel();
