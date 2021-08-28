@@ -212,7 +212,7 @@ namespace ProjectEntityFrameWork
             AutofacContainer = app.ApplicationServices.GetAutofacRoot();
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage(); 
                 app.UseMigrationsEndPoint();
             }
             else

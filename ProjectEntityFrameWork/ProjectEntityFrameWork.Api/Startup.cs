@@ -144,7 +144,16 @@ namespace ProjectEntityFrameWork.Api
             });
 
             services.AddSingleton<IAuthorizationHandler, ApiRequirementHandler>(); // claim based er jonno ekhane 
-
+            services.AddCors(options => //cors config
+            {
+                options.AddPolicy("AllowSites",
+                    builder =>
+                    {
+                        builder.WithOrigins("https://localhost:44358") //origin ta kotha theke amra allow korboo main project er port 
+                           .AllowAnyMethod() //ei duita get post ja diye call houk amra access dicchi
+                           .AllowAnyHeader(); //uporer ta moto r o onk option ase documentation theke nite hobe 
+                    });
+            });
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); //automapper config er jonno must 
             services.AddHttpContextAccessor();
             services.AddControllers();
@@ -168,6 +177,7 @@ namespace ProjectEntityFrameWork.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(); //routing er ekta bepar ase routing er niche dite hobe
             
             app.UseAuthentication();
             app.UseAuthorization();

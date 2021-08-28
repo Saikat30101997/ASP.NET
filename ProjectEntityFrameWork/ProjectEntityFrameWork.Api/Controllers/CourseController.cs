@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace ProjectEntityFrameWork.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController,Authorize(Policy = "AccessPermission")]
+    [EnableCors("AllowSites")]
     public class CourseController : ControllerBase
     {
         // GET: api/<CourseController>
@@ -19,7 +21,7 @@ namespace ProjectEntityFrameWork.Api.Controllers
         {
             return new string[] { "value1", "value2" };
         }
-
+       
         // GET api/<CourseController>/5 //querystring na eta route /routeparameter  er part 
         [HttpGet("{id}")]
         public string Get(int id)
