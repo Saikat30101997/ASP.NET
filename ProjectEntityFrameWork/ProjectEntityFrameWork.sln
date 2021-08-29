@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEntityFrameWork.Comm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEntityFrameWork.Membership", "ProjectEntityFrameWork.Membership\ProjectEntityFrameWork.Membership.csproj", "{37DE6F5E-01D8-446C-9379-7B52C9043671}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEntityFrameWork.Api", "ProjectEntityFrameWork.Api\ProjectEntityFrameWork.Api.csproj", "{4475569E-6542-4A99-831F-52B10767CE2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectEntityFrameWork.Api", "ProjectEntityFrameWork.Api\ProjectEntityFrameWork.Api.csproj", "{4475569E-6542-4A99-831F-52B10767CE2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectEntityFrameWork.Worker", "ProjectEntityFrameWork.Worker\ProjectEntityFrameWork.Worker.csproj", "{FDAF46E1-40B9-47DB-8B01-41E8DBDF9851}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{4475569E-6542-4A99-831F-52B10767CE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4475569E-6542-4A99-831F-52B10767CE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4475569E-6542-4A99-831F-52B10767CE2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDAF46E1-40B9-47DB-8B01-41E8DBDF9851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDAF46E1-40B9-47DB-8B01-41E8DBDF9851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDAF46E1-40B9-47DB-8B01-41E8DBDF9851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDAF46E1-40B9-47DB-8B01-41E8DBDF9851}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
