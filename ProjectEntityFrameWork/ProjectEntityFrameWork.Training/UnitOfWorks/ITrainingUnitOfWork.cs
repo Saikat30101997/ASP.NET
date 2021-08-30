@@ -8,5 +8,7 @@ namespace ProjectEntityFrameWork.Training.UnitOfWorks
     {
         IStudentRepository Students { get; }
         ICourseRepository  Courses { get; }
+        ICompanyRepository Companies { get; }
+        IStockPriceRepository StockPrices { get; }
     }
 }

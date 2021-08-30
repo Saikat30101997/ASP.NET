@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.36" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="5.0.1" />
     <PackageReference Include="Serilog.Extensions.Hosting" Version="4.1.2" />
@@ -17,5 +18,9 @@
 
   <ItemGroup>
     <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectEntityFrameWork.Training\ProjectEntityFrameWork.Training.csproj" />
   </ItemGroup>
 </Project>

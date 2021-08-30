@@ -38,11 +38,21 @@ namespace ProjectEntityFrameWork.Training
                 .InstancePerLifetimeScope();
             builder.RegisterType<CourseRepository>().As<ICourseRepository>()
                 .InstancePerLifetimeScope();
+            builder.RegisterType<CompanyRepository>().As<ICompanyRepository>()
+            .InstancePerLifetimeScope();
+            builder.RegisterType<StockPriceRepository>().As<IStockPriceRepository>()
+            .InstancePerLifetimeScope();
+      
             builder.RegisterType<TrainingUnitOfWork>().As<ITrainingUnitOfWork>()
                 .InstancePerLifetimeScope();
 
             builder.RegisterType<CourseService>().As<ICourseService>()
                 .InstancePerLifetimeScope();
+
+            builder.RegisterType<StockPriceService>().As<IStockPriceService>()
+           .InstancePerLifetimeScope();
+            builder.RegisterType<CompanyService>().As<ICompanyService>()
+               .InstancePerLifetimeScope();
 
             base.Load(builder);
         }

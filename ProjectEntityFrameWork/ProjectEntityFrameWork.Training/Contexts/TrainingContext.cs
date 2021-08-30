@@ -58,5 +58,8 @@ namespace ProjectEntityFrameWork.Training.Contexts
         public DbSet<Course> Courses { get; set; }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<StockPrice> StockPrices { get; set; }
+       
     }
 }

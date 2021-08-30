@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "iHN3QGLfyG6sc9wgGLd4sivm4wSxqh9Smi7XC8lbqyC44vl9mMhdM7itR9oEUbNlV5rrKpwMT4Q9k9Ql10DH5g==",
+  "success": true,
+  "projectFilePath": "G:\\ASP.NET\\HtmlAgility\\HtmlAgility\\HtmlAgility.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Saikat\\.nuget\\packages\\htmlagilitypack\\1.11.36\\htmlagilitypack.1.11.36.nupkg.sha512"
+  ],
+  "logs": []
+}

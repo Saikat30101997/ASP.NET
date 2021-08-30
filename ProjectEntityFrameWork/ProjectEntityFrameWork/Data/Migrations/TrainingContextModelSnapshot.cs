@@ -16,8 +16,23 @@ namespace ProjectEntityFrameWork.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.7")
+                .HasAnnotation("ProductVersion", "5.0.8")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.Company", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("TradeCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Companies");
+                });
 
             modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.Course", b =>
                 {
@@ -53,6 +68,51 @@ namespace ProjectEntityFrameWork.Data.Migrations
                     b.HasIndex("StudentId");
 
                     b.ToTable("CourseStudents");
+                });
+
+            modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.StockPrice", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("Change")
+                        .HasColumnType("float");
+
+                    b.Property<double>("ClosePrice")
+                        .HasColumnType("float");
+
+                    b.Property<int>("CompanyId")
+                        .HasColumnType("int");
+
+                    b.Property<double>("High")
+                        .HasColumnType("float");
+
+                    b.Property<double>("LastTradingPrice")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Low")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Trade")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Value")
+                        .HasColumnType("float");
+
+                    b.Property<int>("Volume")
+                        .HasColumnType("int");
+
+                    b.Property<double>("YesterdayClosePrice")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CompanyId")
+                        .IsUnique();
+
+                    b.ToTable("StockPrices");
                 });
 
             modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.Student", b =>
@@ -115,6 +175,17 @@ namespace ProjectEntityFrameWork.Data.Migrations
                     b.Navigation("Student");
                 });
 
+            modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.StockPrice", b =>
+                {
+                    b.HasOne("ProjectEntityFrameWork.Training.Entities.Company", "Company")
+                        .WithOne("StockPrice")
+                        .HasForeignKey("ProjectEntityFrameWork.Training.Entities.StockPrice", "CompanyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Company");
+                });
+
             modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.Topic", b =>
                 {
                     b.HasOne("ProjectEntityFrameWork.Training.Entities.Course", "Course")
@@ -124,6 +195,11 @@ namespace ProjectEntityFrameWork.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Course");
+                });
+
+            modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.Company", b =>
+                {
+                    b.Navigation("StockPrice");
                 });
 
             modelBuilder.Entity("ProjectEntityFrameWork.Training.Entities.Course", b =>

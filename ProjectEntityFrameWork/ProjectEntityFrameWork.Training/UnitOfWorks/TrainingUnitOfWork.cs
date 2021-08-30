@@ -16,13 +16,19 @@ namespace ProjectEntityFrameWork.Training.UnitOfWorks
         public IStudentRepository Students { get; private set; }
         public ICourseRepository Courses { get; private set; }
 
+        public ICompanyRepository Companies { get; private set; }
+        public IStockPriceRepository StockPrices { get; private set; }
+
         public TrainingUnitOfWork(ITrainingContext context,
             IStudentRepository students,
-            ICourseRepository courses
+            ICourseRepository courses,ICompanyRepository companies,
+            IStockPriceRepository stockPrices
             ) : base((DbContext)context)
         {
             Students = students;
             Courses = courses;
+            Companies = companies;
+            StockPrices = stockPrices;
         }
     }
 }
