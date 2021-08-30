@@ -1,0 +1,15 @@
+G:\ASP.NET\StockData\StockData.Stock\bin\Debug\net5.0\StockData.Stock.deps.json
+G:\ASP.NET\StockData\StockData.Stock\bin\Debug\net5.0\StockData.Stock.dll
+G:\ASP.NET\StockData\StockData.Stock\bin\Debug\net5.0\ref\StockData.Stock.dll
+G:\ASP.NET\StockData\StockData.Stock\bin\Debug\net5.0\StockData.Stock.pdb
+G:\ASP.NET\StockData\StockData.Stock\obj\Debug\net5.0\StockData.Stock.GeneratedMSBuildEditorConfig.editorconfig
+G:\ASP.NET\StockData\StockData.Stock\obj\Debug\net5.0\StockData.Stock.AssemblyInfoInputs.cache
+G:\ASP.NET\StockData\StockData.Stock\obj\Debug\net5.0\StockData.Stock.AssemblyInfo.cs
+G:\ASP.NET\StockData\StockData.Stock\obj\Debug\net5.0\StockData.Stock.csproj.CoreCompileInputs.cache
+G:\ASP.NET\StockData\StockData.Stock\obj\Debug\net5.0\StockData.Stock.dll
+G:\ASP.NET\StockData\StockData.Stock\obj\Debug\net5.0\ref\StockData.Stock.dll
+G:\ASP.NET\StockData\StockData.Stock\obj\Debug\net5.0\StockData.Stock.pdb
+G:\ASP.NET\StockData\StockData.Stock\obj\Debug\net5.0\StockData.Stock.csprojAssemblyReference.cache
+G:\ASP.NET\StockData\StockData.Stock\bin\Debug\net5.0\StockData.Data.dll
+G:\ASP.NET\StockData\StockData.Stock\bin\Debug\net5.0\StockData.Data.pdb
+G:\ASP.NET\StockData\StockData.Stock\obj\Debug\net5.0\StockData.Stock.csproj.CopyComplete
