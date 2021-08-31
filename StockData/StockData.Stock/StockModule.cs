@@ -44,7 +44,7 @@ namespace StockData.Stock
                 .InstancePerLifetimeScope();
             builder.RegisterType<StockPriceService>().As<IStockPriceService>()
                 .InstancePerLifetimeScope();
-          
+
 
             base.Load(builder);
         }

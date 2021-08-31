@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlAgility", "HtmlAgility\HtmlAgility.csproj", "{C31CDD61-9AF5-4C97-A82F-33FB3D882A02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlAgility", "HtmlAgility\HtmlAgility.csproj", "{C31CDD61-9AF5-4C97-A82F-33FB3D882A02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlAgility2", "HtmlAgility2\HtmlAgility2.csproj", "{A654C481-07E1-4DA2-ACB7-33D293E95F01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C31CDD61-9AF5-4C97-A82F-33FB3D882A02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C31CDD61-9AF5-4C97-A82F-33FB3D882A02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C31CDD61-9AF5-4C97-A82F-33FB3D882A02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A654C481-07E1-4DA2-ACB7-33D293E95F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A654C481-07E1-4DA2-ACB7-33D293E95F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A654C481-07E1-4DA2-ACB7-33D293E95F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A654C481-07E1-4DA2-ACB7-33D293E95F01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

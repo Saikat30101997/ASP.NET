@@ -15,67 +15,72 @@ namespace StockData.Worker
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-        //  private readonly IStockPriceService _stockPriceService;
+        private readonly IStockPriceService _stockPriceService;
         private readonly IServiceProvider _provider;
+      
        
-        public Worker(ILogger<Worker> logger,IServiceProvider provider)
+        public Worker(ILogger<Worker> logger, IStockPriceService stockPriceService, IServiceProvider provider)
         {
             _logger = logger;
-            // _stockPriceService = stockPriceService;
+            _stockPriceService = stockPriceService;
             _provider = provider;
+        
+        
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                
-                //HtmlWeb web = new HtmlWeb();
-                //HtmlDocument document = web.Load("https://www.dse.com.bd/latest_share_price_scroll_l.php");
-                //var nodes = document.DocumentNode.SelectSingleNode("//div[@class='table-responsive inner-scroll']/table[contains(@class, " +
-                //    "'table table-bordered background-white shares-table fixedHeader')]").ChildNodes;
+               // using var scope = _provider.CreateScope();
+                _provider.GetRequiredService<IStockPriceService>();
 
-                //foreach (var node in nodes)
-                //{
-                //    var id = node.SelectSingleNode("td[1]") == null ? "" : node.SelectSingleNode("td[1]").InnerText;
+                HtmlWeb web = new HtmlWeb();
+                HtmlDocument document = web.Load("https://www.dse.com.bd/latest_share_price_scroll_l.php");
+                var nodes = document.DocumentNode.SelectSingleNode("//div[@class='table-responsive inner-scroll']/table[contains(@class, " +
+                    "'table table-bordered background-white shares-table fixedHeader')]").ChildNodes;
 
-                //    var tradingcode = node.SelectSingleNode("td[2]") == null ? "" : node.SelectSingleNode("td[2]").InnerText;
+                foreach (var node in nodes)
+                {
+                    var id = node.SelectSingleNode("td[1]") == null ? "" : node.SelectSingleNode("td[1]").InnerText;
 
-                //    var LTP = node.SelectSingleNode("td[3]") == null ? "" : node.SelectSingleNode("td[3]").InnerText;
+                    var tradingcode = node.SelectSingleNode("td[2]") == null ? "" : node.SelectSingleNode("td[2]").InnerText;
 
-                //    var high = node.SelectSingleNode("td[4]") == null ? "" : node.SelectSingleNode("td[4]").InnerText;
+                    var LTP = node.SelectSingleNode("td[3]") == null ? "" : node.SelectSingleNode("td[3]").InnerText;
 
-                //    var Low = node.SelectSingleNode("td[5]") == null ? "" : node.SelectSingleNode("td[5]").InnerText;
+                    var high = node.SelectSingleNode("td[4]") == null ? "" : node.SelectSingleNode("td[4]").InnerText;
 
-                //    var Closep = node.SelectSingleNode("td[6]") == null ? "" : node.SelectSingleNode("td[6]").InnerText;
+                    var Low = node.SelectSingleNode("td[5]") == null ? "" : node.SelectSingleNode("td[5]").InnerText;
 
-                //    var YCP = node.SelectSingleNode("td[7]") == null ? "" : node.SelectSingleNode("td[7]").InnerText;
+                    var Closep = node.SelectSingleNode("td[6]") == null ? "" : node.SelectSingleNode("td[6]").InnerText;
 
-                //    var CHANGE = node.SelectSingleNode("td[8]") == null ? "" : node.SelectSingleNode("td[8]").InnerText;
+                    var YCP = node.SelectSingleNode("td[7]") == null ? "" : node.SelectSingleNode("td[7]").InnerText;
 
-                //    var TRADE = node.SelectSingleNode("td[9]") == null ? "" : node.SelectSingleNode("td[9]").InnerText;
+                    var CHANGE = node.SelectSingleNode("td[8]") == null ? "" : node.SelectSingleNode("td[8]").InnerText;
 
-
-                //    var Value = node.SelectSingleNode("td[10]") == null ? "" : node.SelectSingleNode("td[10]").InnerText;
-
-                //    var Volume = node.SelectSingleNode("td[11]") == null ? "" : node.SelectSingleNode("td[11]").InnerText;
-                //    var stockPrice = new StockPrice()
-                //    {
-                //        LastTradingPrice = Convert.ToDouble(LTP),
-                //        High = Convert.ToDouble(high),
-                //        Low = Convert.ToDouble(Low),
-                //        ClosePrice = Convert.ToDouble(Closep),
-                //        YesterdayClosePrice = Convert.ToDouble(YCP),
-                //        Change = Convert.ToDouble(CHANGE),
-                //        Trade = Convert.ToDouble(TRADE),
-                //        Value = Convert.ToDouble(Value),
-                //        Volume = Convert.ToInt32(Volume)
+                    var TRADE = node.SelectSingleNode("td[9]") == null ? "" : node.SelectSingleNode("td[9]").InnerText;
 
 
-                //    };
-                //    _stockPriceService.Create(stockPrice);
-                //}
-               
+                    var Value = node.SelectSingleNode("td[10]") == null ? "" : node.SelectSingleNode("td[10]").InnerText;
+
+                    var Volume = node.SelectSingleNode("td[11]") == null ? "" : node.SelectSingleNode("td[11]").InnerText;
+                    var stockPrice = new StockPrice()
+                    {
+                        LastTradingPrice = Convert.ToDouble(LTP),
+                        High = Convert.ToDouble(high),
+                        Low = Convert.ToDouble(Low),
+                        ClosePrice = Convert.ToDouble(Closep),
+                        YesterdayClosePrice = Convert.ToDouble(YCP),
+                        Change = Convert.ToDouble(CHANGE),
+                        Trade = Convert.ToDouble(TRADE),
+                        Value = Convert.ToDouble(Value),
+                        Volume = Convert.ToInt32(Volume)
+
+
+                    };
+                    _stockPriceService.Create(stockPrice);
+                }
+
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
                 await Task.Delay(1000, stoppingToken);
             }

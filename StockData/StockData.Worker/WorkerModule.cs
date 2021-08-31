@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Microsoft.Extensions.Configuration;
+using StockData.Stock.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace StockData.Worker
 
         protected override void Load(ContainerBuilder builder)
         {
+            
             base.Load(builder);
         }
     }

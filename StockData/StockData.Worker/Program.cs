@@ -71,7 +71,7 @@ namespace StockData.Worker
                     services.AddDbContext<StockDbContext>(options =>
                          options.UseSqlServer(_connectionString, b =>
                          b.MigrationsAssembly(_migrationAssemblyName)));
-
+                   
                     services.AddHostedService<Worker>();
                    
                 });
