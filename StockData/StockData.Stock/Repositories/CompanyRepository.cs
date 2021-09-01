@@ -18,7 +18,7 @@ namespace StockData.Stock.Repositories
         {
 
         }
-        public List<Company> GetCompanyName(Expression<Func<Company, bool>> filter)
+        public IList<Company> GetCompanyName(Expression<Func<Company, bool>> filter)
         {
             IQueryable<Company> query = _dbSet;
 

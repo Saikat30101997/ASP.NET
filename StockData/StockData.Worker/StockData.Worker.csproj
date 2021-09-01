@@ -25,4 +25,8 @@
   <ItemGroup>
     <ProjectReference Include="..\StockData.Stock\StockData.Stock.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
 </Project>

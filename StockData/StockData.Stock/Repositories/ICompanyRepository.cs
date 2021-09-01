@@ -11,6 +11,6 @@ namespace StockData.Stock.Repositories
 {
     public interface ICompanyRepository : IRepository<Company,int>
     {
-        List<Company> GetCompanyName(Expression<Func<Company, bool>> filter);
+        IList<Company> GetCompanyName(Expression<Func<Company, bool>> filter);
     }
 }

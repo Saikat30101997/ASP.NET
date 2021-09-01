@@ -14,7 +14,7 @@ namespace StockData.Worker
     {
         private readonly string _connectionString;
         private readonly string _migrationAssemblyName;
-        private readonly IConfiguration _configuration; //onk shmy connfguration file ta read kora lage worker er 
+        private readonly IConfiguration _configuration; 
 
         public WorkerModule(string connectionStringName, string migrationAssemblyName,
             IConfiguration configuration)
