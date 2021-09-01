@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StockData.Stock.UnitOFWorks
+namespace StockData.Stock.UnitOfWorks
 {
     public interface IStockDataUnitOfWork : IUnitOfWork
     {

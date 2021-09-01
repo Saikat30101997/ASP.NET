@@ -1,6 +1,5 @@
-﻿using AutoMapper;
-using StockData.Stock.BusinessObjects;
-using StockData.Stock.UnitOFWorks;
+﻿using StockData.Stock.BusinessObjects;
+using StockData.Stock.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,20 +11,38 @@ namespace StockData.Stock.Services
     public class StockPriceService : IStockPriceService
     {
         private readonly IStockDataUnitOfWork _stockDataUnitOfWork;
-        private readonly IMapper _mapper;
-        public StockPriceService(IStockDataUnitOfWork stockDataUnitOfWork,IMapper mapper)
+        public StockPriceService(IStockDataUnitOfWork stockDataUnitOfWork)
         {
             _stockDataUnitOfWork = stockDataUnitOfWork;
-            _mapper = mapper;
         }
 
         public void Create(StockPrice stockPrice)
         {
             if (stockPrice == null)
-                throw new InvalidOperationException("");
+                throw new InvalidOperationException("StockPrice is not Provided");
             _stockDataUnitOfWork.StockPrices.Add(
-                _mapper.Map<Entities.StockPrice>(stockPrice));
+                new Entities.StockPrice
+                {
+                    CompanyId = GetId(stockPrice.Tradecode),
+                    LastTradingPrice = stockPrice.LastTradingPrice,
+                    High = stockPrice.High,
+                    Low = stockPrice.Low,
+                    ClosePrice = stockPrice.ClosePrice,
+                    YesterdayClosePrice = stockPrice.YesterdayClosePrice,
+                    Change = stockPrice.Change,
+                    Trade = stockPrice.Trade,
+                    Value = stockPrice.Value,
+                    Volume = stockPrice.Volume
+                });
+          
             _stockDataUnitOfWork.Save();
+        }
+
+        public int GetId(string name)
+        {
+            var company = _stockDataUnitOfWork.Companies.GetCompanyName(x => x.TradeCode == name);
+            int id = company[0].Id;
+            return id;
         }
     }
 }

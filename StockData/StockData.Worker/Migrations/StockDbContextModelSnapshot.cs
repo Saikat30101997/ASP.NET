@@ -40,35 +40,35 @@ namespace StockData.Worker.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<double>("Change")
-                        .HasColumnType("float");
+                    b.Property<string>("Change")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("ClosePrice")
-                        .HasColumnType("float");
+                    b.Property<string>("ClosePrice")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("CompanyId")
                         .HasColumnType("int");
 
-                    b.Property<double>("High")
-                        .HasColumnType("float");
+                    b.Property<string>("High")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("LastTradingPrice")
-                        .HasColumnType("float");
+                    b.Property<string>("LastTradingPrice")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Low")
-                        .HasColumnType("float");
+                    b.Property<string>("Low")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Trade")
-                        .HasColumnType("float");
+                    b.Property<string>("Trade")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("Value")
-                        .HasColumnType("float");
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Volume")
-                        .HasColumnType("int");
+                    b.Property<string>("Volume")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("YesterdayClosePrice")
-                        .HasColumnType("float");
+                    b.Property<string>("YesterdayClosePrice")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

@@ -9,6 +9,6 @@ namespace StockData.Stock.Services
 {
     public interface IStockPriceService
     {
-        void Create(StockPrice stockPrice);
+       void Create(StockPrice stockPrice);
     }
 }

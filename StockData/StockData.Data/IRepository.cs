@@ -17,6 +17,7 @@ namespace StockData.Data
         void Edit(TEntity entityToUpdate);
         int GetCount(Expression<Func<TEntity, bool>> filter = null);
         IList<TEntity> Get(Expression<Func<TEntity, bool>> filter, string includeProperties = "");
+
         IList<TEntity> GetAll();
         TEntity GetById(TKey id);
         (IList<TEntity> data, int total, int totalDisplay) Get(
@@ -36,5 +37,7 @@ namespace StockData.Data
         IList<TEntity> GetDynamic(Expression<Func<TEntity, bool>> filter = null,
             string orderBy = null,
             string includeProperties = "", bool isTrackingOff = false);
+
+       
     }
 }

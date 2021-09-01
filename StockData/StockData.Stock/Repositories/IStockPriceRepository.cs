@@ -1,5 +1,4 @@
-﻿
-using StockData.Data;
+﻿using StockData.Data;
 using StockData.Stock.Entities;
 using System;
 using System.Collections.Generic;

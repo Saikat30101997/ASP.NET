@@ -32,7 +32,7 @@ namespace StockData.Data
             var entityToDelete = _dbSet.Find(id);
             Remove(entityToDelete);
         }
-
+       
         public virtual void Remove(TEntity entityToDelete)
         {
             if (_dbContext.Entry(entityToDelete).State == EntityState.Detached)

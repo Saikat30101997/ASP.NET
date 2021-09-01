@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-
 using StockData.Data;
 using StockData.Stock.Contexts;
 using StockData.Stock.Entities;
@@ -11,7 +10,8 @@ using System.Threading.Tasks;
 
 namespace StockData.Stock.Repositories
 {
-    public class StockPriceRepository : Repository<StockPrice,int> ,IStockPriceRepository
+    public class StockPriceRepository : Repository<StockPrice,int>,
+        IStockPriceRepository
     {
         public StockPriceRepository(IStockDbContext context) : base((DbContext)context)
         {

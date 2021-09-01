@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Microsoft.Extensions.Configuration;
-using StockData.Stock.Services;
+
+using StockData.Worker.DataStores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,8 @@ namespace StockData.Worker
 
         protected override void Load(ContainerBuilder builder)
         {
-            
+            builder.RegisterType<StockDataStore>().As<IStockDataStore>()
+                .InstancePerLifetimeScope(); 
             base.Load(builder);
         }
     }

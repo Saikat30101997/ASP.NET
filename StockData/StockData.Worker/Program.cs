@@ -8,6 +8,7 @@ using Serilog;
 using Serilog.Events;
 using StockData.Stock;
 using StockData.Stock.Contexts;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

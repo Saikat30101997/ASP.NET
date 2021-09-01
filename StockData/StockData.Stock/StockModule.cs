@@ -2,7 +2,7 @@
 using StockData.Stock.Contexts;
 using StockData.Stock.Repositories;
 using StockData.Stock.Services;
-using StockData.Stock.UnitOFWorks;
+using StockData.Stock.UnitOfWorks;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,17 +33,18 @@ namespace StockData.Stock
                 .WithParameter("connectionString", _connectionString)
                 .WithParameter("migrationAssemblyName", _migrationAssemblyName)
                 .InstancePerLifetimeScope();
-
-         
             builder.RegisterType<CompanyRepository>().As<ICompanyRepository>()
                 .InstancePerLifetimeScope();
             builder.RegisterType<StockPriceRepository>().As<IStockPriceRepository>()
-                .InstancePerLifetimeScope();
-
+              .InstancePerLifetimeScope();
             builder.RegisterType<StockDataUnitOfWork>().As<IStockDataUnitOfWork>()
+              .InstancePerLifetimeScope();
+
+            builder.RegisterType<CompanyService>().As<ICompanyService>()
                 .InstancePerLifetimeScope();
             builder.RegisterType<StockPriceService>().As<IStockPriceService>()
-                .InstancePerLifetimeScope();
+               .InstancePerLifetimeScope();
+
 
 
             base.Load(builder);
