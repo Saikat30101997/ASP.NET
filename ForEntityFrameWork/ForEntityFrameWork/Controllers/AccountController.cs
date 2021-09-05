@@ -57,12 +57,14 @@ namespace ForEntityFrameWork.Controllers
         {
             model.ReturnUrl ??= Url.Content("~/"); //value null hole eta bosbe default page bosbe.. 
             model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+          
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await _userManager.CreateAsync(user, model.Password);
-                await _userManager.AddToRoleAsync(user, "Admin");
-                await _userManager.AddToRoleAsync(user, "Teacher");
+                //await _userManager.AddToRoleAsync(user, "Admin");
+                //await _userManager.AddToRoleAsync(user, "Teacher");
+                await _userManager.AddClaimAsync(user, new System.Security.Claims.Claim("view_permission", "true"));
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
