@@ -1,0 +1,20 @@
+﻿@model DataImporter.Web.Models.ImportJobModel
+@{
+    ViewData["Title"] = "ImporyJob";
+}
+
+<section class="content-header">
+
+</section>
+<div class="container">
+    <form asp-controller="Dashboard" asp-action="ImportJob" asp-antiforgery="true" class="text-danger">
+        <label asp-for="DateFrom">Date From: </label>
+        <input type="text" id="dateFrom" name="dateFrom" asp-for="DateFrom">
+        <label asp-for="DateTo">Date To: </label>
+        <input type="text" id="dateto" name="dateto" asp-for="DateTo">
+        <button type="submit" class="btn btn-info float-right">Search</button>
+    </form>
+</div>
+
+
+
