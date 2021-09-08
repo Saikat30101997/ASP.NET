@@ -5,6 +5,7 @@ using DataImporter.Membership.Contexts;
 using DataImporter.Membership.Entities;
 using DataImporter.Membership.Services;
 using DataImporter.Web.Data;
+using DataImporter.Web.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -65,6 +66,7 @@ namespace DataImporter.Web
                 options.UseSqlServer(connectionInfo.connectionString, b =>
                 b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
             services.AddDatabaseDeveloperPageExceptionFilter();
+            services.Configure<ReCaptchaSettings>(Configuration.GetSection("GooglereCaptcha"));
 
             services  
                  .AddIdentity<ApplicationUser, Role>()
@@ -74,6 +76,27 @@ namespace DataImporter.Web
                  .AddSignInManager<SignInManager>()
                  .AddDefaultUI()
                  .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options => //password config er jonno 
+            {
+                // Password settings.
+                options.Password.RequireDigit = false;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Password.RequireUppercase = false;
+                options.Password.RequiredLength = 6;
+                options.Password.RequiredUniqueChars = 1;
+
+                // Lockout settings.
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                options.Lockout.MaxFailedAccessAttempts = 5;
+                options.Lockout.AllowedForNewUsers = true;
+
+                // User settings.
+                options.User.AllowedUserNameCharacters =
+                "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+                options.User.RequireUniqueEmail = false;
+            });
             services.AddControllersWithViews();
             services.AddRazorPages();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

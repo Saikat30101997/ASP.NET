@@ -459,3 +459,5 @@ G:\ASP.NET\DataImporter\DataImporter.Web\bin\Debug\net5.0\Serilog.Sinks.Debug.dl
 G:\ASP.NET\DataImporter\DataImporter.Web\bin\Debug\net5.0\Serilog.Sinks.File.dll
 G:\ASP.NET\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Membership.dll
 G:\ASP.NET\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Membership.pdb
+G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
