@@ -10,7 +10,7 @@ namespace ProjectEntityFrameWork.Training.Services
 {
     public interface ICourseService
     {
-        IList<Course> GetAllCourses();
+        IList<Course> GetAllCourses(DateTime start,DateTime end);
         void CreateCourse(Course course);
         void EnrollStudents(Course course, Student student);
         (IList<Course>records,int total,int totalDisplay) GetCourses(int pageIndex, int pageSize, 

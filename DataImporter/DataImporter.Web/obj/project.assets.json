@@ -2451,6 +2451,24 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "DataImporter.Membership/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Autofac.Extensions.DependencyInjection": "7.1.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "5.0.7",
+          "Microsoft.AspNetCore.Identity.UI": "5.0.7",
+          "Microsoft.EntityFrameworkCore": "5.0.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.7",
+          "Microsoft.Extensions.Identity.Stores": "5.0.7"
+        },
+        "compile": {
+          "bin/placeholder/DataImporter.Membership.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataImporter.Membership.dll": {}
+        }
       }
     }
   },
@@ -8229,12 +8247,18 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "DataImporter.Membership/1.0.0": {
+      "type": "project",
+      "path": "../DataImporter.Membership/DataImporter.Membership.csproj",
+      "msbuildProject": "../DataImporter.Membership/DataImporter.Membership.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "Autofac.Extensions.DependencyInjection >= 7.1.0",
+      "DataImporter.Membership >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 5.0.7",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.7",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.7",
@@ -8272,7 +8296,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\ASP.NET\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj": {
+              "projectPath": "G:\\ASP.NET\\DataImporter\\DataImporter.Membership\\DataImporter.Membership.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

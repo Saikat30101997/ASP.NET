@@ -12,5 +12,6 @@ namespace ProjectEntityFrameWork.Training.Repositories
 {
     public interface ICourseRepository : IRepository<Course, int>
     {
+      
     }
 }

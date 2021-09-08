@@ -1,5 +1,9 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using DataImporter.Membership;
+using DataImporter.Membership.Contexts;
+using DataImporter.Membership.Entities;
+using DataImporter.Membership.Services;
 using DataImporter.Web.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -39,7 +43,8 @@ namespace DataImporter.Web
         public void ConfigureContainer(ContainerBuilder builder)
         {
             var connectionInfo = GetConnectionStringAndAssemblyName();
-     
+            builder.RegisterModule(new MembershipModule(connectionInfo.connectionString
+                , connectionInfo.migrationAssemblyName));
 
             builder.RegisterModule(new WebModule());
         }
@@ -54,14 +59,24 @@ namespace DataImporter.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
+            var connectionInfo = GetConnectionStringAndAssemblyName();
+
+            services.AddDbContext<ApplicationDbContext>(options => 
+                options.UseSqlServer(connectionInfo.connectionString, b =>
+                b.MigrationsAssembly(connectionInfo.migrationAssemblyName)));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services  
+                 .AddIdentity<ApplicationUser, Role>()
+                 .AddEntityFrameworkStores<ApplicationDbContext>()
+                 .AddUserManager<UserManager>() 
+                 .AddRoleManager<RoleManager>()
+                 .AddSignInManager<SignInManager>()
+                 .AddDefaultUI()
+                 .AddDefaultTokenProviders();
             services.AddControllersWithViews();
+            services.AddRazorPages();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

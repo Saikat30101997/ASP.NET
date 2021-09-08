@@ -26,23 +26,14 @@ namespace ProjectEntityFrameWork.Training.Services
             _mapper = mapper;
         }
 
-        public IList<Course> GetAllCourses()
+        public IList<Course> GetAllCourses(DateTime start,DateTime end)
         {
             var courseEntities = _trainingUnitOfWork.Courses.GetAll();
-            var courses = new List<Course>();
+            var courses = courseEntities.Where(c => c.StartDate >= start && c.StartDate <= end).ToList();
 
-            foreach(var entity in courseEntities)
-            {
-                var course = new Course()
-                {
-                    Title = entity.Title,
-                    Fees = entity.Fees
-                };
+           
 
-                courses.Add(course);
-            }
-
-            return courses;
+            return (IList<Course>)courses;
         }
 
         public void CreateCourse(Course course)
