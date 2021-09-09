@@ -11,34 +11,34 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="card card-info">
+                <div class="card card-success">
                     <div class="card-header">
                         <h3 class="card-title">Import Contacts</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form class="form-horizontal" method="post" asp-controller="Dashboard"
-                          asp-action="ImportContact" asp-antiforgery="true">
-                        <div asp-validation-summary="All" class="text-danger"></div>
+                    <form>
                         <div class="card-body">
-                            <div class="form-group row">
-                                <label asp-for="ExcelFile" class="col-sm-2 col-form-label">File Name</label>
-                                <div class="col-sm-10">
-                                    <input type="file" class="form-control" asp-for="ExcelFile" id="excelfile"
-                                           placeholder="File Name">
+                          
+                            <div class="form-group">
+                                <label for="exampleInputFile">Upload Excel</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="exampleInputFile" asp-for="ExcelFile">
+                                        <label class="custom-file-label" for="exampleInputFile" asp-for="ExcelFile">Choose file</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- /.card-body -->
+
                         <div class="card-footer">
-                            <button type="submit" class="btn btn-info">Create</button>
-                            <a asp-controller="Dashboard" asp-action="Index" class="btn btn-default float-right">Cancel</a>
+                            <button type="submit" class="btn btn-primary">Upload</button>
                         </div>
-                        <!-- /.card-footer -->
                     </form>
                 </div>
             </div>
-        </div>
+       </div>
     </div>
 </section>
 

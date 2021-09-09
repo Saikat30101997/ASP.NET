@@ -2,19 +2,31 @@
 @{
     ViewData["Title"] = "ImporyJob";
 }
+@section Styles
+{
 
+    <link href="~/css/ImportJob.css" rel="stylesheet" />
+}
 <section class="content-header">
-
 </section>
-<div class="container">
-    <form asp-controller="Dashboard" asp-action="ImportJob" asp-antiforgery="true" class="text-danger">
-        <label asp-for="DateFrom">Date From: </label>
-        <input type="text" id="dateFrom" name="dateFrom" asp-for="DateFrom">
-        <label asp-for="DateTo">Date To: </label>
-        <input type="text" id="dateto" name="dateto" asp-for="DateTo">
-        <button type="submit" class="btn btn-info float-right">Search</button>
+
+<div class="imports">
+    <form class="row g-3" method="post" asp-antiforgery="true" asp-controller="Dashboard" asp-action="ImportJob">
+        <div class="col-md-3">
+            <label asp-for="DateFrom" class="form-label">Date From</label>
+            <input type="text" class="form-control" id="datefrom" asp-for="DateFrom">
+        </div>
+        <div class="col-md-3">
+            <label asp-for="DateTo" class="form-label">Date To</label>
+            <input type="text" class="form-control" id="dateTo" asp-for="DateTo">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-info float-sm-right">Search</button>
+        </div>
     </form>
 </div>
+
+
 
 
 

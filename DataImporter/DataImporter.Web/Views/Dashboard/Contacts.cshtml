@@ -2,19 +2,31 @@
 @{
     ViewData["Title"] = "Contacts";
 }
+@section Styles
+{
+    <link href="~/css/Contacts.css" rel="stylesheet" />
+}
 
-<section class="content-header">
+<section>
 
 </section>
-<div class="container">
-    <form asp-controller="Dashboard" asp-action="Contacts" asp-antiforgery="true" class="text-danger">
-        <label asp-for="GroupName">Group: </label>
-        <input type="text" id="groupName" name="groupName" asp-for="GroupName">
-        <label asp-for="DateFrom">Date From: </label>
-        <input type="text" id="dateFrom" name="dateFrom" asp-for="DateFrom">
-        <label asp-for="DateTo">Date To: </label>
-        <input type="text" id="dateto" name="dateto" asp-for="DateTo">
-        <button type="submit" class="btn btn-info float-right">Search</button>
+<div class="contacts">
+    <form class="row g-3" method="post" asp-antiforgery="true">
+        <div class="col-md-3">
+            <label asp-for="GroupName" class="form-label">Group</label>
+            <input type="text" class="form-control" id="group" asp-for="GroupName">
+        </div>
+        <div class="col-md-3">
+            <label asp-for="DateFrom" class="form-label">Date From</label>
+            <input type="text" class="form-control" id="datefrom" asp-for="DateFrom">
+        </div>
+        <div class="col-md-3">
+            <label asp-for="DateTo" class="form-label">Date To</label>
+            <input type="text" class="form-control" id="dateTo" asp-for="DateTo">
+        </div>
+        <div>
+            <button type="submit" class="btn btn-info float-sm-right" >Search</button>
+        </div>
     </form>
 </div>
 
