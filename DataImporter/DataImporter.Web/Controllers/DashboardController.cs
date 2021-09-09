@@ -32,5 +32,9 @@ namespace DataImporter.Web.Controllers
         {
             return View();
         }
+        public IActionResult Register1()
+        {
+            return View();
+        }
     }
 }

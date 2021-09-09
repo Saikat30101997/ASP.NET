@@ -461,3 +461,4 @@ G:\ASP.NET\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Membershi
 G:\ASP.NET\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Membership.pdb
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Register1.cshtml.g.cs

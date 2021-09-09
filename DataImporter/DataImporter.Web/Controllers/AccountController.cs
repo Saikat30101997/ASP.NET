@@ -164,5 +164,10 @@ namespace DataImporter.Web.Controllers
                 return RedirectToAction("Index", "Dashboard");
             }
         }
+
+        public IActionResult Register1()
+        {
+            return View();
+        }
     }
 }
