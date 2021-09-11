@@ -1,5 +1,6 @@
 ﻿
 using DataImporter.Membership.Entities;
+using DataImporter.Web.Models;
 using DataImporter.Web.Models.Account;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
@@ -23,18 +24,21 @@ namespace DataImporter.Web.Controllers
         private readonly ILogger<AccountController> _logger;
         private readonly RoleManager<Role> _roleManager;
         private readonly IEmailSender _emailSender;
+        private readonly IGooglereCaptchaService _googlereCaptchaService;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<AccountController> logger,
-            IEmailSender emailSender, RoleManager<Role> roleManager)
+            IEmailSender emailSender, RoleManager<Role> roleManager, 
+            IGooglereCaptchaService googlereCaptchaService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
             _roleManager = roleManager;
+            _googlereCaptchaService = googlereCaptchaService;
         }
      
         public async Task<IActionResult> Register(string returnUrl = null)
@@ -50,6 +54,12 @@ namespace DataImporter.Web.Controllers
         {
             model.ReturnUrl ??= Url.Content("~/"); 
             model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            var googlereCaptcha = _googlereCaptchaService.RecaptchaVer(model.Token);
+            if(!googlereCaptcha.Result.Success && googlereCaptcha.Result.Score<=0.5)
+            {
+                ModelState.AddModelError(string.Empty, "Invalid Registration");
+                return View();
+            }
             if (ModelState.IsValid)
             {
                 var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
@@ -163,11 +173,6 @@ namespace DataImporter.Web.Controllers
             {
                 return RedirectToAction("Index", "Dashboard");
             }
-        }
-
-        public IActionResult Register1()
-        {
-            return View();
         }
     }
 }

@@ -7,10 +7,8 @@
     <link href="~/css/Contacts.css" rel="stylesheet" />
 }
 
-<section>
 
-</section>
-<div class="contacts">
+<div class="card card-body">
     <form class="row g-3" method="post" asp-antiforgery="true">
         <div class="col-md-3">
             <label asp-for="GroupName" class="form-label">Group</label>
@@ -24,7 +22,7 @@
             <label asp-for="DateTo" class="form-label">Date To</label>
             <input type="text" class="form-control" id="dateTo" asp-for="DateTo">
         </div>
-        <div>
+        <div class="col align-self-end">
             <button type="submit" class="btn btn-info float-sm-right" >Search</button>
         </div>
     </form>

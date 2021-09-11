@@ -77,6 +77,17 @@ namespace DataImporter.Web
                  .AddDefaultUI()
                  .AddDefaultTokenProviders();
 
+            services.ConfigureApplicationCookie(options =>
+            {
+                // Cookie settings
+                options.Cookie.HttpOnly = true;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+
+                options.LoginPath = "/Account/Login";
+                options.AccessDeniedPath = "/Account/AccessDenied";
+                options.SlidingExpiration = true;
+            });
+
             services.Configure<IdentityOptions>(options => //password config er jonno 
             {
                 // Password settings.

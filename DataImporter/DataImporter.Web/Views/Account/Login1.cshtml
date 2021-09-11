@@ -1,28 +1,22 @@
-﻿@model DataImporter.Web.Models.Account.RegisterModel
+﻿@model DataImporter.Web.Models.Account.LoginModel
 @{
-    ViewData["Title"] = "Register1";
+    ViewData["Title"] = "Login1";
 }
 @section Styles
 {
-    <link href="~/css/Registration.css" rel="stylesheet" />
-    <link href="~/css/RegistrationLTE.css" rel="stylesheet" />
+    <link href="~/css/Login.css" rel="stylesheet" />
 }
 <section>
-    <div class="card card-blue reg">
+    <div class="card card-blue login">
         <div class="card-header">
-            <h2 class="card-title">Register</h2>
-        </div>
-        <div style="padding-top:1%;">
-            <h5>Create A New Account</h5>
-            <hr />
+            <h2 class="card-title">Login Your Account</h2>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form class="form-horizontal">
+        <form class="form-horizontal" method="post" asp-controller="Account" asp-action="Login1" asp-antiforgery="true">
             <div class="card-body">
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group row">
-
                     <label asp-for="Email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
                         <input type="email" class="form-control" id="inputEmail" placeholder="Email" asp-for="Email">
@@ -35,26 +29,23 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label asp-for="ConfirmPassword" class="col-sm-2 col-form-label">Confirm Password</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3" asp-for="ConfirmPassword" placeholder="Confirm Password">
-                    </div>
-                </div>
-                <div class="form-group row">
                     <div class="offset-sm-2 col-sm-10">
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                            <label class="form-check-label" for="exampleCheck2">Remember me</label>
+                            <label asp-for="RememberMe">
+                                <input asp-for="RememberMe" />
+                                @Html.DisplayNameFor(m => m.RememberMe)
+                            </label>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- /.card-body -->
             <div class="card-footer">
-                <button type="submit" class="btn btn-info">Register</button>
-                <button type="submit" class="btn btn-default float-right">Cancel</button>
+                <button type="submit" class="btn btn-info">Login</button>
+                <button type="submit" asp-controller="Dashboard" asp-action="Index" class="btn btn-default float-right">Cancel</button>
             </div>
             <!-- /.card-footer -->
         </form>
     </div>
 </section>
+

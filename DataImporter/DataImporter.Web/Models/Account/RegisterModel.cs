@@ -25,6 +25,8 @@ namespace DataImporter.Web.Models.Account
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
         public string ReturnUrl { get; set; }
+        [Required]
+        public string Token { get; set; }
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
     }

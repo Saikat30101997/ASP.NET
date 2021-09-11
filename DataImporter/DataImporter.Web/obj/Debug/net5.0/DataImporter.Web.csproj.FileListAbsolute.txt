@@ -420,10 +420,7 @@ G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.TagHe
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.TagHelpers.output.cache
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.RazorCoreGenerate.cache
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
-G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
-G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
@@ -437,7 +434,6 @@ G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\ref\DataImporter.Web.d
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.pdb
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\DataImporter.Web.genruntimeconfig.cache
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_AdminMenuPartial.cshtml.g.cs
-G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_Layout1.cshtml.g.cs
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\Index.cshtml.g.cs
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\Create.cshtml.g.cs
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Dashboard\Contacts.cshtml.g.cs
@@ -461,4 +457,5 @@ G:\ASP.NET\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Membershi
 G:\ASP.NET\DataImporter\DataImporter.Web\bin\Debug\net5.0\DataImporter.Membership.pdb
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
-G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Register1.cshtml.g.cs
+G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Account\Login1.cshtml.g.cs
+G:\ASP.NET\DataImporter\DataImporter.Web\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs

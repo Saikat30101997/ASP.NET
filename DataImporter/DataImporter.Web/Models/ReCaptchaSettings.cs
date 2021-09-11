@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace DataImporter.Web.Models
 {
-    public class ReCaptchaSettings
+    public class ReCaptchaSettings : IReCaptchaSettings
     {
         public string ReCAPTCHA_Site_Key { get; set; }
         public string ReCAPTCHA_Secret_Key { get; set; }

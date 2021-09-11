@@ -4,67 +4,65 @@
 @{
     ViewData["Title"] = "Register";
 }
+
 @section Styles
 {
     <link href="~/css/Registration.css" rel="stylesheet" />
+    <link href="~/css/RegistrationLTE.css" rel="stylesheet" />
 }
-
-
-<div class="container-fluid">
-    <div class="row registermargin">
-        <div class="col-md-6">
-            <h1>@ViewData["Title"]</h1>
-            <form asp-controller="Account" asp-action="Register" method="post">
-                <h4>Create a new account.</h4>
-                <hr />
+<section>
+    <div class="card card-blue reg">
+        <div class="card-header">
+            <h2 class="card-title">Register</h2>
+        </div>
+        <div style="padding-top:1%;">
+            <h5>Create A New Account</h5>
+            <hr />
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form id="demo-form" class="form-horizontal" method="post" asp-controller="Account" asp-action="Register" asp-antiforgery="true">
+            <div class="card-body">
                 <div asp-validation-summary="All" class="text-danger"></div>
-                <div class="form-group">
-                    <label asp-for="Email"></label>
-                    <input asp-for="Email" class="form-control" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="Password"></label>
-                    <input asp-for="Password" class="form-control" />
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                </div>
-                <div class="form-group">
-                    <label asp-for="ConfirmPassword"></label>
-                    <input asp-for="ConfirmPassword" class="form-control" />
-                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                </div>
-                <button type="submit" class="btn btn-primary">Register</button>
-            </form>
-        </div>
-        <div class="col-md-6 col-md-offset-2">
-            <section>
+                <div class="form-group row">
 
-                @{
-                    if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                    {
-                        <div>
-
+                    <label asp-for="Email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" asp-for="Email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Password" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password" asp-for="Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="ConfirmPassword" class="col-sm-2 col-form-label">Confirm Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" id="inputPassword3" asp-for="ConfirmPassword" placeholder="Confirm Password">
+                    </div>
+                </div>
+                <input type="hidden" id="Input_Token" asp-for="Token">
+                <div class="form-group row">
+                    <div class="offset-sm-2 col-sm-10">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                            <label class="form-check-label" for="exampleCheck2">Remember me</label>
                         </div>
-                    }
-                    else
-                    {
-                        <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                            <div>
-                                <p>
-                                    @foreach (var provider in Model.ExternalLogins)
-                                    {
-                                        <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                    }
-                                </p>
-                            </div>
-                        </form>
-                    }
-                }
-            </section>
-        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-footer">
+                <button type="submit" class="btn btn-info">Register</button>
+                <button type="submit" asp-controller="Dashboard" asp-action="Index" class="btn btn-default float-right">Cancel</button>
+            </div>
+            <!-- /.card-footer -->
+        </form>
     </div>
+</section>
 
-</div>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
@@ -73,10 +71,13 @@
         function onClick(e) {
             e.preventDefault();
             grecaptcha.ready(function () {
-                grecaptcha.execute('reCAPTCHA_site_key', { action: 'submit' }).then(function (token) {
-                    console.log(token)
+                grecaptcha.execute('@GooglereCaptcha.Value.ReCAPTCHA_Site_Key', { action: 'submit' }).then(function (token) {
+                    // Add your logic to submit to your backend server here.
+                    console.log(token);
+                    $('#Input_Token').val(token);
                 });
             });
         }
     </script>
 }
+    

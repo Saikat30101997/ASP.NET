@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6RSHgov6+l2anaFsP+T/L/B/yRF6jSqg90/5wheczFhwUjWVM8dQSR7Wc/K4emUrvjHHy8KR10wUUCpsyhC+vg==",
+  "dgSpecHash": "XxxpAImGDhPmD5RE5L40/x8vvJHKcmD/6WZoqpnKn9N+52r8Axi+iiqPJRULv8kNR5Vp6ngsebY2gvQxLoG7xg==",
   "success": true,
   "projectFilePath": "G:\\ASP.NET\\DataImporter\\DataImporter.Web\\DataImporter.Web.csproj",
   "expectedPackageFiles": [
@@ -73,7 +73,7 @@
     "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.2\\microsoft.visualstudio.web.codegenerators.mvc.5.0.2.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\Saikat\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\Saikat\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\serilog\\2.10.0\\serilog.2.10.0.nupkg.sha512",
     "C:\\Users\\Saikat\\.nuget\\packages\\serilog.aspnetcore\\4.1.0\\serilog.aspnetcore.4.1.0.nupkg.sha512",
