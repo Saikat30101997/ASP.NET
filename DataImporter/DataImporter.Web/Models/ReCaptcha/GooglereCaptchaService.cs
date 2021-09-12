@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace DataImporter.Web.Models
+namespace DataImporter.Web.Models.ReCaptcha
 {
     public class GooglereCaptchaService  :IGooglereCaptchaService
     {

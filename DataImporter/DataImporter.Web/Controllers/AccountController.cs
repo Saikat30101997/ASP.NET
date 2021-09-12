@@ -2,6 +2,7 @@
 using DataImporter.Membership.Entities;
 using DataImporter.Web.Models;
 using DataImporter.Web.Models.Account;
+using DataImporter.Web.Models.ReCaptcha;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -54,7 +55,7 @@ namespace DataImporter.Web.Controllers
         {
             model.ReturnUrl ??= Url.Content("~/"); 
             model.ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-            var googlereCaptcha = _googlereCaptchaService.RecaptchaVer(model.Token);
+            var googlereCaptcha = _googlereCaptchaService.RecaptchaVer(model.GoogleCaptchaToken);
             if(!googlereCaptcha.Result.Success && googlereCaptcha.Result.Score<=0.5)
             {
                 ModelState.AddModelError(string.Empty, "Invalid Registration");

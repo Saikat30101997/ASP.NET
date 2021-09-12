@@ -6,6 +6,7 @@ using DataImporter.Membership.Entities;
 using DataImporter.Membership.Services;
 using DataImporter.Web.Data;
 using DataImporter.Web.Models;
+using DataImporter.Web.Models.ReCaptcha;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

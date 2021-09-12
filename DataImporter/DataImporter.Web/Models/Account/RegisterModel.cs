@@ -26,7 +26,7 @@ namespace DataImporter.Web.Models.Account
         public string ConfirmPassword { get; set; }
         public string ReturnUrl { get; set; }
         [Required]
-        public string Token { get; set; }
+        public string GoogleCaptchaToken { get; set; }
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
     }

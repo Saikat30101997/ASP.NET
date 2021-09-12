@@ -1,6 +1,6 @@
 ﻿@model DataImporter.Web.Models.Account.RegisterModel
 @using Microsoft.Extensions.Options
-@inject IOptions<DataImporter.Web.Models.ReCaptchaSettings> GooglereCaptcha
+@inject IOptions<DataImporter.Web.Models.ReCaptcha.ReCaptchaSettings> GooglereCaptcha
 @{
     ViewData["Title"] = "Register";
 }
@@ -43,7 +43,7 @@
                         <input type="password" class="form-control" id="inputPassword3" asp-for="ConfirmPassword" placeholder="Confirm Password">
                     </div>
                 </div>
-                <input id="Input_Token" asp-for="Token">
+
                 <div class="form-group row">
                     <div class="offset-sm-2 col-sm-10">
                         <div class="form-check">
@@ -52,6 +52,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                @Html.HiddenFor(m => m.GoogleCaptchaToken)
             </div>
             <!-- /.card-body -->
             <div class="card-footer">
@@ -66,18 +69,14 @@
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
-    <script src="https://www.google.com/recaptcha/api.js?render=@GooglereCaptcha.Value.ReCAPTCHA_Site_Key"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ldi-VwcAAAAAGi86ziIJveRX-34bG_k_UPqN8hc"></script>
     <script>
-        function onClick(e) {
-            e.preventDefault();
-            grecaptcha.ready(function () {
-                grecaptcha.execute('@GooglereCaptcha.Value.ReCAPTCHA_Site_Key', { action: 'submit' }).then(function (token) {
-                    // Add your logic to submit to your backend server here.
-                    console.log(token);
-                    $('#Input_Token').val(token);
-                });
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Ldi-VwcAAAAAGi86ziIJveRX-34bG_k_UPqN8hc', { action: 'Register' }).then(function (token) {
+                $("#GoogleCaptchaToken").val(token);
             });
-        }
+        });
     </script>
+
 }
-    
+
