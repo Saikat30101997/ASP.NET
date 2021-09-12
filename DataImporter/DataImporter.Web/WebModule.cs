@@ -11,8 +11,7 @@ namespace DataImporter.Web
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<ReCaptchaSettings>().As<IReCaptchaSettings>()
-                .InstancePerLifetimeScope();
+            builder.RegisterType<ReCaptchaSettings>().AsSelf();
             builder.RegisterType<GooglereCaptchaService>().As<IGooglereCaptchaService>()
              .InstancePerLifetimeScope();
             base.Load(builder);

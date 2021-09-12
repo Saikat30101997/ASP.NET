@@ -10,7 +10,7 @@ namespace DataImporter.Web.Models
 {
     public class GooglereCaptchaService  :IGooglereCaptchaService
     {
-        private IReCaptchaSettings _reCaptchSettings;
+        private ReCaptchaSettings _reCaptchSettings;
         public GooglereCaptchaService(IOptions<ReCaptchaSettings> reCaptchSettings)
         {
             _reCaptchSettings = reCaptchSettings.Value;
