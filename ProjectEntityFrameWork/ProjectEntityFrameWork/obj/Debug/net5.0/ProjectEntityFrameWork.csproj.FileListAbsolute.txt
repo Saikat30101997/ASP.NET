@@ -475,3 +475,6 @@ G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\Projec
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Views\Home\Sass.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\obj\Debug\net5.0\Razor\Views\Home\HTML.cshtml.g.cs
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\MailKit.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\MimeKit.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork\bin\Debug\net5.0\BouncyCastle.Crypto.dll

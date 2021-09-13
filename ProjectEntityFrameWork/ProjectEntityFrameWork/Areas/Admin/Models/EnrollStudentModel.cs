@@ -22,17 +22,17 @@ namespace ProjectEntityFrameWork.Areas.Admin.Models
             _courseService = courseService;
         }
 
-       public void EnrollStudent()
-       {
-           var courses =  _courseService.GetAllCourses();
-           var selectcourse = courses.Where(c => c.Title == courseName).FirstOrDefault();
-            var student = new Student
-            {
-                Id = studentId,
-                DateOfBirth = DateTime.Now,
-                Name = "Saikat"
-            };
-            _courseService.EnrollStudents(selectcourse,student);
-       }
+       //public void EnrollStudent()
+       //{
+       //    var courses =  _courseService.GetAllCourses();
+       //    var selectcourse = courses.Where(c => c.Title == courseName).FirstOrDefault();
+       //     var student = new Student
+       //     {
+       //         Id = studentId,
+       //         DateOfBirth = DateTime.Now,
+       //         Name = "Saikat"
+       //     };
+       //     _courseService.EnrollStudents(selectcourse,student);
+       //}
     }
 }

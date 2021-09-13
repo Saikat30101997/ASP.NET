@@ -13,6 +13,14 @@ namespace ProjectEntityFrameWork.Common
            
             builder.RegisterType<DateTimeUtility>().As<IDateTimeUtility>()
                 .InstancePerLifetimeScope();
+            builder.RegisterType<EmailService>().As<IEmailService>()
+                .WithParameter("host", "smtp.gmail.com")
+                .WithParameter("port", 465)
+                .WithParameter("username", "saikat.cse1997@gmail.com")
+                .WithParameter("password", "")
+                .WithParameter("useSSL", true)
+                .WithParameter("from", "saikat.cse1997@gmail.com")
+                .InstancePerLifetimeScope();
 
             base.Load(builder);
         }

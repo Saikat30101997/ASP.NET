@@ -41,15 +41,15 @@ namespace ProjectEntityFrameWork.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult Enroll(EnrollStudentModel enrollStudentModel)
-        {
-            if(ModelState.IsValid)
-            {
-                enrollStudentModel.EnrollStudent();
-            }
+        //public IActionResult Enroll(EnrollStudentModel enrollStudentModel)
+        //{
+        //    if(ModelState.IsValid)
+        //    {
+        //        enrollStudentModel.EnrollStudent();
+        //    }
 
-            return RedirectToAction(nameof(Index));
-        }
+        //    return RedirectToAction(nameof(Index));
+        //}
 
         public IActionResult Create()
         {

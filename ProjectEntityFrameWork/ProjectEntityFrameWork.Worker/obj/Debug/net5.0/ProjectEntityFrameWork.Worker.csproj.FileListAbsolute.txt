@@ -108,3 +108,8 @@ G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Worker\bin\Debug\net5.0
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Worker\bin\Debug\net5.0\ProjectEntityFrameWork.Training.pdb
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Worker\bin\Debug\net5.0\ProjectEntityFrameWork.Common.pdb
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Worker\bin\Debug\net5.0\ProjectEntityFrameWork.Data.pdb
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Worker\bin\Debug\net5.0\MailKit.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Worker\bin\Debug\net5.0\MimeKit.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Worker\bin\Debug\net5.0\BouncyCastle.Crypto.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Worker\bin\Debug\net5.0\System.Security.Cryptography.Pkcs.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Worker\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Security.Cryptography.Pkcs.dll

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEntityFrameWork.Training.Repositories
 {
-    public class CompanyRepository : Repository<Company,int>
+    public class CompanyRepository : Repository<Company,int>,ICompanyRepository
     {
         public CompanyRepository(ITrainingContext context) : base((DbContext)context)
         {

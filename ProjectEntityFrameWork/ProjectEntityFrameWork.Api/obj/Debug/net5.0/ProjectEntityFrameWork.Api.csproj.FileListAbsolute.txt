@@ -398,3 +398,6 @@ G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Api\bin\Debug\net5.0\Pr
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Api\bin\Debug\net5.0\ProjectEntityFrameWork.Training.pdb
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Api\bin\Debug\net5.0\ProjectEntityFrameWork.Common.pdb
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Api\bin\Debug\net5.0\ProjectEntityFrameWork.Data.pdb
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Api\bin\Debug\net5.0\MailKit.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Api\bin\Debug\net5.0\MimeKit.dll
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Api\bin\Debug\net5.0\BouncyCastle.Crypto.dll

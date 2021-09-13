@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEntityFrameWork.Training.Repositories
 {
-    public class StockPriceRepository : Repository<StockPrice,int>
+    public class StockPriceRepository : Repository<StockPrice,int> ,IStockPriceRepository
     {
         public StockPriceRepository(ITrainingContext context) : base((DbContext)context)
         {

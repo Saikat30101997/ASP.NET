@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using ProjectEntityFrameWork.Common.Utilities;
 using ProjectEntityFrameWork.Membership.Entities;
 using ProjectEntityFrameWork.Models.Account;
 using System;
@@ -23,18 +24,21 @@ namespace ProjectEntityFrameWork.Controllers
         private readonly ILogger<AccountController> _logger;
         private readonly RoleManager<Role> _roleManager;
         private readonly IEmailSender _emailSender;
+        private readonly IEmailService _emailService;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<AccountController> logger,
-            IEmailSender emailSender, RoleManager<Role> roleManager)
+            IEmailSender emailSender, RoleManager<Role> roleManager,
+            IEmailService emailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
             _roleManager = roleManager;
+            _emailService = emailService;
         }
 
 
@@ -61,7 +65,7 @@ namespace ProjectEntityFrameWork.Controllers
                 var result = await _userManager.CreateAsync(user, model.Password);
                 //await _userManager.AddToRoleAsync(user, "Admin");
               //  await _userManager.AddToRoleAsync(user, "Teacher");
-                await _userManager.AddClaimAsync(user, new System.Security.Claims.Claim("view_permission", "true"));
+              //  await _userManager.AddClaimAsync(user, new System.Security.Claims.Claim("view_permission", "true"));
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
@@ -76,7 +80,7 @@ namespace ProjectEntityFrameWork.Controllers
 
                     await _emailSender.SendEmailAsync(model.Email, "Confirm your email",
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
+                    _emailService.SendEmail(model.Email, "Confirm your email", $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
                         return RedirectToAction("RegisterConfirmation","Account" ,new { email = model.Email, returnUrl = model.ReturnUrl });
