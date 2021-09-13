@@ -18,7 +18,8 @@ namespace ProjectEntityFrameWork.Common.Utilities
         private readonly bool _useSSL;
         private readonly string _from;
 
-        public EmailService(string host,int port,string username,string password,bool useSSL,string from)
+        public EmailService(string host,int port,string username,
+            string password,bool useSSL,string from)
         {
             _host = host;
             _port = port;
@@ -34,7 +35,7 @@ namespace ProjectEntityFrameWork.Common.Utilities
             message.To.Add(new MailboxAddress(receiver, receiver));
             message.Subject = subject;
 
-            message.Body = new TextPart("plain")
+            message.Body = new TextPart("html")
             {
                 Text = body
             };

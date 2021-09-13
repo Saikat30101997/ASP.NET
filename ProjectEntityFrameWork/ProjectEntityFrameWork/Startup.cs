@@ -28,6 +28,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using ProjectEntityFrameWork.Models;
+using ProjectEntityFrameWork.Common.Utilities;
+using Microsoft.Extensions.Options;
 
 namespace ProjectEntityFrameWork
 {
@@ -151,7 +154,7 @@ namespace ProjectEntityFrameWork
             //by default shb gula uthentication scheme cookie r ta use korbe bt jodi prblm hy bydefault e tahole
             //policy.AuthenticationSchemes.Add(CookieAuthenticationDefaults.AuthenticationScheme);
             //evabe add korte hobe
-
+           // services.Configure<IConfirmationEmailSettings>(Configuration.GetSection("ConfirmEmail"));
             services.AddAuthorization(options =>  //policy and claim er jonno use kora hy 
             {
                 options.AddPolicy("AdminandTeacherAccess", policy =>

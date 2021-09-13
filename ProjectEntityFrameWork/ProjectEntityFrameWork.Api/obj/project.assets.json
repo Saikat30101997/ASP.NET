@@ -2188,7 +2188,8 @@
         "dependencies": {
           "Autofac.Extensions.DependencyInjection": "7.1.0",
           "MailKit": "2.15.0",
-          "Microsoft.AspNetCore.Http.Extensions": "2.2.0"
+          "Microsoft.AspNetCore.Http.Extensions": "2.2.0",
+          "Microsoft.Extensions.Options": "5.0.0"
         },
         "compile": {
           "bin/placeholder/ProjectEntityFrameWork.Common.dll": {}

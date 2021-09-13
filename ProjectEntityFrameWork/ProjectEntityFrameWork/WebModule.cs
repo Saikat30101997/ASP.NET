@@ -1,6 +1,8 @@
 ﻿using Autofac;
 using Microsoft.AspNetCore.Authorization;
+using ProjectEntityFrameWork.Common.Utilities;
 using ProjectEntityFrameWork.Membership.BusinessObjects;
+using ProjectEntityFrameWork.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +14,7 @@ namespace ProjectEntityFrameWork
     {
         protected override void Load(ContainerBuilder builder)
         {
-     
+            
             base.Load(builder);
         }
     }

@@ -2,12 +2,19 @@
 
 using System;
 using Autofac;
+using Microsoft.Extensions.Options;
 using ProjectEntityFrameWork.Common.Utilities;
 
 namespace ProjectEntityFrameWork.Common
 {
     public class CommonModule : Module
     {
+        public CommonModule()
+        {
+
+        }
+ 
+    
         protected override void Load(ContainerBuilder builder)
         {
            
