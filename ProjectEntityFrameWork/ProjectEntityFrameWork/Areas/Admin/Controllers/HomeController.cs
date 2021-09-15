@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEntityFrameWork.Areas.Admin.Controllers
 {
-    [Area("Admin"),Authorize(Policy = "DeletePermission")]   //Authorize Roll and policy egular name add kora jaay 
+    [Area("Admin")]   //Authorize Roll and policy egular name add kora jaay 
     public class HomeController : Controller
     {
         public IActionResult Index()
