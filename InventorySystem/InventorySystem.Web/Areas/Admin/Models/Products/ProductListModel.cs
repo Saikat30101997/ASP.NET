@@ -11,6 +11,8 @@ namespace InventorySystem.Web.Areas.Admin.Models.Products
     public class ProductListModel
     {
         private readonly IProductService _productService;
+
+        public string Name { get; set; }
         public ProductListModel()
         {
             _productService = Startup.AutofacContainer.Resolve<IProductService>();

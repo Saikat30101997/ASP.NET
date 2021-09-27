@@ -29,6 +29,7 @@ namespace InventorySystem.Web.Models
             get
             {
                 return _request.Query["search[value]"];
+                
             }
         }
 

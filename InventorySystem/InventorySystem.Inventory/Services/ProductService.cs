@@ -44,7 +44,7 @@ namespace InventorySystem.Inventory.Services
             int pageSize, string searchText, string sortText)
         {
             var productData = _inventoryUnitOfWork.Products.GetDynamic(string.IsNullOrWhiteSpace(searchText) ? 
-                null : x => x.Name.Contains(searchText), sortText, string.Empty, pageIndex, pageSize);
+                null : x => x.Name.Contains(searchText) || x.Price.ToString().Contains(searchText), sortText, string.Empty, pageIndex, pageSize);
             var resultData = (from product in productData.data
                               select _mapper.Map<Product>(product)).ToList();
 

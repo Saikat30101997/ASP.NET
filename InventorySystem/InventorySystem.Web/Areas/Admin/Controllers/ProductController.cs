@@ -5,6 +5,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
 
 namespace InventorySystem.Web.Areas.Admin.Controllers
@@ -29,6 +30,16 @@ namespace InventorySystem.Web.Areas.Admin.Controllers
             var data = model.GetProducts(tableModel);
             return Json(data);
         }
+        [HttpPost]
+        public JsonResult GetProductData(ProductListModel model)
+        {
+            var tableModel = new DataTablesAjaxRequestModel(Request);
+            var data = model.GetProducts(tableModel);
+            var contactName = Request.Form["ddCountry"].FirstOrDefault();
+            var country = Request.Form["txtEmployeeName"].FirstOrDefault();
+            return Json(data);
+        }
+
         public IActionResult Create()
         {
             return View();

@@ -10,7 +10,7 @@ namespace ECommerceSystem.ECommerce.Services
     public interface IProductService
     {
         (IList<Product>records,int total,int totalDisplay) GetProducts(int pageIndex, 
-            int pageSize, string searchText, string sortText);
+            int pageSize, string searchText, string sortText,string Name);
         void CreateProduct(Product product);
         Product GetProduct(int id);
         void Update(Product product);

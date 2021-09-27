@@ -20,10 +20,9 @@ namespace ECommerceSystem.ECommerce.Services
         }
 
         public (IList<Product> records, int total, int totalDisplay) GetProducts(int pageIndex, 
-            int pageSize, string searchText, string sortText)
+            int pageSize, string searchText, string sortText,string Name)
         {
-            var productData = _eCommerceUnitOfWork.Products.GetDynamic(string.IsNullOrWhiteSpace(searchText) ?
-                null : x => x.Name.Contains(searchText), sortText, string.Empty, pageIndex, pageSize);
+            var productData = _eCommerceUnitOfWork.Products.GetDynamic(x=>x.Name==Name, sortText, string.Empty, pageIndex, pageSize);
 
             var resultData = (from product in productData.data
                               select _mapper.Map<Product>(product)).ToList();

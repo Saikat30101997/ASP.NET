@@ -30,7 +30,13 @@ namespace ECommerceSystem.Web.Areas.Admin.Controllers
             var data = model.GetProducts(tableModel);
             return Json(data);
         }
-
+        //[HttpPost]
+        //public IActionResult GetProductData(ProductListModel model)
+        //{
+        //    var tableModel = new DataTablesAjaxRequestModel(Request);
+        //    var data = model.GetProducts(tableModel,model.Name);
+        //    return Json(data);
+        //}
         public ActionResult Create()
         {
             return View();

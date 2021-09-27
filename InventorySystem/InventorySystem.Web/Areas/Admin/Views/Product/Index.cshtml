@@ -1,4 +1,4 @@
-﻿
+﻿@model InventorySystem.Web.Areas.Admin.Models.Products.ProductListModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -17,7 +17,10 @@
             $('#products').DataTable({
                 "processing": true,
                 "serverSide": true,
-                "ajax": "/Admin/Product/GetProductData",
+                "ajax": {
+                    "url": "/Admin/Product/GetProductData",
+                    "type": "POST"
+                },
                 "columnDefs": [
                     {
                         "orderable": false,
@@ -37,6 +40,7 @@
                     }
                 ]
             });
+          
             $('#products').on('click', '.show-bs-modal', function (event) {
                 var id = $(this).data("id");
                 var modal = $("#modal-default");
@@ -47,6 +51,15 @@
             });
             $("#deleteButton").click(function () {
                 $("#deleteForm").submit();
+            });
+            oTable = $('#products').DataTable();
+            $('#btnSearch').click(function () {
+                //Apply search for Employee Name // DataTable column index 0
+                oTable.columns(0).search($('#ddCountry').val().trim());
+                //Apply search for Country // DataTable column index 3
+                oTable.columns(1).search($('#txtEmployeeName').val().trim());
+                //hit search on server
+                oTable.draw();
             });
         });
 
@@ -70,44 +83,73 @@
         </div>
     </div><!-- /.container-fluid -->
 </section>
+<div style="width:90%; margin:0 auto">
+    @* Search Area *@
+    <div style="background-color:#f5f5f5; padding:20px">
+        <h2>Search Panel</h2>
+        <table>
+            <tbody>
+                <tr>
 
-<!-- Main content -->
-<section class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="card">
-                    <div class="card-header">
-                        <h3 class="card-title">All Products</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <div class="card-body">
-                        <table id="products" class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Price</th>
-                                    <th style="width:150px">Action</th>
-                                </tr>
-                            </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Price</th>
-                                    <th style="width:150px">Action</th>
-                                </tr>
-                            </tfoot>
-                        </table>
-                        <partial name="_DeletePopUpPartial" />
-                    </div>
-                    <!-- /.card-body -->
-                </div>
-                <!-- /.card -->
-            </div>
-            <!-- /.col -->
-        </div>
-        <!-- /.row -->
+                    <td>Name</td>
+                    <td>
+                        <select id="ddCountry" style="width:200px">
+                            <option value="">All Names</option>
+                            <option value="Poco X3">Poco X3</option>
+                            <option value="Poco X3 Pro">Poco X3 Pro</option>
+                        </select>
+                        @* Here I have made this select box with some static data for make this example simpler.
+                                    You can fill it from database data *@
+                    </td>
+                    <td>Price</td>
+                    <td><input type="text" id="txtEmployeeName" /></td>
+                    <td>
+                        <input type="button" value="Search" id="btnSearch" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <!-- /.container-fluid -->
-</section>
-<!-- /.content-wrapper -->
+    </div>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">All Products</h3>
+                        </div>
+
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="products" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th style="width:150px">Action</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th style="width:150px">Action</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <partial name="_DeletePopUpPartial" />
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content-wrapper -->
