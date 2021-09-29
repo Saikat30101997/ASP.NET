@@ -528,3 +528,4 @@ G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Tests\bin\Debug\net5.0\
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Tests\bin\Debug\net5.0\ProjectEntityFrameWork.Membership.dll
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Tests\bin\Debug\net5.0\ProjectEntityFrameWork.pdb
 G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Tests\bin\Debug\net5.0\ProjectEntityFrameWork.Membership.pdb
+G:\ASP.NET\ProjectEntityFrameWork\ProjectEntityFrameWork.Tests\bin\Debug\net5.0\ProjectEntityFrameWork.StaticWebAssets.xml

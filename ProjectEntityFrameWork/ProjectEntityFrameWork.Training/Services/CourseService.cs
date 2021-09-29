@@ -72,7 +72,7 @@ namespace ProjectEntityFrameWork.Training.Services
 
         }
 
-        private bool IsTitleAlreadyUsed(string title) =>
+        public bool IsTitleAlreadyUsed(string title) =>
             _trainingUnitOfWork.Courses.GetCount(x => x.Title == title) > 0;
         private bool IsTitleAlreadyUsed(string title,int id) =>
             _trainingUnitOfWork.Courses.GetCount(x => x.Title == title && x.Id!=id) > 0;

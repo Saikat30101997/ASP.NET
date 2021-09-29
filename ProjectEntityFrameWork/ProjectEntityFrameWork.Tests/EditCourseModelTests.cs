@@ -59,16 +59,37 @@ namespace ProjectEntityFrameWork.Tests
             };
 
             _courseServiceMock.Setup(x => x.GetCourse(id)).Returns(course);
-            _mapperMock.Setup(x => x.Map<EditCourseModel>(It.IsAny<Course>()))
-                .Returns((Course course) =>
-                {
-                    return new EditCourseModel { Id = course.Id };
-                });
+            _mapperMock.Setup(x => x.Map<Course, EditCourseModel> //   _mapper.Map(course,this); eta k set up korchi 
+            (course, It.IsAny<EditCourseModel>())).Verifiable(); //varifiable mane method ta call na dile shey error increase korbe
+            //it.is any diye kaj korchi jekunu edit course model holei hobee 
+            //course disi j getcourse er jeta astse setar jonnoo r _model dilam this er jonno karon editcoursemodel 
+            //e this er properties gula achee
+
             //act
             _model.LoadModelData(id);
 
             //Assert
-            Assert.AreEqual(id,_model.Id);
+            //  Assert.AreEqual(id,_model.Id);
+            _courseServiceMock.VerifyAll();
+            _mapperMock.VerifyAll();
+        }
+        [Test]
+        public void Update_Course_LoadProperties()
+        {
+            var course = new Course
+            {
+                Title = "Asp.net",
+                Fees = 40000,
+                Id = 5
+            };
+
+            _mapperMock.Setup(x => x.Map<Course>(_model)).Returns(course);
+            
+
+            _model.Update();
+
+            _mapperMock.VerifyAll();
+            _courseServiceMock.VerifyAll();
         }
     }
 }
